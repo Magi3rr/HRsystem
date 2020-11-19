@@ -26,6 +26,7 @@ namespace HR
             slidePanel.Top = btn.Top;
             slidePanel.Height = btn.Height;
             slidePanel.Visible = btn.Enabled;
+            //
 
         }
 
