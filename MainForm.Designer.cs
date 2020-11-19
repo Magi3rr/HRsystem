@@ -135,6 +135,7 @@
             this.btnContracts.TabIndex = 2;
             this.btnContracts.Text = "Umowy";
             this.btnContracts.UseVisualStyleBackColor = false;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // btnSalary
             // 

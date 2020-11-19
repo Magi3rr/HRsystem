@@ -58,5 +58,10 @@ namespace HR
         {
             SlidePanel(btnPosition);
         }
+
+        private void btnContracts_Click(object sender, EventArgs e)
+        {
+            SlidePanel(btnContracts);
+        }
     }
 }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DatabaseHR">
+  <DataContextMoniker Name="/DatabaseHRDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e74e800a-4f00-4b8f-bcbc-7f59f2e1d128" absoluteBounds="1.875, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DatabaseHRDataContext/Worker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c84fbe2-b28f-42db-abb7-3915a40ee097" absoluteBounds="1.8900000000000001, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2fef514-f8ff-4a3c-9750-5c5a7a1d7aa0" absoluteBounds="5.875, 2, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DatabaseHRDataContext/Contract" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9acf212-05cc-499b-8fbd-b502188a1cc2" absoluteBounds="5.89, 2.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ecd35f2-cddf-4e8b-98b1-130188b3203f" absoluteBounds="8.375, 4.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DatabaseHRDataContext/LogIn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66c18332-c26c-46b2-92b4-dfcaa0758593" absoluteBounds="8.39, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -33,6 +33,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.listBoxWorkers = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -88,6 +90,17 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // listBoxWorkers
+            // 
+            this.listBoxWorkers.FormattingEnabled = true;
+            this.listBoxWorkers.ItemHeight = 17;
+            this.listBoxWorkers.Location = new System.Drawing.Point(12, 78);
+            this.listBoxWorkers.Name = "listBoxWorkers";
+            this.listBoxWorkers.Size = new System.Drawing.Size(805, 548);
+            this.listBoxWorkers.TabIndex = 1;
+            this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
             // WorkersForm
             // 
@@ -95,6 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1052, 653);
+            this.Controls.Add(this.listBoxWorkers);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -112,5 +126,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.ListBox listBoxWorkers;
     }
 }

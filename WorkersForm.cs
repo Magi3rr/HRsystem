@@ -12,9 +12,42 @@ namespace HR
 {
     public partial class WorkersForm : Form
     {
+        DatabaseHRDataContext DatabaseHRWorkers = new DatabaseHRDataContext();
         public WorkersForm()
         {
             InitializeComponent();
+            LoadWorkers();
+
+        }
+
+       private void LoadWorkers()
+        {
+            listBoxWorkers.Items.Clear();
+            foreach (Worker w in DatabaseHRWorkers.Workers)
+            {
+                listBoxWorkers.Items.Add(w); 
+
+            }    
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddWorker Adw = new AddWorker();
+            Adw.Show();
+
+
+
+          
+
         }
     }
 }
