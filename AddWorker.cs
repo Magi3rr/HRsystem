@@ -39,10 +39,10 @@ namespace HR
             newWorker.Imie = txtName.Text;
             newWorker.Nazwisko = txtLastName.Text;
 
-            newWorker.Płeć = lbSex.ValueMember;
-            newWorker.Data_urodzenia = dtBirth.Value;
-            newWorker.Status = txtStatus.Text;
-            newWorker.Wynagrodzenie = updSalary.Value;
+            //newWorker.IdPłeć = lbSex.ValueMember;
+            newWorker.DataUrodzenia = dtBirth.Value;
+            //newWorker.IdStatus = txtStatus.Text;
+            //newWorker.Wynagrodzenie = updSalary.Value;
             //DatabaseHRDataContext.SubmitChanges();
 
 

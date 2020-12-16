@@ -1,31 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HR" Class="DatabaseHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\Desktop\ZALICZENIE\MDF\HR.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="HR.Properties.Settings" SettingsPropertyName="HRConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Workers" Member="Workers">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\baza\HR.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="HR.Properties.Settings" SettingsPropertyName="HRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Workers" Member="Worker">
     <Type Name="Worker">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Imie" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Nazwisko" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Płeć" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="[Data urodzenia]" Member="Data_urodzenia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IdPłeć" Storage="_Płeć" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataUrodzenia" Storage="_Data_urodzenia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="PESEL" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Status" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Wynagrodzenie" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="IdStatus" Storage="_Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="true" />
+      <Association Name="Worker_Contract" Member="Contract" ThisKey="Id" OtherKey="IdPracownik" Type="Contract" />
+      <Association Name="Genders_Worker" Member="Genders" ThisKey="IdPłeć" OtherKey="Id" Type="Genders" IsForeignKey="true" />
+      <Association Name="Statuses_Worker" Member="Statuses" ThisKey="IdStatus" OtherKey="Id" Type="Statuses" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Contract" Member="Contracts">
+  <Table Name="dbo.Contract" Member="Contract">
     <Type Name="Contract">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="[Rodzaj umowy]" Member="Rodzaj_umowy" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="[Data zawarcia]" Member="Data_zawarcia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="[Okres umowy]" Member="Okres_umowy" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Stanowisko" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="[Kwota bazowa]" Member="Kwota_bazowa" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IdTypUmowy" Storage="_Rodzaj_umowy" AutoSync="OnInsert" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataRozpoczęcia" Storage="_Data_zawarcia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DataZakończenia" Storage="_Okres_umowy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IdStanowisko" Storage="_Stanowisko" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Wynagrodzenie" Storage="_Kwota_bazowa" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IdPracownik" AutoSync="OnInsert" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Positions_Contract" Member="Positions" ThisKey="IdStanowisko" OtherKey="Id" Type="Positions" IsForeignKey="true" />
+      <Association Name="TypeContracts_Contract" Member="TypeContracts" ThisKey="IdTypUmowy" OtherKey="Id" Type="TypeContracts" IsForeignKey="true" />
+      <Association Name="Worker_Contract" Member="Worker" ThisKey="IdPracownik" OtherKey="Id" Type="Worker" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.LogIn" Member="LogIns">
-    <Type Name="LogIn">
-      <Column Name="Uzytkownik" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Haslo" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+  <Table Name="" Member="Genders">
+    <Type Name="Genders">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Płeć" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Genders_Worker" Member="Worker" ThisKey="Id" OtherKey="IdPłeć" Type="Worker" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Positions">
+    <Type Name="Positions">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stanowisko" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Positions_Contract" Member="Contract" ThisKey="Id" OtherKey="IdStanowisko" Type="Contract" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Statuses">
+    <Type Name="Statuses">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Statuses_Worker" Member="Worker" ThisKey="Id" OtherKey="IdStatus" Type="Worker" />
+    </Type>
+  </Table>
+  <Table Name="" Member="TypeContracts">
+    <Type Name="TypeContracts">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypUmowy" Storage="_Typ" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TypeContracts_Contract" Member="Contract" ThisKey="Id" OtherKey="IdTypUmowy" Type="Contract" />
     </Type>
   </Table>
 </Database>

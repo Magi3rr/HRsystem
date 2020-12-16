@@ -10,7 +10,7 @@ namespace HR
     {
         public override string ToString()
         {
-            return Imie  + Data_urodzenia;
+            return Imie  + DataUrodzenia;
         }
     }
 

@@ -23,7 +23,7 @@ namespace HR
        private void LoadWorkers()
         {
             listBoxWorkers.Items.Clear();
-            foreach (Worker w in DatabaseHRWorkers.Workers)
+            foreach (Worker w in DatabaseHRWorkers.Worker)
             {
                 listBoxWorkers.Items.Add(w); 
 
