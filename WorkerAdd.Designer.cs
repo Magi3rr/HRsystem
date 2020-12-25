@@ -1,7 +1,7 @@
 ﻿
 namespace HR
 {
-    partial class AddWorker
+    partial class WorkerAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace HR
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCloseWr = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -38,15 +39,18 @@ namespace HR
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtBirth = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtBirth = new System.Windows.Forms.DateTimePicker();
-            this.updSalary = new System.Windows.Forms.NumericUpDown();
+            this.txtPESEL = new System.Windows.Forms.TextBox();
             this.btnAddWorker = new System.Windows.Forms.Button();
             this.lbSex = new System.Windows.Forms.ListBox();
+            this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCloseWr
@@ -68,19 +72,19 @@ namespace HR
             // 
             this.txtName.Location = new System.Drawing.Point(148, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(201, 20);
+            this.txtName.Size = new System.Drawing.Size(210, 20);
             this.txtName.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(148, 31);
+            this.txtLastName.Location = new System.Drawing.Point(148, 33);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(201, 20);
+            this.txtLastName.Size = new System.Drawing.Size(210, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(148, 127);
+            this.txtStatus.Location = new System.Drawing.Point(148, 153);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(210, 20);
             this.txtStatus.TabIndex = 7;
@@ -97,7 +101,7 @@ namespace HR
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 28);
+            this.label1.Location = new System.Drawing.Point(3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 9;
@@ -106,7 +110,7 @@ namespace HR
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 57);
+            this.label2.Location = new System.Drawing.Point(3, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 10;
@@ -117,45 +121,52 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.Controls.Add(this.lbSex, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtStatus, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.dtBirth, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.updSalary, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtStatus, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtPESEL, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbSex, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 112);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.3871F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.6129F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 201F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 420);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 230);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 86);
+            this.label3.Location = new System.Drawing.Point(3, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Data urodzenia";
             // 
+            // dtBirth
+            // 
+            this.dtBirth.Location = new System.Drawing.Point(148, 93);
+            this.dtBirth.Name = "dtBirth";
+            this.dtBirth.Size = new System.Drawing.Size(210, 20);
+            this.dtBirth.TabIndex = 16;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 124);
+            this.label4.Location = new System.Drawing.Point(3, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 12;
@@ -164,30 +175,24 @@ namespace HR
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 161);
+            this.label5.Location = new System.Drawing.Point(3, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 13);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Bazowe wynagrodzenie";
+            this.label5.Text = "PESEL";
             // 
-            // dtBirth
+            // txtPESEL
             // 
-            this.dtBirth.Location = new System.Drawing.Point(148, 89);
-            this.dtBirth.Name = "dtBirth";
-            this.dtBirth.Size = new System.Drawing.Size(200, 20);
-            this.dtBirth.TabIndex = 16;
-            // 
-            // updSalary
-            // 
-            this.updSalary.Location = new System.Drawing.Point(148, 164);
-            this.updSalary.Name = "updSalary";
-            this.updSalary.Size = new System.Drawing.Size(120, 20);
-            this.updSalary.TabIndex = 17;
+            this.txtPESEL.Location = new System.Drawing.Point(148, 123);
+            this.txtPESEL.Name = "txtPESEL";
+            this.txtPESEL.Size = new System.Drawing.Size(210, 20);
+            this.txtPESEL.TabIndex = 17;
             // 
             // btnAddWorker
             // 
+            this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(3, 221);
+            this.btnAddWorker.Location = new System.Drawing.Point(457, 195);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(79, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -197,11 +202,16 @@ namespace HR
             // 
             // lbSex
             // 
+            this.lbSex.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.gendersBindingSource, "Płeć", true));
             this.lbSex.FormattingEnabled = true;
-            this.lbSex.Location = new System.Drawing.Point(148, 60);
+            this.lbSex.Location = new System.Drawing.Point(148, 63);
             this.lbSex.Name = "lbSex";
-            this.lbSex.Size = new System.Drawing.Size(120, 17);
+            this.lbSex.Size = new System.Drawing.Size(210, 17);
             this.lbSex.TabIndex = 12;
+            // 
+            // gendersBindingSource
+            // 
+            this.gendersBindingSource.DataSource = typeof(HR.Genders);
             // 
             // label6
             // 
@@ -215,22 +225,28 @@ namespace HR
             this.label6.Text = "Dodawanie nowego pracownika";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // AddWorker
+            // workerBindingSource
+            // 
+            this.workerBindingSource.DataMember = "Worker";
+            this.workerBindingSource.DataSource = this.gendersBindingSource;
+            // 
+            // WorkerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(543, 595);
+            this.ClientSize = new System.Drawing.Size(543, 348);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCloseWr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddWorker";
+            this.Name = "WorkerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWorker";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,9 +266,11 @@ namespace HR
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtBirth;
-        private System.Windows.Forms.NumericUpDown updSalary;
         private System.Windows.Forms.Button btnAddWorker;
         private System.Windows.Forms.ListBox lbSex;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource gendersBindingSource;
+        private System.Windows.Forms.TextBox txtPESEL;
+        private System.Windows.Forms.BindingSource workerBindingSource;
     }
 }

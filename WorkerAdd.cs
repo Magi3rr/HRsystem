@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace HR
 {
-    public partial class AddWorker : Form
+    public partial class WorkerAdd : Form
     {
 
         DatabaseHRDataContext DatabaseHRWorkers = new DatabaseHRDataContext();
-        public AddWorker()
+        public WorkerAdd()
         {
             InitializeComponent();
            
@@ -38,18 +38,19 @@ namespace HR
             Worker newWorker = new Worker();
             newWorker.Imie = txtName.Text;
             newWorker.Nazwisko = txtLastName.Text;
-
-            //newWorker.IdPłeć = lbSex.ValueMember;
+            //lbSex.DataSource = DatabaseHRWorkers.Genders;
+            //lbSex.DisplayMember = "Płeć";
+            //newWorker.IdPłeć = lbSex.DataBindings.Control;
             newWorker.DataUrodzenia = dtBirth.Value;
-            //newWorker.IdStatus = txtStatus.Text;
-            //newWorker.Wynagrodzenie = updSalary.Value;
-            //DatabaseHRDataContext.SubmitChanges();
+            newWorker.PESEL = txtPESEL.Text;
+            //newWorker.IdStatus = 1;
 
 
+            DatabaseHRWorkers.Worker.InsertOnSubmit(newWorker);
+            DatabaseHRWorkers.SubmitChanges();
 
-            // DatabaseHRWorkers.InsertOnSubmit(newWorker);
-
-
+            Close();
         }
+
     }
 }
