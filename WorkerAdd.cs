@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace HR
 {
+   
     public partial class WorkerAdd : Form
     {
 
@@ -17,6 +18,7 @@ namespace HR
         public WorkerAdd()
         {
             InitializeComponent();
+            
            
         }
 
@@ -37,7 +39,8 @@ namespace HR
         {
             Worker newWorker = new Worker();
             newWorker.Imie = txtName.Text;
-           newWorker.Nazwisko = txtLastName.Text;
+            newWorker.Nazwisko = txtLastName.Text;
+            newWorker.IdPłeć = 1;
             //lbSex.DataSource = DatabaseHRWorkers.Genders;
             //lbSex.DisplayMember = "Płeć";
             //newWorker.IdPłeć = lbSex.DataBindings.Control;
@@ -56,5 +59,9 @@ namespace HR
             Close();
         }
 
+        private void WorkerAdd_Load(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

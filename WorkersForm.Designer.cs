@@ -28,14 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkersForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.listBoxWorkers = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewWorker = new System.Windows.Forms.DataGridView();
+            this.Imie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nazwisko = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataUrodzenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PESEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,6 +62,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1052, 58);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 34);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Odśwież";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDelete
             // 
@@ -94,25 +117,64 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // listBoxWorkers
+            // dataGridView1
             // 
-            this.listBoxWorkers.FormattingEnabled = true;
-            this.listBoxWorkers.ItemHeight = 17;
-            this.listBoxWorkers.Location = new System.Drawing.Point(12, 78);
-            this.listBoxWorkers.Name = "listBoxWorkers";
-            this.listBoxWorkers.Size = new System.Drawing.Size(1016, 548);
-            this.listBoxWorkers.TabIndex = 1;
-            this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
+            this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewWorker.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Imie,
+            this.Nazwisko,
+            this.DataUrodzenia,
+            this.PESEL,
+            this.Genders});
+            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewWorker.Name = "dataGridView1";
+            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
+            this.dataGridViewWorker.TabIndex = 1;
             // 
-            // button1
+            // Imie
             // 
-            this.button1.Location = new System.Drawing.Point(506, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Odśwież";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Imie.DataPropertyName = "Imie";
+            this.Imie.HeaderText = "Imie";
+            this.Imie.Name = "Imie";
+            // 
+            // Nazwisko
+            // 
+            this.Nazwisko.DataPropertyName = "Nazwisko";
+            this.Nazwisko.HeaderText = "Nazwisko";
+            this.Nazwisko.Name = "Nazwisko";
+            // 
+            // DataUrodzenia
+            // 
+            this.DataUrodzenia.DataPropertyName = "DataUrodzenia";
+            this.DataUrodzenia.HeaderText = "DataUrodzenia";
+            this.DataUrodzenia.Name = "DataUrodzenia";
+            // 
+            // PESEL
+            // 
+            this.PESEL.DataPropertyName = "PESEL";
+            this.PESEL.HeaderText = "PESEL";
+            this.PESEL.Name = "PESEL";
+            // 
+            // Genders
+            // 
+            this.Genders.DataPropertyName = "Genders";
+            this.Genders.HeaderText = "Genders";
+            this.Genders.Name = "Genders";
+            // 
+            // workerBindingSource
+            // 
+            this.workerBindingSource.DataMember = "Worker";
+            this.workerBindingSource.DataSource = this.gendersBindingSource;
+            // 
+            // gendersBindingSource
+            // 
+            this.gendersBindingSource.DataSource = typeof(HR.Genders);
+            // 
+            // contractBindingSource
+            // 
+            this.contractBindingSource.DataMember = "Contract";
+            this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
             // WorkersForm
             // 
@@ -120,14 +182,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1052, 653);
-            this.Controls.Add(this.listBoxWorkers);
+            this.Controls.Add(this.dataGridViewWorker);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkersForm";
             this.ShowIcon = false;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.WorkersForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,7 +205,15 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.ListBox listBoxWorkers;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridViewWorker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Imie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nazwisko;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataUrodzenia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PESEL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genders;
+        private System.Windows.Forms.BindingSource workerBindingSource;
+        private System.Windows.Forms.BindingSource gendersBindingSource;
+        private System.Windows.Forms.BindingSource contractBindingSource;
     }
 }

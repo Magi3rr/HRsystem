@@ -48,9 +48,20 @@ namespace HR
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCloseWr
@@ -77,7 +88,7 @@ namespace HR
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(148, 33);
+            this.txtLastName.Location = new System.Drawing.Point(148, 34);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(210, 20);
             this.txtLastName.TabIndex = 6;
@@ -101,7 +112,7 @@ namespace HR
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 30);
+            this.label1.Location = new System.Drawing.Point(3, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 9;
@@ -134,13 +145,14 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.txtPESEL, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.lbSex, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 0, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 112);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -150,7 +162,7 @@ namespace HR
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 90);
+            this.label3.Location = new System.Drawing.Point(3, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 11;
@@ -158,7 +170,7 @@ namespace HR
             // 
             // dtBirth
             // 
-            this.dtBirth.Location = new System.Drawing.Point(148, 93);
+            this.dtBirth.Location = new System.Drawing.Point(148, 99);
             this.dtBirth.Name = "dtBirth";
             this.dtBirth.Size = new System.Drawing.Size(210, 20);
             this.dtBirth.TabIndex = 16;
@@ -203,11 +215,14 @@ namespace HR
             // lbSex
             // 
             this.lbSex.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.gendersBindingSource, "Płeć", true));
+            this.lbSex.DataSource = this.gendersBindingSource2;
+            this.lbSex.DisplayMember = "Płeć";
             this.lbSex.FormattingEnabled = true;
             this.lbSex.Location = new System.Drawing.Point(148, 63);
             this.lbSex.Name = "lbSex";
-            this.lbSex.Size = new System.Drawing.Size(210, 17);
+            this.lbSex.Size = new System.Drawing.Size(210, 30);
             this.lbSex.TabIndex = 12;
+            this.lbSex.ValueMember = "Id";
             // 
             // gendersBindingSource
             // 
@@ -230,6 +245,39 @@ namespace HR
             this.workerBindingSource.DataMember = "Worker";
             this.workerBindingSource.DataSource = this.gendersBindingSource;
             // 
+            // workerBindingSource1
+            // 
+            this.workerBindingSource1.DataMember = "Worker";
+            this.workerBindingSource1.DataSource = this.gendersBindingSource;
+            // 
+            // gendersBindingSource1
+            // 
+            this.gendersBindingSource1.DataSource = typeof(HR.Genders);
+            // 
+            // gendersBindingSource2
+            // 
+            this.gendersBindingSource2.DataSource = typeof(HR.Genders);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.gendersBindingSource4, "Płeć", true));
+            this.comboBox1.DataSource = this.gendersBindingSource3;
+            this.comboBox1.DisplayMember = "Id";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 183);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 18;
+            this.comboBox1.ValueMember = "Płeć";
+            // 
+            // gendersBindingSource3
+            // 
+            this.gendersBindingSource3.DataSource = typeof(HR.Genders);
+            // 
+            // gendersBindingSource4
+            // 
+            this.gendersBindingSource4.DataSource = typeof(HR.Genders);
+            // 
             // WorkerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,10 +291,16 @@ namespace HR
             this.Name = "WorkerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWorker";
+            this.Load += new System.EventHandler(this.WorkerAdd_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +326,11 @@ namespace HR
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.TextBox txtPESEL;
         private System.Windows.Forms.BindingSource workerBindingSource;
+        private System.Windows.Forms.BindingSource workerBindingSource1;
+        private System.Windows.Forms.BindingSource gendersBindingSource2;
+        private System.Windows.Forms.BindingSource gendersBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource gendersBindingSource4;
+        private System.Windows.Forms.BindingSource gendersBindingSource3;
     }
 }

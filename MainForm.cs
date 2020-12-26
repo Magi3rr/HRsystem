@@ -29,9 +29,6 @@ namespace HR
             //
 
         }
-
-
-
         private void BtnWorkers_Click(object sender, EventArgs e)
         {
             SlidePanel(btnWorkers);
@@ -47,8 +44,6 @@ namespace HR
             SlidePanel(btnContracts);
 
         }
-
-
 
         private void BtnSalary_Click(object sender, EventArgs e)
         {
