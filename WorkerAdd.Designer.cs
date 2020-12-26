@@ -30,7 +30,6 @@ namespace HR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnCloseWr = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -46,14 +45,15 @@ namespace HR
             this.rbButtonMale = new System.Windows.Forms.RadioButton();
             this.rbButtonFemale = new System.Windows.Forms.RadioButton();
             this.btnAddWorker = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).BeginInit();
@@ -63,21 +63,6 @@ namespace HR
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCloseWr
-            // 
-            this.btnCloseWr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseWr.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCloseWr.FlatAppearance.BorderSize = 0;
-            this.btnCloseWr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWr.Font = new System.Drawing.Font("Arial Black", 16F);
-            this.btnCloseWr.Location = new System.Drawing.Point(499, 12);
-            this.btnCloseWr.Name = "btnCloseWr";
-            this.btnCloseWr.Size = new System.Drawing.Size(32, 33);
-            this.btnCloseWr.TabIndex = 4;
-            this.btnCloseWr.Text = "X";
-            this.btnCloseWr.UseVisualStyleBackColor = false;
-            this.btnCloseWr.Click += new System.EventHandler(this.btnCloseWr_Click);
             // 
             // txtName
             // 
@@ -135,7 +120,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -150,6 +135,7 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.rbButtonMale, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.rbButtonFemale, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -221,7 +207,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(339, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(337, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -233,13 +219,25 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(204, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(202, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
             this.btnAddWorker.Text = "Dodaj";
             this.btnAddWorker.UseVisualStyleBackColor = false;
             this.btnAddWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(63, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(454, 36);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Dodawanie nowego pracownika";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // gendersBindingSource
             // 
@@ -257,18 +255,6 @@ namespace HR
             // 
             this.gendersBindingSource3.DataSource = typeof(HR.Genders);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(25, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(454, 36);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Dodawanie nowego pracownika";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // workerBindingSource
             // 
             this.workerBindingSource.DataMember = "Worker";
@@ -283,6 +269,18 @@ namespace HR
             // 
             this.gendersBindingSource1.DataSource = typeof(HR.Genders);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCancel.Location = new System.Drawing.Point(407, 247);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(129, 32);
+            this.btnCancel.TabIndex = 20;
+            this.btnCancel.Text = "Anuluj";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // WorkerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,7 +289,6 @@ namespace HR
             this.ClientSize = new System.Drawing.Size(543, 348);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.btnCloseWr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -312,8 +309,6 @@ namespace HR
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCloseWr;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtStatus;
@@ -337,5 +332,6 @@ namespace HR
         private System.Windows.Forms.BindingSource gendersBindingSource3;
         private System.Windows.Forms.RadioButton rbButtonMale;
         private System.Windows.Forms.RadioButton rbButtonFemale;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -31,7 +31,7 @@ namespace HR
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractsForm));
-            this.dataGridViewWorker = new System.Windows.Forms.DataGridView();
+            this.dataGridViewContracts = new System.Windows.Forms.DataGridView();
             this.test = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -41,21 +41,21 @@ namespace HR
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewWorker
+            // dataGridViewContracts
             // 
-            this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
-            this.dataGridViewWorker.Name = "dataGridViewWorker";
-            this.dataGridViewWorker.Size = new System.Drawing.Size(800, 392);
-            this.dataGridViewWorker.TabIndex = 3;
+            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewContracts.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewContracts.Name = "dataGridViewContracts";
+            this.dataGridViewContracts.Size = new System.Drawing.Size(1052, 595);
+            this.dataGridViewContracts.TabIndex = 3;
             // 
             // test
             // 
@@ -126,7 +126,7 @@ namespace HR
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 58);
+            this.panel1.Size = new System.Drawing.Size(1052, 58);
             this.panel1.TabIndex = 2;
             // 
             // workerBindingSource
@@ -147,12 +147,14 @@ namespace HR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridViewWorker);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1052, 653);
+            this.Controls.Add(this.dataGridViewContracts);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContractsForm";
             this.Text = "ContractsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
@@ -164,7 +166,7 @@ namespace HR
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewWorker;
+        private System.Windows.Forms.DataGridView dataGridViewContracts;
         private System.Windows.Forms.TextBox test;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDelete;

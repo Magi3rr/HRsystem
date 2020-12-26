@@ -32,7 +32,7 @@ namespace HR
             //
 
         }
-        public void BtnWorkers_Click(object sender, EventArgs e)
+        private void BtnWorkers_Click(object sender, EventArgs e)
         {
             cf.Hide();
             SlidePanel(btnWorkers);
