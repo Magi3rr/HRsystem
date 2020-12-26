@@ -10,6 +10,9 @@ namespace HR
 {
     public partial class MainForm : Form
     {
+        WorkersForm wf = new WorkersForm();
+        ContractsForm cf = new ContractsForm();
+
         public MainForm()
         {
             InitializeComponent();
@@ -29,21 +32,17 @@ namespace HR
             //
 
         }
-        private void BtnWorkers_Click(object sender, EventArgs e)
+        public void BtnWorkers_Click(object sender, EventArgs e)
         {
+            cf.Hide();
             SlidePanel(btnWorkers);
-
-            WorkersForm wf = new WorkersForm();
             wf.TopLevel = false;
             centerPanel.Controls.Add(wf);
             wf.Show();
         }
 
-        private void BtnContrats_Click(object sender, EventArgs e)
-        {
-            SlidePanel(btnContracts);
-
-        }
+     
+        
 
         private void BtnSalary_Click(object sender, EventArgs e)
         {
@@ -57,7 +56,13 @@ namespace HR
 
         private void btnContracts_Click(object sender, EventArgs e)
         {
+            wf.Hide();
             SlidePanel(btnContracts);
+            cf.TopLevel = false;
+            centerPanel.Controls.Add(cf);
+            cf.Show();
         }
+
+        
     }
 }

@@ -28,6 +28,7 @@ namespace HR
         {
             if (IsvalidUser(textBox1.Text, textBox2.Text))
             {
+                MessageBox.Show("Zalogowano pomyślnie!", "Sukces");
                 Open();
             }
             else
@@ -47,25 +48,23 @@ namespace HR
         private bool IsvalidUser(string userName, string password)
         {
             var q = from p in Dblog.logintbs where p.name == userName && p.passw == password select p;
-       
-
             if (q.Any())
 
             {
-
                 return true;
-
             }
 
             else
 
-            {
-
+            { 
                 return false;
-
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 
 }

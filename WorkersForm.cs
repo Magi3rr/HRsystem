@@ -43,7 +43,7 @@ namespace HR
             
             DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
 
-
+           
 
             LoadWorkers();
             MessageBox.Show("Rekord usunięty");
@@ -75,7 +75,40 @@ namespace HR
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
         }
-       
 
+        private void test_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewWorker_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void workerBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gendersBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contractBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

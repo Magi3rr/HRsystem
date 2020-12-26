@@ -1,6 +1,7 @@
-﻿namespace HR
+﻿
+namespace HR
 {
-    partial class WorkersForm
+    partial class ContractsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,50 +30,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkersForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractsForm));
+            this.dataGridViewWorker = new System.Windows.Forms.DataGridView();
             this.test = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridViewWorker = new System.Windows.Forms.DataGridView();
-            this.Imie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nazwisko = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataUrodzenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PESEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // dataGridViewWorker
             // 
-            this.panel1.Controls.Add(this.test);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnEdit);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1052, 58);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewWorker.Name = "dataGridViewWorker";
+            this.dataGridViewWorker.Size = new System.Drawing.Size(800, 392);
+            this.dataGridViewWorker.TabIndex = 3;
             // 
             // test
             // 
             this.test.Location = new System.Drawing.Point(709, 13);
             this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(100, 25);
+            this.test.Size = new System.Drawing.Size(100, 20);
             this.test.TabIndex = 3;
-            this.test.TextChanged += new System.EventHandler(this.test_TextChanged);
             // 
             // button1
             // 
@@ -82,7 +72,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Odśwież";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDelete
             // 
@@ -97,7 +86,6 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -112,7 +100,6 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edytuj";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -129,86 +116,45 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridViewWorker
+            // panel1
             // 
-            this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Imie,
-            this.Nazwisko,
-            this.DataUrodzenia,
-            this.PESEL,
-            this.Genders});
-            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
-            this.dataGridViewWorker.Name = "dataGridViewWorker";
-            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
-            this.dataGridViewWorker.TabIndex = 1;
-            this.dataGridViewWorker.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWorker_CellContentClick);
-            // 
-            // Imie
-            // 
-            this.Imie.DataPropertyName = "Imie";
-            this.Imie.HeaderText = "Imie";
-            this.Imie.Name = "Imie";
-            // 
-            // Nazwisko
-            // 
-            this.Nazwisko.DataPropertyName = "Nazwisko";
-            this.Nazwisko.HeaderText = "Nazwisko";
-            this.Nazwisko.Name = "Nazwisko";
-            // 
-            // DataUrodzenia
-            // 
-            this.DataUrodzenia.DataPropertyName = "DataUrodzenia";
-            this.DataUrodzenia.HeaderText = "DataUrodzenia";
-            this.DataUrodzenia.Name = "DataUrodzenia";
-            // 
-            // PESEL
-            // 
-            this.PESEL.DataPropertyName = "PESEL";
-            this.PESEL.HeaderText = "PESEL";
-            this.PESEL.Name = "PESEL";
-            // 
-            // Genders
-            // 
-            this.Genders.DataPropertyName = "Genders";
-            this.Genders.HeaderText = "Genders";
-            this.Genders.Name = "Genders";
+            this.panel1.Controls.Add(this.test);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 58);
+            this.panel1.TabIndex = 2;
             // 
             // workerBindingSource
             // 
             this.workerBindingSource.DataMember = "Worker";
             this.workerBindingSource.DataSource = this.gendersBindingSource;
-            this.workerBindingSource.CurrentChanged += new System.EventHandler(this.workerBindingSource_CurrentChanged);
             // 
             // gendersBindingSource
             // 
             this.gendersBindingSource.DataSource = typeof(HR.Genders);
-            this.gendersBindingSource.CurrentChanged += new System.EventHandler(this.gendersBindingSource_CurrentChanged);
             // 
             // contractBindingSource
             // 
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
-            this.contractBindingSource.CurrentChanged += new System.EventHandler(this.contractBindingSource_CurrentChanged);
             // 
-            // WorkersForm
+            // ContractsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1052, 653);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridViewWorker);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "WorkersForm";
-            this.ShowIcon = false;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.WorkersForm_Load);
+            this.Name = "ContractsForm";
+            this.Text = "ContractsForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
@@ -218,20 +164,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dataGridViewWorker;
+        private System.Windows.Forms.TextBox test;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridViewWorker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Imie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nazwisko;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataUrodzenia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PESEL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genders;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
-        private System.Windows.Forms.TextBox test;
     }
 }
