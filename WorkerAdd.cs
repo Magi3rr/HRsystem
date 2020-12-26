@@ -41,22 +41,22 @@ namespace HR
             newWorker.Imie = txtName.Text;
             newWorker.Nazwisko = txtLastName.Text;
             newWorker.IdPłeć = 1;
-            //lbSex.DataSource = DatabaseHRWorkers.Genders;
-            //lbSex.DisplayMember = "Płeć";
-            //newWorker.IdPłeć = lbSex.DataBindings.Control;
-          
-          //  newWorker.DataUrodzenia = dtBirth.Value;
-          // newWorker.PESEL = txtPESEL.Text;
-          // newWorker.IdStatus = 1;
+            if (rbButtonFemale.Checked)
+            {
+                newWorker.IdPłeć = 2;
+            }
+            newWorker.DataUrodzenia = dtBirth.Value;
+            newWorker.PESEL = txtPESEL.Text;
+            newWorker.IdStatus = 1; // aktywny
 
-       //
+
            DatabaseHRWorkers.Worker.InsertOnSubmit(newWorker); 
            DatabaseHRWorkers.SubmitChanges();
            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
            workersForm.LoadWorkers();
-       // dodanie do bazy, refresh
+     
 
-            Close();
+           Close();
         }
 
         private void WorkerAdd_Load(object sender, EventArgs e)
