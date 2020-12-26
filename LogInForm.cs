@@ -18,7 +18,7 @@ namespace HR
         {
             InitializeComponent();
         }
-       
+
         private void BtnCloseLog_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -26,21 +26,13 @@ namespace HR
 
         private void BtnLogIn_Click(object sender, EventArgs e)
         {
-            
-            /* var user = (from w in Dblog.LogIn
-                        where s.Uzytkownik == textBox1.Text
-                        select w).First(); 
-            if (user.pass == textBox2.Text)
+            if (IsvalidUser(textBox1.Text, textBox2.Text))
             {
-                MainForm log = new MainForm();
-                log.Show();
+                Open();
             }
             else
-            {
-                MessageBox.Show("Bledne dane logowania");
+                MessageBox.Show("Niepoprawne dane logowania", "Ostrzeżenie");
 
-            }    */
-                Open();
         }
 
         public void Open()
@@ -51,5 +43,29 @@ namespace HR
                 this.Close();
             }
         }
+
+        private bool IsvalidUser(string userName, string password)
+        {
+            var q = from p in Dblog.logintbs where p.name == userName && p.passw == password select p;
+       
+
+            if (q.Any())
+
+            {
+
+                return true;
+
+            }
+
+            else
+
+            {
+
+                return false;
+
+            }
+        }
+
     }
+
 }
