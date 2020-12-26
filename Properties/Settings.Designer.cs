@@ -28,17 +28,6 @@ namespace HR.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\baza\\HR.mdf;I" +
             "ntegrated Security=True;Connect Timeout=30")]
-        public string HRConnectionString {
-            get {
-                return ((string)(this["HRConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR.mdf;Integr" +
-            "ated Security=True;Connect Timeout=30")]
         public string HRConnectionString1 {
             get {
                 return ((string)(this["HRConnectionString1"]));
