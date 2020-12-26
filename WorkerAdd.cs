@@ -37,17 +37,21 @@ namespace HR
         {
             Worker newWorker = new Worker();
             newWorker.Imie = txtName.Text;
-            newWorker.Nazwisko = txtLastName.Text;
+           newWorker.Nazwisko = txtLastName.Text;
             //lbSex.DataSource = DatabaseHRWorkers.Genders;
             //lbSex.DisplayMember = "Płeć";
             //newWorker.IdPłeć = lbSex.DataBindings.Control;
-            newWorker.DataUrodzenia = dtBirth.Value;
-            newWorker.PESEL = txtPESEL.Text;
-            //newWorker.IdStatus = 1;
+          
+          //  newWorker.DataUrodzenia = dtBirth.Value;
+          // newWorker.PESEL = txtPESEL.Text;
+          // newWorker.IdStatus = 1;
 
-
-            DatabaseHRWorkers.Worker.InsertOnSubmit(newWorker);
-            DatabaseHRWorkers.SubmitChanges();
+       //
+           DatabaseHRWorkers.Worker.InsertOnSubmit(newWorker); 
+           DatabaseHRWorkers.SubmitChanges();
+           var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
+           workersForm.LoadWorkers();
+       // dodanie do bazy, refresh
 
             Close();
         }
