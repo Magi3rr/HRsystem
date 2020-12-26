@@ -29,21 +29,20 @@ namespace HR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridViewWorker.SelectedRows)
+            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
+            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            
+            var query = from t in DatabaseHRWorkers.Worker where t.Id == index select t;
+
+            foreach (var t in query)
             {
-                
-                int rowId = Convert.ToInt32(row.Cells[0].Value);
-
-                
-                if (rowId > 0)
-                {
-                  
-                    
-
-                    
-                    dataGridViewWorker.Rows.RemoveAt(row.Index);
-                }
+                DatabaseHRWorkers.Worker.DeleteOnSubmit(t);
             }
+            
+            DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
+
 
 
             LoadWorkers();
@@ -57,8 +56,9 @@ namespace HR
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
 
+            WorkerAdd Adw = new WorkerAdd(); 
+            Adw.Show();
             LoadWorkers();
 
 

@@ -44,6 +44,7 @@
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.test = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.test);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
@@ -117,7 +119,7 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridView1
+            // dataGridViewWorker
             // 
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWorker.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -128,7 +130,7 @@
             this.Genders});
             this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
-            this.dataGridViewWorker.Name = "dataGridView1";
+            this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
             this.dataGridViewWorker.TabIndex = 1;
             // 
@@ -176,6 +178,13 @@
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(709, 13);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(100, 25);
+            this.test.TabIndex = 3;
+            // 
             // WorkersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -191,6 +200,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.WorkersForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
@@ -215,5 +225,6 @@
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
+        private System.Windows.Forms.TextBox test;
     }
 }
