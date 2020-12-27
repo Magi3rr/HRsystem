@@ -17,6 +17,15 @@ namespace HR
             InitializeComponent();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        private void btnEditWorker_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

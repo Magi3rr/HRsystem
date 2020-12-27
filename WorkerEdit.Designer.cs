@@ -71,7 +71,7 @@ namespace HR
             // txtLastName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtLastName, 2);
-            this.txtLastName.Location = new System.Drawing.Point(92, 34);
+            this.txtLastName.Location = new System.Drawing.Point(91, 34);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(400, 20);
             this.txtLastName.TabIndex = 6;
@@ -138,7 +138,7 @@ namespace HR
             // txtName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtName, 2);
-            this.txtName.Location = new System.Drawing.Point(92, 3);
+            this.txtName.Location = new System.Drawing.Point(91, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(400, 20);
             this.txtName.TabIndex = 5;
@@ -155,7 +155,7 @@ namespace HR
             // dtBirth
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(92, 99);
+            this.dtBirth.Location = new System.Drawing.Point(91, 99);
             this.dtBirth.Name = "dtBirth";
             this.dtBirth.Size = new System.Drawing.Size(400, 20);
             this.dtBirth.TabIndex = 16;
@@ -181,7 +181,7 @@ namespace HR
             // rbButtonMale
             // 
             this.rbButtonMale.AutoSize = true;
-            this.rbButtonMale.Location = new System.Drawing.Point(92, 63);
+            this.rbButtonMale.Location = new System.Drawing.Point(91, 63);
             this.rbButtonMale.Name = "rbButtonMale";
             this.rbButtonMale.Size = new System.Drawing.Size(78, 17);
             this.rbButtonMale.TabIndex = 18;
@@ -192,7 +192,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(334, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(329, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -204,12 +204,13 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(199, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(194, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
-            this.btnAddWorker.Text = "Dodaj";
+            this.btnAddWorker.Text = "Zatwierdź";
             this.btnAddWorker.UseVisualStyleBackColor = false;
+            this.btnAddWorker.Click += new System.EventHandler(this.btnEditWorker_Click);
             // 
             // btnCancel
             // 
@@ -221,13 +222,14 @@ namespace HR
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -260,7 +262,7 @@ namespace HR
             // txtStatus
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(92, 153);
+            this.txtStatus.Location = new System.Drawing.Point(91, 153);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(400, 20);
             this.txtStatus.TabIndex = 7;
@@ -268,7 +270,7 @@ namespace HR
             // txtPESEL
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtPESEL, 2);
-            this.txtPESEL.Location = new System.Drawing.Point(92, 131);
+            this.txtPESEL.Location = new System.Drawing.Point(91, 131);
             this.txtPESEL.Name = "txtPESEL";
             this.txtPESEL.Size = new System.Drawing.Size(400, 20);
             this.txtPESEL.TabIndex = 17;
@@ -306,20 +308,20 @@ namespace HR
         #endregion
 
         private System.Windows.Forms.BindingSource gendersBindingSource1;
-        private System.Windows.Forms.TextBox txtLastName;
+        public System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1Name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtBirth;
+        public System.Windows.Forms.DateTimePicker dtBirth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.TextBox txtPESEL;
-        private System.Windows.Forms.RadioButton rbButtonMale;
-        private System.Windows.Forms.RadioButton rbButtonFemale;
+        public System.Windows.Forms.TextBox txtStatus;
+        public System.Windows.Forms.TextBox txtPESEL;
+        public System.Windows.Forms.RadioButton rbButtonMale;
+        public System.Windows.Forms.RadioButton rbButtonFemale;
         private System.Windows.Forms.Button btnAddWorker;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.BindingSource workerBindingSource;

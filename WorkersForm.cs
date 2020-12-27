@@ -92,8 +92,20 @@ namespace HR
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //DatabaseHRDataContext dc = new DatabaseHRDataContext();
+            WorkerEdit we = new WorkerEdit();
 
+            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
+            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
+            we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();
+            
+            we.ShowDialog();
+
+
+
+            /*
             int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
@@ -111,14 +123,10 @@ namespace HR
                 select a;
 
             dataGridViewWorker.DataSource = SelectQuery;
-
-
-        }
-
-        private void dataGridViewWorker_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            */
 
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

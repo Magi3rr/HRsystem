@@ -151,39 +151,45 @@
             this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewWorker.Name = "dataGridViewWorker";
+            this.dataGridViewWorker.ReadOnly = true;
+            this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
             this.dataGridViewWorker.TabIndex = 1;
-            this.dataGridViewWorker.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWorker_CellContentClick);
             // 
             // Imie
             // 
             this.Imie.DataPropertyName = "Imie";
             this.Imie.HeaderText = "Imie";
             this.Imie.Name = "Imie";
+            this.Imie.ReadOnly = true;
             // 
             // Nazwisko
             // 
             this.Nazwisko.DataPropertyName = "Nazwisko";
             this.Nazwisko.HeaderText = "Nazwisko";
             this.Nazwisko.Name = "Nazwisko";
+            this.Nazwisko.ReadOnly = true;
             // 
             // DataUrodzenia
             // 
             this.DataUrodzenia.DataPropertyName = "DataUrodzenia";
             this.DataUrodzenia.HeaderText = "DataUrodzenia";
             this.DataUrodzenia.Name = "DataUrodzenia";
+            this.DataUrodzenia.ReadOnly = true;
             // 
             // PESEL
             // 
             this.PESEL.DataPropertyName = "PESEL";
             this.PESEL.HeaderText = "PESEL";
             this.PESEL.Name = "PESEL";
+            this.PESEL.ReadOnly = true;
             // 
             // Genders
             // 
             this.Genders.DataPropertyName = "Genders";
             this.Genders.HeaderText = "Genders";
             this.Genders.Name = "Genders";
+            this.Genders.ReadOnly = true;
             // 
             // workerBindingSource
             // 
