@@ -30,8 +30,6 @@ namespace HR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1Name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,46 +37,37 @@ namespace HR
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnAddWorker = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimeRozp = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButtonUZ = new System.Windows.Forms.RadioButton();
-            this.radioButtonUOP = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.numericUPWynagrodzenie = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxPrac = new System.Windows.Forms.CheckBox();
+            this.checkBoxKier = new System.Windows.Forms.CheckBox();
+            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.workerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUPWynagrodzenie = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxPrac = new System.Windows.Forms.CheckBox();
-            this.checkBoxKier = new System.Windows.Forms.CheckBox();
+            this.radioButtonUOP = new System.Windows.Forms.CheckBox();
+            this.radioButtonUZ = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).BeginInit();
             this.SuspendLayout();
-            // 
-            // workerBindingSource
-            // 
-            this.workerBindingSource.DataMember = "Worker";
-            this.workerBindingSource.DataSource = this.gendersBindingSource;
-            this.workerBindingSource.CurrentChanged += new System.EventHandler(this.workerBindingSource_CurrentChanged);
-            // 
-            // gendersBindingSource
-            // 
-            this.gendersBindingSource.DataSource = typeof(HR.Genders);
-            this.gendersBindingSource.CurrentChanged += new System.EventHandler(this.gendersBindingSource_CurrentChanged);
             // 
             // label1Name
             // 
@@ -110,7 +99,7 @@ namespace HR
             // dtBirth
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(92, 63);
+            this.dtBirth.Location = new System.Drawing.Point(91, 63);
             this.dtBirth.Name = "dtBirth";
             this.dtBirth.Size = new System.Drawing.Size(400, 20);
             this.dtBirth.TabIndex = 16;
@@ -146,16 +135,10 @@ namespace HR
             this.label5.Text = "Wynagrodzenie";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // workerBindingSource1
-            // 
-            this.workerBindingSource1.DataMember = "Worker";
-            this.workerBindingSource1.DataSource = this.gendersBindingSource;
-            this.workerBindingSource1.CurrentChanged += new System.EventHandler(this.workerBindingSource1_CurrentChanged);
-            // 
             // txtStatus
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(92, 153);
+            this.txtStatus.Location = new System.Drawing.Point(91, 153);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(400, 20);
             this.txtStatus.TabIndex = 7;
@@ -164,7 +147,7 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(197, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(195, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -177,7 +160,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel1.Controls.Add(this.dateTimeRozp, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
@@ -186,8 +169,6 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonUZ, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonUOP, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dtBirth, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
@@ -195,6 +176,8 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.numericUPWynagrodzenie, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxPrac, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxKier, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonUOP, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonUZ, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -213,7 +196,7 @@ namespace HR
             // dateTimeRozp
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeRozp, 2);
-            this.dateTimeRozp.Location = new System.Drawing.Point(92, 34);
+            this.dateTimeRozp.Location = new System.Drawing.Point(91, 34);
             this.dateTimeRozp.Name = "dateTimeRozp";
             this.dateTimeRozp.Size = new System.Drawing.Size(400, 20);
             this.dateTimeRozp.TabIndex = 23;
@@ -230,28 +213,6 @@ namespace HR
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButtonUZ
-            // 
-            this.radioButtonUZ.AutoSize = true;
-            this.radioButtonUZ.Location = new System.Drawing.Point(92, 3);
-            this.radioButtonUZ.Name = "radioButtonUZ";
-            this.radioButtonUZ.Size = new System.Drawing.Size(103, 17);
-            this.radioButtonUZ.TabIndex = 21;
-            this.radioButtonUZ.TabStop = true;
-            this.radioButtonUZ.Text = "Umowa zlecenie";
-            this.radioButtonUZ.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUOP
-            // 
-            this.radioButtonUOP.AutoSize = true;
-            this.radioButtonUOP.Location = new System.Drawing.Point(332, 3);
-            this.radioButtonUOP.Name = "radioButtonUOP";
-            this.radioButtonUOP.Size = new System.Drawing.Size(100, 17);
-            this.radioButtonUOP.TabIndex = 22;
-            this.radioButtonUOP.TabStop = true;
-            this.radioButtonUOP.Text = "Umowa o pracę";
-            this.radioButtonUOP.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -260,6 +221,59 @@ namespace HR
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Stanowisko";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 183);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(82, 21);
+            this.comboBox1.TabIndex = 27;
+            // 
+            // numericUPWynagrodzenie
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
+            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(91, 131);
+            this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
+            this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
+            this.numericUPWynagrodzenie.TabIndex = 28;
+            // 
+            // checkBoxPrac
+            // 
+            this.checkBoxPrac.AutoSize = true;
+            this.checkBoxPrac.Location = new System.Drawing.Point(330, 99);
+            this.checkBoxPrac.Name = "checkBoxPrac";
+            this.checkBoxPrac.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxPrac.TabIndex = 29;
+            this.checkBoxPrac.Text = "Pracownik";
+            this.checkBoxPrac.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxKier
+            // 
+            this.checkBoxKier.AutoSize = true;
+            this.checkBoxKier.Location = new System.Drawing.Point(91, 99);
+            this.checkBoxKier.Name = "checkBoxKier";
+            this.checkBoxKier.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxKier.TabIndex = 30;
+            this.checkBoxKier.Text = "Kierownik";
+            this.checkBoxKier.UseVisualStyleBackColor = true;
+            // 
+            // workerBindingSource
+            // 
+            this.workerBindingSource.DataMember = "Worker";
+            this.workerBindingSource.DataSource = this.gendersBindingSource;
+            this.workerBindingSource.CurrentChanged += new System.EventHandler(this.workerBindingSource_CurrentChanged);
+            // 
+            // gendersBindingSource
+            // 
+            this.gendersBindingSource.DataSource = typeof(HR.Genders);
+            this.gendersBindingSource.CurrentChanged += new System.EventHandler(this.gendersBindingSource_CurrentChanged);
+            // 
+            // workerBindingSource1
+            // 
+            this.workerBindingSource1.DataMember = "Worker";
+            this.workerBindingSource1.DataSource = this.gendersBindingSource;
+            this.workerBindingSource1.CurrentChanged += new System.EventHandler(this.workerBindingSource1_CurrentChanged);
             // 
             // workerBindingSource2
             // 
@@ -286,41 +300,25 @@ namespace HR
             this.gendersBindingSource2.DataSource = typeof(HR.Genders);
             this.gendersBindingSource2.CurrentChanged += new System.EventHandler(this.gendersBindingSource2_CurrentChanged);
             // 
-            // comboBox1
+            // radioButtonUOP
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(83, 21);
-            this.comboBox1.TabIndex = 27;
+            this.radioButtonUOP.AutoSize = true;
+            this.radioButtonUOP.Location = new System.Drawing.Point(330, 3);
+            this.radioButtonUOP.Name = "radioButtonUOP";
+            this.radioButtonUOP.Size = new System.Drawing.Size(101, 17);
+            this.radioButtonUOP.TabIndex = 31;
+            this.radioButtonUOP.Text = "Umowa o pracę";
+            this.radioButtonUOP.UseVisualStyleBackColor = true;
             // 
-            // numericUPWynagrodzenie
+            // radioButtonUZ
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
-            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(92, 131);
-            this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
-            this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
-            this.numericUPWynagrodzenie.TabIndex = 28;
-            // 
-            // checkBoxPrac
-            // 
-            this.checkBoxPrac.AutoSize = true;
-            this.checkBoxPrac.Location = new System.Drawing.Point(332, 99);
-            this.checkBoxPrac.Name = "checkBoxPrac";
-            this.checkBoxPrac.Size = new System.Drawing.Size(76, 17);
-            this.checkBoxPrac.TabIndex = 29;
-            this.checkBoxPrac.Text = "Pracownik";
-            this.checkBoxPrac.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxKier
-            // 
-            this.checkBoxKier.AutoSize = true;
-            this.checkBoxKier.Location = new System.Drawing.Point(92, 99);
-            this.checkBoxKier.Name = "checkBoxKier";
-            this.checkBoxKier.Size = new System.Drawing.Size(72, 17);
-            this.checkBoxKier.TabIndex = 30;
-            this.checkBoxKier.Text = "Kierownik";
-            this.checkBoxKier.UseVisualStyleBackColor = true;
+            this.radioButtonUZ.AutoSize = true;
+            this.radioButtonUZ.Location = new System.Drawing.Point(91, 3);
+            this.radioButtonUZ.Name = "radioButtonUZ";
+            this.radioButtonUZ.Size = new System.Drawing.Size(104, 17);
+            this.radioButtonUZ.TabIndex = 32;
+            this.radioButtonUZ.Text = "Umowa zlecenie";
+            this.radioButtonUZ.UseVisualStyleBackColor = true;
             // 
             // ContractsAdd
             // 
@@ -334,17 +332,17 @@ namespace HR
             this.Name = "ContractsAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContractAdd";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,8 +368,6 @@ namespace HR
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource workerBindingSource1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButtonUZ;
-        private System.Windows.Forms.RadioButton radioButtonUOP;
         private System.Windows.Forms.DateTimePicker dateTimeRozp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource workerBindingSource2;
@@ -379,5 +375,7 @@ namespace HR
         private System.Windows.Forms.NumericUpDown numericUPWynagrodzenie;
         private System.Windows.Forms.CheckBox checkBoxPrac;
         private System.Windows.Forms.CheckBox checkBoxKier;
+        private System.Windows.Forms.CheckBox radioButtonUOP;
+        private System.Windows.Forms.CheckBox radioButtonUZ;
     }
 }
