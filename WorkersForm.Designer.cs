@@ -45,6 +45,7 @@
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.test1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.test1);
             this.panel1.Controls.Add(this.test);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDelete);
@@ -192,6 +194,13 @@
             this.contractBindingSource.DataSource = this.workerBindingSource;
             this.contractBindingSource.CurrentChanged += new System.EventHandler(this.contractBindingSource_CurrentChanged);
             // 
+            // test1
+            // 
+            this.test1.Location = new System.Drawing.Point(855, 12);
+            this.test1.Name = "test1";
+            this.test1.Size = new System.Drawing.Size(100, 25);
+            this.test1.TabIndex = 4;
+            // 
             // WorkersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -233,5 +242,6 @@
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
         private System.Windows.Forms.TextBox test;
+        private System.Windows.Forms.TextBox test1;
     }
 }

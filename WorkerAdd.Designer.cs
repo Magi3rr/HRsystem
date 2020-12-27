@@ -45,6 +45,7 @@ namespace HR
             this.rbButtonMale = new System.Windows.Forms.RadioButton();
             this.rbButtonFemale = new System.Windows.Forms.RadioButton();
             this.btnAddWorker = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,6 @@ namespace HR
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).BeginInit();
@@ -120,7 +120,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -207,7 +207,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(337, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(336, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -219,13 +219,25 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(202, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(201, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
             this.btnAddWorker.Text = "Dodaj";
             this.btnAddWorker.UseVisualStyleBackColor = false;
             this.btnAddWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCancel.Location = new System.Drawing.Point(407, 247);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(129, 32);
+            this.btnCancel.TabIndex = 20;
+            this.btnCancel.Text = "Anuluj";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label6
             // 
@@ -268,18 +280,6 @@ namespace HR
             // gendersBindingSource1
             // 
             this.gendersBindingSource1.DataSource = typeof(HR.Genders);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCancel.Location = new System.Drawing.Point(407, 247);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(129, 32);
-            this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Anuluj";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // WorkerAdd
             // 

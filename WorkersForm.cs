@@ -29,11 +29,12 @@ namespace HR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
+            
+            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;              
             DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+            test.Text = index.ToString();
 
-            
             var query = from t in DatabaseHRWorkers.Worker where t.Id == index select t;
 
             foreach (var t in query)
@@ -71,7 +72,7 @@ namespace HR
 
         private void WorkersForm_Load(object sender, EventArgs e)
         {
-            DatabaseHRDataContext cd = new DatabaseHRDataContext();
+            //DatabaseHRDataContext cd = new DatabaseHRDataContext();
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
         }
@@ -83,6 +84,26 @@ namespace HR
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            //DatabaseHRDataContext dc = new DatabaseHRDataContext();
+
+            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
+            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+            Worker wrk = DatabaseHRWorkers.Worker.FirstOrDefault(wrk1 => wrk1.Id.Equals(index));
+            //test.Text = index.ToString();
+            
+
+            wrk.Imie = "zzz";
+            wrk.Nazwisko = "zzzzz";
+
+            DatabaseHRWorkers.SubmitChanges();
+
+            var SelectQuery =
+                from a in DatabaseHRWorkers.GetTable<Worker>()
+                select a;
+
+            dataGridViewWorker.DataSource = SelectQuery;
+
 
         }
 
