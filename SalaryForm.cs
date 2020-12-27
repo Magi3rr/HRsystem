@@ -10,27 +10,49 @@ using System.Windows.Forms;
 
 namespace HR
 {
-   
+
     public partial class SalaryForm : Form
     {
 
         DatabaseHRDataContext DatabaseHRSalary = new DatabaseHRDataContext();
-
+        DatabaseHRDataContext DatabaseHRConctract = new DatabaseHRDataContext();
 
         public SalaryForm()
         {
             InitializeComponent();
-            LoadSalary();
+           // LoadSalary();
 
         }
+
         public void LoadSalary()
         {
 
-            var sal = (from x in DatabaseHRSalary.Positions select x).ToList();
-            dataGridViewSalary.DataSource = sal;
+
+            var stu = (from DatabaseHRSalary in DatabaseHRSalary.TypeContracts join DatabaseHRConctract in DatabaseHRConctract.Contract on DatabaseHRSalary.Id equals DatabaseHRConctract.Id
+
+                       select new
+                      {
+                         DatabaseHRSalary.TypUmowy,
+                         DatabaseHRSalary.Id,
+                         DatabaseHRConctract.DataRozpoczęcia
+                       });
+
+            dataGridViewSalary.DataSource = stu.ToList();
+
+
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public class TestLinqToSql
+        {
+            public int ReportId { get; set; }
+            public string ReportName { get; set; }
+            public string FormatName { get; set; }
+        }
+
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             LoadSalary();
         }

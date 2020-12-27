@@ -13,6 +13,7 @@ namespace HR
         WorkersForm wf = new WorkersForm();
         ContractsForm cf = new ContractsForm();
         SalaryForm sf = new SalaryForm();
+        PositionForm pf = new PositionForm();
 
         public MainForm()
         {
@@ -35,8 +36,7 @@ namespace HR
         }
         private void BtnWorkers_Click(object sender, EventArgs e)
         {
-            cf.Hide();
-            sf.Hide();
+            hide();
             SlidePanel(btnWorkers);
             wf.TopLevel = false;
             centerPanel.Controls.Add(wf);
@@ -48,8 +48,7 @@ namespace HR
 
         private void BtnSalary_Click(object sender, EventArgs e)
         {
-            wf.Hide();
-            cf.Hide();
+            hide();
             SlidePanel(btnSalary);
             sf.TopLevel = false;
             centerPanel.Controls.Add(sf);
@@ -58,17 +57,33 @@ namespace HR
 
         private void BtnPosition_Click(object sender, EventArgs e)
         {
+            hide();
             SlidePanel(btnPosition);
+            pf.TopLevel = false;
+            centerPanel.Controls.Add(pf);
+            pf.Show();
+
+
+
+
         }
 
         private void btnContracts_Click(object sender, EventArgs e)
         {
-            wf.Hide();
-            sf.Hide();
+            hide();
             SlidePanel(btnContracts);
             cf.TopLevel = false;
             centerPanel.Controls.Add(cf);
             cf.Show();
+        }
+
+        private void hide()
+        {
+            wf.Hide();
+            sf.Hide();
+            pf.Hide();
+            cf.Hide();
+
         }
 
         
