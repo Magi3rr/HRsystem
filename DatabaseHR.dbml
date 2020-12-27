@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HR" Class="DatabaseHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="HR.Properties.Settings" SettingsPropertyName="HRConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\baza\HR.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="HR.Properties.Settings" SettingsPropertyName="HRConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Workers" Member="Worker">
     <Type Name="Worker">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

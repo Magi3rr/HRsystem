@@ -35,5 +35,15 @@ namespace HR
             Adw.Show();
             LoadContracts();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //del
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            //modyf
+        }
     }
 }

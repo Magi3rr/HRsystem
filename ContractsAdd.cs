@@ -12,6 +12,7 @@ namespace HR
 {
     public partial class ContractsAdd : Form
     {
+        DatabaseHRDataContext DatabaseHRContracts = new DatabaseHRDataContext();
         public ContractsAdd()
         {
             InitializeComponent();
@@ -71,5 +72,84 @@ namespace HR
         {
             this.Hide();
         }
+
+        private void btnAddContract_Click(object sender, EventArgs e)
+        {
+            Contract newContract = new Contract();
+        /*
+
+            if (numericUPWynagrodzenie.Value < 99)
+            {
+                MessageBox.Show("Wynagrodzenie jest mniejsze od bazowej kwoty");
+
+            }
+            else if (weryfikacja()== false)
+            {
+                newContract.IdTypUmowy = 1;
+                if (radioButtonUOP.Checked)
+                {
+
+                    newContract.IdTypUmowy = 2;
+                }
+                newContract.DataRozpoczęcia = dtBirth.Value;
+                newContract.DataZakończenia = dtBirth.Value;
+                newContract.IdStanowisko = 1;
+                if (radioButtonKierownik.Checked)
+                {
+                    newContract.IdStanowisko = 2;
+                }
+                newContract.Wynagrodzenie = numericUPWynagrodzenie.Value;
+                //newContract.IdPracownik =
+            }
+        */
+            newContract.IdTypUmowy = 1;
+            if (radioButtonUOP.Checked)
+            {
+
+                newContract.IdTypUmowy = 2;
+            }
+            newContract.DataRozpoczęcia = dtBirth.Value;
+            newContract.DataZakończenia = dtBirth.Value;
+            newContract.IdStanowisko = 1;
+            if (checkBoxKier.Checked)
+            {
+                newContract.IdStanowisko = 2;
+            }
+            newContract.Wynagrodzenie = numericUPWynagrodzenie.Value;
+            newContract.IdPracownik = 30; //wymaga dodania listy rozwijanej typu 
+
+
+            DatabaseHRContracts.Contract.InsertOnSubmit(newContract);
+            DatabaseHRContracts.SubmitChanges();
+            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
+            workersForm.LoadContracts();
+
+
+            Close();
+
+
+
+        }
+
+        bool weryfikacja()
+        {
+
+            if (numericUPWynagrodzenie.Value.ToString() == "" || dtBirth.Value.ToString() == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
