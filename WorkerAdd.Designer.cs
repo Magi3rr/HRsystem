@@ -67,7 +67,7 @@ namespace HR
             // txtName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtName, 2);
-            this.txtName.Location = new System.Drawing.Point(81, 3);
+            this.txtName.Location = new System.Drawing.Point(93, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(400, 20);
             this.txtName.TabIndex = 5;
@@ -75,7 +75,7 @@ namespace HR
             // txtLastName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtLastName, 2);
-            this.txtLastName.Location = new System.Drawing.Point(81, 34);
+            this.txtLastName.Location = new System.Drawing.Point(93, 34);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(400, 20);
             this.txtLastName.TabIndex = 6;
@@ -83,7 +83,7 @@ namespace HR
             // txtStatus
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(81, 153);
+            this.txtStatus.Location = new System.Drawing.Point(93, 153);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(400, 20);
             this.txtStatus.TabIndex = 7;
@@ -147,7 +147,7 @@ namespace HR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(495, 282);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 282);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // label3
@@ -155,14 +155,14 @@ namespace HR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 26);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Data urodzenia";
             // 
             // dtBirth
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(81, 99);
+            this.dtBirth.Location = new System.Drawing.Point(93, 99);
             this.dtBirth.Name = "dtBirth";
             this.dtBirth.Size = new System.Drawing.Size(400, 20);
             this.dtBirth.TabIndex = 16;
@@ -188,7 +188,7 @@ namespace HR
             // txtPESEL
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtPESEL, 2);
-            this.txtPESEL.Location = new System.Drawing.Point(81, 131);
+            this.txtPESEL.Location = new System.Drawing.Point(93, 131);
             this.txtPESEL.Name = "txtPESEL";
             this.txtPESEL.Size = new System.Drawing.Size(400, 20);
             this.txtPESEL.TabIndex = 17;
@@ -196,7 +196,7 @@ namespace HR
             // rbButtonMale
             // 
             this.rbButtonMale.AutoSize = true;
-            this.rbButtonMale.Location = new System.Drawing.Point(81, 63);
+            this.rbButtonMale.Location = new System.Drawing.Point(93, 63);
             this.rbButtonMale.Name = "rbButtonMale";
             this.rbButtonMale.Size = new System.Drawing.Size(78, 17);
             this.rbButtonMale.TabIndex = 18;
@@ -207,7 +207,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(292, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(336, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -219,7 +219,7 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(157, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(201, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -231,7 +231,7 @@ namespace HR
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCancel.Location = new System.Drawing.Point(363, 247);
+            this.btnCancel.Location = new System.Drawing.Point(407, 247);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 32);
             this.btnCancel.TabIndex = 20;
