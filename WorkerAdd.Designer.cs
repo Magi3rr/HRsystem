@@ -120,7 +120,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -207,7 +207,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(335, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(334, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -219,7 +219,7 @@ namespace HR
             // 
             this.btnEditWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditWorker.Location = new System.Drawing.Point(200, 247);
+            this.btnEditWorker.Location = new System.Drawing.Point(199, 247);
             this.btnEditWorker.Name = "btnEditWorker";
             this.btnEditWorker.Size = new System.Drawing.Size(129, 32);
             this.btnEditWorker.TabIndex = 12;

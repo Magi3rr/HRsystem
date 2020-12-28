@@ -15,6 +15,8 @@ namespace HR
         SalaryForm sf = new SalaryForm();
         PositionForm pf = new PositionForm();
 
+        public static DatabaseHRDataContext DatabaseHRDataConnection = new DatabaseHRDataContext();
+        
         public MainForm()
         {
             InitializeComponent();

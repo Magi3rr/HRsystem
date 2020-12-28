@@ -14,8 +14,7 @@ namespace HR
     public partial class SalaryForm : Form
     {
 
-        DatabaseHRDataContext DatabaseHRSalary = new DatabaseHRDataContext();
-        DatabaseHRDataContext DatabaseHRConctract = new DatabaseHRDataContext();
+        
 
         public SalaryForm()
         {
@@ -28,7 +27,7 @@ namespace HR
         {
 
 
-            var stu = (from DatabaseHRSalary in DatabaseHRSalary.TypeContracts join DatabaseHRConctract in DatabaseHRConctract.Contract on DatabaseHRSalary.Id equals DatabaseHRConctract.Id
+           var stu = (from DatabaseHRSalary in MainForm.DatabaseHRDataConnection.TypeContracts join DatabaseHRConctract in MainForm.DatabaseHRDataConnection.Contract on DatabaseHRSalary.Id equals DatabaseHRConctract.Id
 
                        select new
                       {
@@ -42,14 +41,6 @@ namespace HR
 
 
         }
-
-        public class TestLinqToSql
-        {
-            public int ReportId { get; set; }
-            public string ReportName { get; set; }
-            public string FormatName { get; set; }
-        }
-
        
 
         private void button1_Click_1(object sender, EventArgs e)
