@@ -92,14 +92,14 @@ namespace HR
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            WorkerEdit we = new WorkerEdit();
+            
 
             int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-
-            we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
-            we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();
+            WorkerEdit we = new WorkerEdit(DatabaseHRWorkers, index);
+            //we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
+            //we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();
             
             we.ShowDialog();
 

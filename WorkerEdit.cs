@@ -12,9 +12,17 @@ namespace HR
 {
     public partial class WorkerEdit : Form
     {
-        public WorkerEdit()
+        DatabaseHRDataContext DatabaseHRWorkers;
+        Worker w;
+        public WorkerEdit(DatabaseHRDataContext DatabaseHRWorkers, int id)
         {
             InitializeComponent();
+
+            this.DatabaseHRWorkers = DatabaseHRWorkers;
+            w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
+            txtName.Text = w.Imie;
+
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -24,7 +32,8 @@ namespace HR
 
         private void btnEditWorker_Click(object sender, EventArgs e)
         {
-            
+            w.Imie = txtName.Text;
+            DatabaseHRWorkers.SubmitChanges();
 
         }
     }

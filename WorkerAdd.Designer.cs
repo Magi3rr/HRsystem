@@ -32,7 +32,6 @@ namespace HR
             this.components = new System.ComponentModel.Container();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label1Name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@ namespace HR
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource2)).BeginInit();
@@ -79,14 +79,6 @@ namespace HR
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(400, 20);
             this.txtLastName.TabIndex = 6;
-            // 
-            // txtStatus
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(92, 153);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(400, 20);
-            this.txtStatus.TabIndex = 7;
             // 
             // label1Name
             // 
@@ -120,7 +112,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -130,12 +122,12 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.dtBirth, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtStatus, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtPESEL, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.rbButtonMale, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.rbButtonFemale, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnEditWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.listBox1, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -207,7 +199,7 @@ namespace HR
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(335, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(334, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(61, 17);
             this.rbButtonFemale.TabIndex = 19;
@@ -219,7 +211,7 @@ namespace HR
             // 
             this.btnEditWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditWorker.Location = new System.Drawing.Point(200, 247);
+            this.btnEditWorker.Location = new System.Drawing.Point(199, 247);
             this.btnEditWorker.Name = "btnEditWorker";
             this.btnEditWorker.Size = new System.Drawing.Size(129, 32);
             this.btnEditWorker.TabIndex = 12;
@@ -281,6 +273,14 @@ namespace HR
             // 
             this.gendersBindingSource1.DataSource = typeof(HR.Genders);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(92, 153);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(236, 17);
+            this.listBox1.TabIndex = 21;
+            // 
             // WorkerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +311,6 @@ namespace HR
         #endregion
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label1Name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -333,5 +332,6 @@ namespace HR
         private System.Windows.Forms.RadioButton rbButtonMale;
         private System.Windows.Forms.RadioButton rbButtonFemale;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
