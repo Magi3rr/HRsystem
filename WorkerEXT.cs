@@ -10,7 +10,7 @@ namespace HR
     {
         public override string ToString()
         {
-            return Imie + " Płeć: " + IdPłeć;
+            return Name + " Płeć: " + IdSex;
            
         }
     }

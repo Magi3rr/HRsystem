@@ -28,7 +28,8 @@ namespace HR
         {
             if (IsvalidUser(textBox1.Text, textBox2.Text))
             {
-                
+              
+             
                 Open();
             }
             else

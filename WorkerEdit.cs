@@ -19,8 +19,8 @@ namespace HR
             InitializeComponent();
 
             this.DatabaseHRWorkers = DatabaseHRWorkers;
-            w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
-            txtName.Text = w.Imie;
+            w = DatabaseHRWorkers.Workers.Single(x => x.Id == id);
+            txtName.Text = w.Name;
 
             
         }
@@ -32,7 +32,7 @@ namespace HR
 
         private void btnEditWorker_Click(object sender, EventArgs e)
         {
-            w.Imie = txtName.Text;
+            w.Name = txtName.Text;
             DatabaseHRWorkers.SubmitChanges();
 
         }

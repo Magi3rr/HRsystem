@@ -31,9 +31,10 @@ namespace HR
 
                        select new
                       {
-                         DatabaseHRSalary.TypUmowy,
+                         DatabaseHRSalary.typeContract,
                          DatabaseHRSalary.Id,
-                         DatabaseHRConctract.DataRozpoczęcia
+                         DatabaseHRConctract.dtStartContract,
+                         DatabaseHRConctract.dtEndContract
                        });
 
             dataGridViewSalary.DataSource = stu.ToList();

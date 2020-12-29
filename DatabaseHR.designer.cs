@@ -83,7 +83,7 @@ namespace HR
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Worker> Worker
+		public System.Data.Linq.Table<Worker> Workers
 		{
 			get
 			{
@@ -172,16 +172,16 @@ namespace HR
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnImieChanging(string value);
-    partial void OnImieChanged();
-    partial void OnNazwiskoChanging(string value);
-    partial void OnNazwiskoChanged();
-    partial void OnIdPłećChanging(int value);
-    partial void OnIdPłećChanged();
-    partial void OnDataUrodzeniaChanging(System.DateTime value);
-    partial void OnDataUrodzeniaChanged();
-    partial void OnPESELChanging(string value);
-    partial void OnPESELChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnSurnameChanging(string value);
+    partial void OnSurnameChanged();
+    partial void OnIdSexChanging(int value);
+    partial void OnIdSexChanged();
+    partial void OndtBirthChanging(System.DateTime value);
+    partial void OndtBirthChanged();
+    partial void OnPeselChanging(string value);
+    partial void OnPeselChanged();
     partial void OnIdStatusChanging(System.Nullable<int> value);
     partial void OnIdStatusChanged();
     #endregion
@@ -215,7 +215,7 @@ namespace HR
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imie", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string Imie
+		public string Name
 		{
 			get
 			{
@@ -225,17 +225,17 @@ namespace HR
 			{
 				if ((this._Imie != value))
 				{
-					this.OnImieChanging(value);
+					this.OnNameChanging(value);
 					this.SendPropertyChanging();
 					this._Imie = value;
-					this.SendPropertyChanged("Imie");
-					this.OnImieChanged();
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwisko", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string Nazwisko
+		public string Surname
 		{
 			get
 			{
@@ -245,17 +245,17 @@ namespace HR
 			{
 				if ((this._Nazwisko != value))
 				{
-					this.OnNazwiskoChanging(value);
+					this.OnSurnameChanging(value);
 					this.SendPropertyChanging();
 					this._Nazwisko = value;
-					this.SendPropertyChanged("Nazwisko");
-					this.OnNazwiskoChanged();
+					this.SendPropertyChanged("Surname");
+					this.OnSurnameChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Płeć", DbType="Int NOT NULL")]
-		public int IdPłeć
+		public int IdSex
 		{
 			get
 			{
@@ -269,17 +269,17 @@ namespace HR
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnIdPłećChanging(value);
+					this.OnIdSexChanging(value);
 					this.SendPropertyChanging();
 					this._Płeć = value;
-					this.SendPropertyChanged("IdPłeć");
-					this.OnIdPłećChanged();
+					this.SendPropertyChanged("IdSex");
+					this.OnIdSexChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data_urodzenia", DbType="Date NOT NULL")]
-		public System.DateTime DataUrodzenia
+		public System.DateTime dtBirth
 		{
 			get
 			{
@@ -289,17 +289,17 @@ namespace HR
 			{
 				if ((this._Data_urodzenia != value))
 				{
-					this.OnDataUrodzeniaChanging(value);
+					this.OndtBirthChanging(value);
 					this.SendPropertyChanging();
 					this._Data_urodzenia = value;
-					this.SendPropertyChanged("DataUrodzenia");
-					this.OnDataUrodzeniaChanged();
+					this.SendPropertyChanged("dtBirth");
+					this.OndtBirthChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PESEL", DbType="NChar(10) NOT NULL", CanBeNull=false)]
-		public string PESEL
+		public string Pesel
 		{
 			get
 			{
@@ -309,11 +309,11 @@ namespace HR
 			{
 				if ((this._PESEL != value))
 				{
-					this.OnPESELChanging(value);
+					this.OnPeselChanging(value);
 					this.SendPropertyChanging();
 					this._PESEL = value;
-					this.SendPropertyChanged("PESEL");
-					this.OnPESELChanged();
+					this.SendPropertyChanged("Pesel");
+					this.OnPeselChanged();
 				}
 			}
 		}
@@ -342,7 +342,7 @@ namespace HR
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Worker_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdPracownik")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Worker_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdWorker")]
 		public EntitySet<Contract> Contract
 		{
 			get
@@ -355,7 +355,7 @@ namespace HR
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genders_Worker", Storage="_Genders", ThisKey="IdPłeć", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genders_Worker", Storage="_Genders", ThisKey="IdSex", OtherKey="Id", IsForeignKey=true)]
 		public Genders Genders
 		{
 			get
@@ -488,18 +488,18 @@ namespace HR
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnIdTypUmowyChanging(int value);
-    partial void OnIdTypUmowyChanged();
-    partial void OnDataRozpoczęciaChanging(System.DateTime value);
-    partial void OnDataRozpoczęciaChanged();
-    partial void OnDataZakończeniaChanging(System.DateTime value);
-    partial void OnDataZakończeniaChanged();
-    partial void OnIdStanowiskoChanging(int value);
-    partial void OnIdStanowiskoChanged();
-    partial void OnWynagrodzenieChanging(decimal value);
-    partial void OnWynagrodzenieChanged();
-    partial void OnIdPracownikChanging(int value);
-    partial void OnIdPracownikChanged();
+    partial void OnIdContractTypeChanging(int value);
+    partial void OnIdContractTypeChanged();
+    partial void OndtStartContractChanging(System.DateTime value);
+    partial void OndtStartContractChanged();
+    partial void OndtEndContractChanging(System.DateTime value);
+    partial void OndtEndContractChanged();
+    partial void OnIdPositionChanging(int value);
+    partial void OnIdPositionChanged();
+    partial void OnSalaryChanging(decimal value);
+    partial void OnSalaryChanged();
+    partial void OnIdWorkerChanging(int value);
+    partial void OnIdWorkerChanged();
     #endregion
 		
 		public Contract()
@@ -531,7 +531,7 @@ namespace HR
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rodzaj_umowy", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL")]
-		public int IdTypUmowy
+		public int IdContractType
 		{
 			get
 			{
@@ -545,17 +545,17 @@ namespace HR
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnIdTypUmowyChanging(value);
+					this.OnIdContractTypeChanging(value);
 					this.SendPropertyChanging();
 					this._Rodzaj_umowy = value;
-					this.SendPropertyChanged("IdTypUmowy");
-					this.OnIdTypUmowyChanged();
+					this.SendPropertyChanged("IdContractType");
+					this.OnIdContractTypeChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data_zawarcia", DbType="Date NOT NULL")]
-		public System.DateTime DataRozpoczęcia
+		public System.DateTime dtStartContract
 		{
 			get
 			{
@@ -565,17 +565,17 @@ namespace HR
 			{
 				if ((this._Data_zawarcia != value))
 				{
-					this.OnDataRozpoczęciaChanging(value);
+					this.OndtStartContractChanging(value);
 					this.SendPropertyChanging();
 					this._Data_zawarcia = value;
-					this.SendPropertyChanged("DataRozpoczęcia");
-					this.OnDataRozpoczęciaChanged();
+					this.SendPropertyChanged("dtStartContract");
+					this.OndtStartContractChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Okres_umowy", DbType="Date NOT NULL")]
-		public System.DateTime DataZakończenia
+		public System.DateTime dtEndContract
 		{
 			get
 			{
@@ -585,17 +585,17 @@ namespace HR
 			{
 				if ((this._Okres_umowy != value))
 				{
-					this.OnDataZakończeniaChanging(value);
+					this.OndtEndContractChanging(value);
 					this.SendPropertyChanging();
 					this._Okres_umowy = value;
-					this.SendPropertyChanged("DataZakończenia");
-					this.OnDataZakończeniaChanged();
+					this.SendPropertyChanged("dtEndContract");
+					this.OndtEndContractChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stanowisko", DbType="Int NOT NULL")]
-		public int IdStanowisko
+		public int IdPosition
 		{
 			get
 			{
@@ -609,17 +609,17 @@ namespace HR
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnIdStanowiskoChanging(value);
+					this.OnIdPositionChanging(value);
 					this.SendPropertyChanging();
 					this._Stanowisko = value;
-					this.SendPropertyChanged("IdStanowisko");
-					this.OnIdStanowiskoChanged();
+					this.SendPropertyChanged("IdPosition");
+					this.OnIdPositionChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kwota_bazowa", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Wynagrodzenie
+		public decimal Salary
 		{
 			get
 			{
@@ -629,17 +629,17 @@ namespace HR
 			{
 				if ((this._Kwota_bazowa != value))
 				{
-					this.OnWynagrodzenieChanging(value);
+					this.OnSalaryChanging(value);
 					this.SendPropertyChanging();
 					this._Kwota_bazowa = value;
-					this.SendPropertyChanged("Wynagrodzenie");
-					this.OnWynagrodzenieChanged();
+					this.SendPropertyChanged("Salary");
+					this.OnSalaryChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPracownik", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL")]
-		public int IdPracownik
+		public int IdWorker
 		{
 			get
 			{
@@ -653,16 +653,16 @@ namespace HR
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnIdPracownikChanging(value);
+					this.OnIdWorkerChanging(value);
 					this.SendPropertyChanging();
 					this._IdPracownik = value;
-					this.SendPropertyChanged("IdPracownik");
-					this.OnIdPracownikChanged();
+					this.SendPropertyChanged("IdWorker");
+					this.OnIdWorkerChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Positions_Contract", Storage="_Positions", ThisKey="IdStanowisko", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Positions_Contract", Storage="_Positions", ThisKey="IdPosition", OtherKey="Id", IsForeignKey=true)]
 		public Positions Positions
 		{
 			get
@@ -696,7 +696,7 @@ namespace HR
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypeContracts_Contract", Storage="_TypeContracts", ThisKey="IdTypUmowy", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypeContracts_Contract", Storage="_TypeContracts", ThisKey="IdContractType", OtherKey="Id", IsForeignKey=true)]
 		public TypeContracts TypeContracts
 		{
 			get
@@ -730,7 +730,7 @@ namespace HR
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Worker_Contract", Storage="_Worker", ThisKey="IdPracownik", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Worker_Contract", Storage="_Worker", ThisKey="IdWorker", OtherKey="Id", IsForeignKey=true)]
 		public Worker Worker
 		{
 			get
@@ -803,8 +803,8 @@ namespace HR
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnPłećChanging(string value);
-    partial void OnPłećChanged();
+    partial void OnSexChanging(string value);
+    partial void OnSexChanged();
     #endregion
 		
 		public Genders()
@@ -834,7 +834,7 @@ namespace HR
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Płeć", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string Płeć
+		public string Sex
 		{
 			get
 			{
@@ -844,16 +844,16 @@ namespace HR
 			{
 				if ((this._Płeć != value))
 				{
-					this.OnPłećChanging(value);
+					this.OnSexChanging(value);
 					this.SendPropertyChanging();
 					this._Płeć = value;
-					this.SendPropertyChanged("Płeć");
-					this.OnPłećChanged();
+					this.SendPropertyChanged("Sex");
+					this.OnSexChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genders_Worker", Storage="_Worker", ThisKey="Id", OtherKey="IdPłeć")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genders_Worker", Storage="_Worker", ThisKey="Id", OtherKey="IdSex")]
 		public EntitySet<Worker> Worker
 		{
 			get
@@ -917,8 +917,8 @@ namespace HR
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnStanowiskoChanging(string value);
-    partial void OnStanowiskoChanged();
+    partial void OnWorkerPositionChanging(string value);
+    partial void OnWorkerPositionChanged();
     #endregion
 		
 		public Positions()
@@ -948,7 +948,7 @@ namespace HR
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stanowisko", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string Stanowisko
+		public string WorkerPosition
 		{
 			get
 			{
@@ -958,16 +958,16 @@ namespace HR
 			{
 				if ((this._Stanowisko != value))
 				{
-					this.OnStanowiskoChanging(value);
+					this.OnWorkerPositionChanging(value);
 					this.SendPropertyChanging();
 					this._Stanowisko = value;
-					this.SendPropertyChanged("Stanowisko");
-					this.OnStanowiskoChanged();
+					this.SendPropertyChanged("WorkerPosition");
+					this.OnWorkerPositionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Positions_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdStanowisko")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Positions_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdPosition")]
 		public EntitySet<Contract> Contract
 		{
 			get
@@ -1145,8 +1145,8 @@ namespace HR
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnTypUmowyChanging(string value);
-    partial void OnTypUmowyChanged();
+    partial void OntypeContractChanging(string value);
+    partial void OntypeContractChanged();
     #endregion
 		
 		public TypeContracts()
@@ -1176,7 +1176,7 @@ namespace HR
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Typ", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string TypUmowy
+		public string typeContract
 		{
 			get
 			{
@@ -1186,16 +1186,16 @@ namespace HR
 			{
 				if ((this._Typ != value))
 				{
-					this.OnTypUmowyChanging(value);
+					this.OntypeContractChanging(value);
 					this.SendPropertyChanging();
 					this._Typ = value;
-					this.SendPropertyChanged("TypUmowy");
-					this.OnTypUmowyChanged();
+					this.SendPropertyChanged("typeContract");
+					this.OntypeContractChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypeContracts_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdTypUmowy")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TypeContracts_Contract", Storage="_Contract", ThisKey="Id", OtherKey="IdContractType")]
 		public EntitySet<Contract> Contract
 		{
 			get

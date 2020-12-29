@@ -23,7 +23,7 @@ namespace HR
        public void LoadWorkers()
         {
 
-            var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
+            var emp = (from x in DatabaseHRWorkers.Workers select x).ToList();
             dataGridViewWorker.DataSource = emp;
         }
 
@@ -43,11 +43,11 @@ namespace HR
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
             test.Text = index.ToString();
 
-            var query = from t in DatabaseHRWorkers.Worker where t.Id == index select t;
+            var query = from t in DatabaseHRWorkers.Workers where t.Id == index select t;
 
             foreach (var t in query)
             {
-                DatabaseHRWorkers.Worker.DeleteOnSubmit(t);
+                DatabaseHRWorkers.Workers.DeleteOnSubmit(t);
             }
             
             DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
@@ -81,7 +81,7 @@ namespace HR
         private void WorkersForm_Load(object sender, EventArgs e)
         {
             //DatabaseHRDataContext cd = new DatabaseHRDataContext();
-            var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
+            var emp = (from x in DatabaseHRWorkers.Workers select x).ToList();
             dataGridViewWorker.DataSource = emp;
         }
 

@@ -78,6 +78,12 @@
     <Compile Include="ContractsForm.Designer.cs">
       <DependentUpon>ContractsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContratcsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContratcsEdit.Designer.cs">
+      <DependentUpon>ContratcsEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="OverrideToString.cs" />
     <Compile Include="PositionForm.cs">
       <SubType>Form</SubType>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContractsForm.resx">
       <DependentUpon>ContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContratcsEdit.resx">
+      <DependentUpon>ContratcsEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PositionForm.resx">
       <DependentUpon>PositionForm.cs</DependentUpon>

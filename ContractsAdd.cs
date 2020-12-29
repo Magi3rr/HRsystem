@@ -102,21 +102,21 @@ namespace HR
                 //newContract.IdPracownik =
             }
         */
-            newContract.IdTypUmowy = 1;
+            newContract.IdContractType = 1;
             if (radioButtonUOP.Checked)
             {
 
-                newContract.IdTypUmowy = 2;
+                newContract.IdContractType = 2;
             }
-            newContract.DataRozpoczęcia = dtBirth.Value;
-            newContract.DataZakończenia = dtBirth.Value;
-            newContract.IdStanowisko = 1;
+            newContract.dtStartContract = dtBirth.Value;
+            newContract.dtEndContract = dtBirth.Value;
+            newContract.IdPosition = 1;
             if (checkBoxKier.Checked)
             {
-                newContract.IdStanowisko = 2;
+                newContract.IdPosition = 2;
             }
-            newContract.Wynagrodzenie = numericUPWynagrodzenie.Value;
-            newContract.IdPracownik = 30; //wymaga dodania listy rozwijanej typu 
+            newContract.Salary = numericUPWynagrodzenie.Value;
+            newContract.IdWorker = 30; //wymaga dodania listy rozwijanej typu 
 
 
             MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);

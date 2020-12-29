@@ -38,19 +38,19 @@ namespace HR
         private void btnAddWorker_Click(object sender, EventArgs e)
         {
             Worker newWorker = new Worker();
-            newWorker.Imie = txtName.Text;
-            newWorker.Nazwisko = txtLastName.Text;
-            newWorker.IdPłeć = 1;
+            newWorker.Name = txtName.Text;
+            newWorker.Surname = txtLastName.Text;
+            newWorker.IdSex = 1;
             if (rbButtonFemale.Checked)
             {
-                newWorker.IdPłeć = 2;
+                newWorker.IdSex = 2;
             }
-            newWorker.DataUrodzenia = dtBirth.Value;
-            newWorker.PESEL = txtPESEL.Text;
+            newWorker.dtBirth = dtBirth.Value;
+            newWorker.Pesel = txtPESEL.Text;
             newWorker.IdStatus = 1; // aktywny
 
-
-            MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
+           
+            MainForm.DatabaseHRDataConnection.Workers.InsertOnSubmit(newWorker);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
            workersForm.LoadWorkers();

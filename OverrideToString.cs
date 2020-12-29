@@ -10,7 +10,7 @@ namespace HR
     {
         public override string ToString()
         {
-            return this.Płeć;
+            return this.Sex;
         }
     }
 }
