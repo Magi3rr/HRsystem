@@ -14,7 +14,7 @@ namespace HR
     public partial class WorkerAdd : Form
     {
 
-        DatabaseHRDataContext DatabaseHRWorkers = new DatabaseHRDataContext();
+      
         public WorkerAdd()
         {
             InitializeComponent();
@@ -50,8 +50,8 @@ namespace HR
             newWorker.IdStatus = 1; // aktywny
 
 
-           DatabaseHRWorkers.Worker.InsertOnSubmit(newWorker); 
-           DatabaseHRWorkers.SubmitChanges();
+            MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
+            MainForm.DatabaseHRDataConnection.SubmitChanges();
            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
            workersForm.LoadWorkers();
      

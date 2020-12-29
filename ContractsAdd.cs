@@ -12,7 +12,7 @@ namespace HR
 {
     public partial class ContractsAdd : Form
     {
-        DatabaseHRDataContext DatabaseHRContracts = new DatabaseHRDataContext();
+       
         public ContractsAdd()
         {
             InitializeComponent();
@@ -119,8 +119,8 @@ namespace HR
             newContract.IdPracownik = 30; //wymaga dodania listy rozwijanej typu 
 
 
-            DatabaseHRContracts.Contract.InsertOnSubmit(newContract);
-            DatabaseHRContracts.SubmitChanges();
+            MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
+            MainForm.DatabaseHRDataConnection.SubmitChanges();
             var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
             workersForm.LoadContracts();
 

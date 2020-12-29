@@ -14,7 +14,7 @@ namespace HR
     {
 
 
-        DatabaseHRDataContext DatabaseHRContracts = new DatabaseHRDataContext();
+        
         public ContractsForm()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace HR
         public void LoadContracts()
         {
 
-            var emp = (from x in DatabaseHRContracts.Contract select x).ToList();
+            var emp = (from x in MainForm.DatabaseHRDataConnection.Contract select x).ToList();
             dataGridViewContracts.DataSource = emp;
         }
 

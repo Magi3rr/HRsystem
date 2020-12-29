@@ -78,7 +78,7 @@
     <Compile Include="ContractsForm.Designer.cs">
       <DependentUpon>ContractsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="nowy.cs" />
+    <Compile Include="OverrideToString.cs" />
     <Compile Include="PositionForm.cs">
       <SubType>Form</SubType>
     </Compile>

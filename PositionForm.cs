@@ -12,7 +12,7 @@ namespace HR
 {
     public partial class PositionForm : Form
     {
-        DatabaseHRDataContext DatabaseHRPosition = new DatabaseHRDataContext();
+       
         public PositionForm()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace HR
         public void LoadPosition()
         {
 
-            var sal = (from x in DatabaseHRPosition.Positions select x).ToList();
+            var sal = (from x in MainForm.DatabaseHRDataConnection.Positions select x).ToList();
             dataGridViewPositions.DataSource = sal;
         }
     }

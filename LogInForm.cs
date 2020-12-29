@@ -12,7 +12,7 @@ namespace HR
 {
     public partial class LogInForm : Form
     {
-        DatabaseHRDataContext Dblog = new DatabaseHRDataContext();
+       
 
         public LogInForm()
         {
@@ -28,7 +28,7 @@ namespace HR
         {
             if (IsvalidUser(textBox1.Text, textBox2.Text))
             {
-                MessageBox.Show("Zalogowano pomyślnie!", "Sukces");
+                
                 Open();
             }
             else
@@ -47,7 +47,7 @@ namespace HR
 
         private bool IsvalidUser(string userName, string password)
         {
-            var q = from p in Dblog.logintbs where p.name == userName && p.passw == password select p;
+            var q = from p in MainForm.DatabaseHRDataConnection.logintbs where p.name == userName && p.passw == password select p;
             if (q.Any())
 
             {
