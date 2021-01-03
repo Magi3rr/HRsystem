@@ -24,9 +24,10 @@ namespace HR
             txtLastName.Text = w.Surname;
 
             //wyświetlanie z comboboxa
-            //dtBirth.Format = w.dtBirth;
 
-            
+            dtBirth.Value = w.dtBirth;
+            cbGender.SelectedItem = w.IdSex;
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -28,19 +28,12 @@ namespace HR
         }
 
        
-
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddWorker_Click(object sender, EventArgs e)
         {
             Worker newWorker = new Worker();
             newWorker.Name = txtName.Text;
             newWorker.Surname = txtLastName.Text;
-            //newWorker.IdSex = cbGender.SelectedIndex;
+            newWorker.IdSex = Convert.ToInt32(cbGender.SelectedIndex); //zmienić typ na string w bazie
             newWorker.dtBirth = dtBirth.Value;
             newWorker.Pesel = txtPESEL.Text;
             newWorker.IdStatus = 1; // aktywny

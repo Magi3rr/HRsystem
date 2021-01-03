@@ -199,8 +199,8 @@
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
-        private System.Windows.Forms.TextBox test;
-        private System.Windows.Forms.TextBox test1;
+        public System.Windows.Forms.TextBox test;
+        public System.Windows.Forms.TextBox test1;
         private System.Windows.Forms.DataGridView dataGridViewWorker;
     }
 }

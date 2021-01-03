@@ -25,6 +25,9 @@ namespace HR
 
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
+            dataGridViewWorker.Columns["Name"].HeaderText = "Imie";
+            //dataGridViewWorker.Columns["Name"].Visible = false;
+
         }
 
         public void LoadContracts()
@@ -33,6 +36,8 @@ namespace HR
             var con = (from x in DatabaseHRWorkers.Contract select x).ToList();
             dataGridViewWorker.DataSource = con;
         }
+
+
 
 
         private void btnDelete_Click(object sender, EventArgs e)

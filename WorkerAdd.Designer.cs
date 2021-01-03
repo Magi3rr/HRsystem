@@ -252,7 +252,6 @@ namespace HR
             this.label6.Size = new System.Drawing.Size(317, 26);
             this.label6.TabIndex = 12;
             this.label6.Text = "Dodawanie nowego pracownika";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // gendersBindingSource2
             // 
