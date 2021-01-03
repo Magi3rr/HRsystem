@@ -45,28 +45,28 @@
         <classShapeMoniker Id="e74e800a-4f00-4b8f-bcbc-7f59f2e1d128" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(9.375 : 3.32774983723958); (5.375 : 3.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.375 : 3.32774983723958); (5.375 : 3.32774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DatabaseHRDataContext/Statuses/Statuses_Worker" />
       <nodes>
         <classShapeMoniker Id="42f25139-b13f-4bf6-ba5e-ddb9f9f18de3" />
         <classShapeMoniker Id="e74e800a-4f00-4b8f-bcbc-7f59f2e1d128" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 5.22199625651042); (3.75 : 5.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.875 : 5.22199625651042); (3.75 : 5.22199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DatabaseHRDataContext/Positions/Positions_Contract" />
       <nodes>
         <classShapeMoniker Id="dc7572c7-8444-465c-9449-4d74aece2410" />
         <classShapeMoniker Id="c2fef514-f8ff-4a3c-9750-5c5a7a1d7aa0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.375 : 5.34699625651042); (5.75 : 5.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.375 : 5.34699625651042); (5.75 : 5.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DatabaseHRDataContext/TypeContracts/TypeContracts_Contract" />
       <nodes>
         <classShapeMoniker Id="0565d398-aa74-4b57-87aa-d5a60180c8ab" />
         <classShapeMoniker Id="c2fef514-f8ff-4a3c-9750-5c5a7a1d7aa0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5625 : 3.78049967447917); (4.5625 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5625 : 3.78049967447917); (4.5625 : 4.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DatabaseHRDataContext/Worker/Worker_Contract" />
       <nodes>
         <classShapeMoniker Id="e74e800a-4f00-4b8f-bcbc-7f59f2e1d128" />

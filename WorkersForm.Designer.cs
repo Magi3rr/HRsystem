@@ -136,9 +136,11 @@
             // 
             // dataGridViewWorker
             // 
+            this.dataGridViewWorker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewWorker.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewWorker.MultiSelect = false;
             this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.ReadOnly = true;
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -194,11 +196,11 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridViewWorker;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
         private System.Windows.Forms.TextBox test;
         private System.Windows.Forms.TextBox test1;
+        private System.Windows.Forms.DataGridView dataGridViewWorker;
     }
 }

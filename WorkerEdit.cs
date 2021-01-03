@@ -19,10 +19,11 @@ namespace HR
             InitializeComponent();
 
             this.DatabaseHRWorkers = DatabaseHRWorkers;
-            w = DatabaseHRWorkers.Workers.Single(x => x.Id == id);
+            w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
 
+            //wyświetlanie z comboboxa
             //dtBirth.Format = w.dtBirth;
 
             
@@ -40,6 +41,12 @@ namespace HR
             DatabaseHRWorkers.SubmitChanges();
             Close();
 
+        }
+
+        private void WorkerEdit_Load(object sender, EventArgs e)
+        {
+            cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
+            cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
         }
     }
 }

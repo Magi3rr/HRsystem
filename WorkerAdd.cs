@@ -40,17 +40,13 @@ namespace HR
             Worker newWorker = new Worker();
             newWorker.Name = txtName.Text;
             newWorker.Surname = txtLastName.Text;
-            newWorker.IdSex = 1;
-            if (rbButtonFemale.Checked)
-            {
-                newWorker.IdSex = 2;
-            }
+            //newWorker.IdSex = cbGender.SelectedIndex;
             newWorker.dtBirth = dtBirth.Value;
             newWorker.Pesel = txtPESEL.Text;
             newWorker.IdStatus = 1; // aktywny
 
            
-            MainForm.DatabaseHRDataConnection.Workers.InsertOnSubmit(newWorker);
+            MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
             var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
             workersForm.LoadWorkers();
@@ -61,7 +57,9 @@ namespace HR
 
         private void WorkerAdd_Load(object sender, EventArgs e)
         {
-            //lbStatus.DataSource=   //zaciąganie danych z bazy podczas wczytywania okna
+            cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
+            cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;  //zaciąganie danych z bazy podczas wczytywania okna
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

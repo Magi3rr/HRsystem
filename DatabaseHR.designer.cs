@@ -83,7 +83,7 @@ namespace HR
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Worker> Workers
+		public System.Data.Linq.Table<Worker> Worker
 		{
 			get
 			{

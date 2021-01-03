@@ -36,18 +36,17 @@ namespace HR
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtBirth = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPESEL = new System.Windows.Forms.TextBox();
-            this.btnEditWorker = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lbStatus = new System.Windows.Forms.ListBox();
+            this.btnEditWorker = new System.Windows.Forms.Button();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rbButtonFemale = new System.Windows.Forms.CheckBox();
-            this.rbButtonMale = new System.Windows.Forms.CheckBox();
             this.workerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -115,6 +114,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.cbGender, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -126,10 +126,8 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtPESEL, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lbStatus, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.rbButtonFemale, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.rbButtonMale, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnEditWorker, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cbStatus, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -142,6 +140,16 @@ namespace HR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 223);
             this.tableLayoutPanel1.TabIndex = 11;
+            // 
+            // cbGender
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbGender, 2);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(103, 63);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(290, 21);
+            this.cbGender.TabIndex = 25;
+            this.cbGender.Text = "System.Windows.Forms.RowStyle";
             // 
             // label3
             // 
@@ -186,18 +194,6 @@ namespace HR
             this.txtPESEL.Size = new System.Drawing.Size(290, 20);
             this.txtPESEL.TabIndex = 17;
             // 
-            // btnEditWorker
-            // 
-            this.btnEditWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditWorker.Location = new System.Drawing.Point(103, 188);
-            this.btnEditWorker.Name = "btnEditWorker";
-            this.btnEditWorker.Size = new System.Drawing.Size(129, 32);
-            this.btnEditWorker.TabIndex = 12;
-            this.btnEditWorker.Text = "Dodaj";
-            this.btnEditWorker.UseVisualStyleBackColor = false;
-            this.btnEditWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -210,15 +206,27 @@ namespace HR
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lbStatus
+            // btnEditWorker
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lbStatus, 2);
-            this.lbStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.workerBindingSource, "IdStatus", true));
-            this.lbStatus.FormattingEnabled = true;
-            this.lbStatus.Location = new System.Drawing.Point(103, 153);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(290, 17);
-            this.lbStatus.TabIndex = 21;
+            this.btnEditWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnEditWorker.Location = new System.Drawing.Point(103, 188);
+            this.btnEditWorker.Name = "btnEditWorker";
+            this.btnEditWorker.Size = new System.Drawing.Size(129, 32);
+            this.btnEditWorker.TabIndex = 12;
+            this.btnEditWorker.Text = "Dodaj";
+            this.btnEditWorker.UseVisualStyleBackColor = false;
+            this.btnEditWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
+            // 
+            // cbStatus
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbStatus, 2);
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(103, 153);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(290, 21);
+            this.cbStatus.TabIndex = 24;
+            this.cbStatus.Text = "System.Windows.Forms.RowStyle";
             // 
             // workerBindingSource
             // 
@@ -228,26 +236,6 @@ namespace HR
             // gendersBindingSource
             // 
             this.gendersBindingSource.DataSource = typeof(HR.Genders);
-            // 
-            // rbButtonFemale
-            // 
-            this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(251, 63);
-            this.rbButtonFemale.Name = "rbButtonFemale";
-            this.rbButtonFemale.Size = new System.Drawing.Size(62, 17);
-            this.rbButtonFemale.TabIndex = 22;
-            this.rbButtonFemale.Text = "Kobieta";
-            this.rbButtonFemale.UseVisualStyleBackColor = true;
-            // 
-            // rbButtonMale
-            // 
-            this.rbButtonMale.AutoSize = true;
-            this.rbButtonMale.Location = new System.Drawing.Point(103, 63);
-            this.rbButtonMale.Name = "rbButtonMale";
-            this.rbButtonMale.Size = new System.Drawing.Size(79, 17);
-            this.rbButtonMale.TabIndex = 23;
-            this.rbButtonMale.Text = "Mężczyzna";
-            this.rbButtonMale.UseVisualStyleBackColor = true;
             // 
             // workerBindingSource2
             // 
@@ -338,9 +326,8 @@ namespace HR
         private System.Windows.Forms.BindingSource gendersBindingSource4;
         private System.Windows.Forms.BindingSource gendersBindingSource3;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ListBox lbStatus;
-        private System.Windows.Forms.CheckBox rbButtonFemale;
-        private System.Windows.Forms.CheckBox rbButtonMale;
         private System.Windows.Forms.BindingSource workerBindingSource2;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.ComboBox cbGender;
     }
 }
