@@ -30,12 +30,12 @@ namespace HR
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnEditWorker_Click(object sender, EventArgs e)
+        private void BtnEditWorker_Click(object sender, EventArgs e)
         {
             w.Name = txtName.Text;
             w.Surname = txtLastName.Text;

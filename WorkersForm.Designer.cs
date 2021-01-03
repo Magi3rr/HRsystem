@@ -62,7 +62,6 @@
             this.panelWorkers.Name = "panelWorkers";
             this.panelWorkers.Size = new System.Drawing.Size(1052, 58);
             this.panelWorkers.TabIndex = 0;
-            this.panelWorkers.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // test1
             // 
@@ -77,7 +76,6 @@
             this.test.Name = "test";
             this.test.Size = new System.Drawing.Size(100, 25);
             this.test.TabIndex = 3;
-            this.test.TextChanged += new System.EventHandler(this.test_TextChanged);
             // 
             // button1
             // 
@@ -87,7 +85,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Odśwież";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnDelete
             // 
@@ -102,7 +100,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnEdit
             // 
@@ -117,7 +115,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edytuj";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -132,7 +130,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // dataGridViewWorker
             // 
@@ -146,24 +144,20 @@
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
             this.dataGridViewWorker.TabIndex = 1;
-            this.dataGridViewWorker.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWorker_CellContentClick);
             // 
             // workerBindingSource
             // 
             this.workerBindingSource.DataMember = "Worker";
             this.workerBindingSource.DataSource = this.gendersBindingSource;
-            this.workerBindingSource.CurrentChanged += new System.EventHandler(this.workerBindingSource_CurrentChanged);
             // 
             // gendersBindingSource
             // 
             this.gendersBindingSource.DataSource = typeof(HR.Genders);
-            this.gendersBindingSource.CurrentChanged += new System.EventHandler(this.gendersBindingSource_CurrentChanged);
             // 
             // contractBindingSource
             // 
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
-            this.contractBindingSource.CurrentChanged += new System.EventHandler(this.contractBindingSource_CurrentChanged);
             // 
             // WorkersForm
             // 

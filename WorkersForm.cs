@@ -25,8 +25,14 @@ namespace HR
 
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
-            dataGridViewWorker.Columns["Name"].HeaderText = "Imie";
-            //dataGridViewWorker.Columns["Name"].Visible = false;
+            dataGridViewWorker.Columns["Name"].HeaderText = "Imię";
+            dataGridViewWorker.Columns["Surname"].HeaderText = "Nazwisko";
+            dataGridViewWorker.Columns["dtbirth"].HeaderText = "Status";
+            dataGridViewWorker.Columns["Genders"].HeaderText = "Płeć";
+            dataGridViewWorker.Columns["Statuses"].HeaderText = "Status";
+            dataGridViewWorker.Columns["Id"].Visible = false;
+            dataGridViewWorker.Columns["IdSex"].Visible = false;
+            dataGridViewWorker.Columns["IdStatus"].Visible = false;
 
         }
 
@@ -35,7 +41,7 @@ namespace HR
 
 
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             
             
@@ -60,12 +66,7 @@ namespace HR
 
         }
 
-        private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
 
             WorkerAdd Adw = new WorkerAdd(); 
@@ -75,7 +76,7 @@ namespace HR
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             LoadWorkers();
         }
@@ -86,12 +87,8 @@ namespace HR
             dataGridViewWorker.DataSource = emp;
         }
 
-        private void test_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             
 
@@ -128,30 +125,5 @@ namespace HR
 
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void workerBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gendersBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contractBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewWorker_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

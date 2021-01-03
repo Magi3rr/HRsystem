@@ -18,27 +18,29 @@ namespace HR
         public WorkerAdd()
         {
             InitializeComponent();
-            
+            //zmienić topmost = true
            
         }
 
-        private void btnCloseWr_Click(object sender, EventArgs e)
+        private void BtnCloseWr_Click(object sender, EventArgs e)
         {
             Close();
         }
 
        
-        private void btnAddWorker_Click(object sender, EventArgs e)
+        private void BtnAddWorker_Click(object sender, EventArgs e)
         {
-            Worker newWorker = new Worker();
-            newWorker.Name = txtName.Text;
-            newWorker.Surname = txtLastName.Text;
-            newWorker.IdSex = Convert.ToInt32(cbGender.SelectedIndex); //zmienić typ na string w bazie
-            newWorker.dtBirth = dtBirth.Value;
-            newWorker.Pesel = txtPESEL.Text;
-            newWorker.IdStatus = 1; // aktywny
+            Worker newWorker = new Worker
+            {
+                Name = txtName.Text,
+                Surname = txtLastName.Text,
+                IdSex = Convert.ToInt32(cbGender.SelectedIndex), //zmienić typ na string w bazie
+                dtBirth = dtBirth.Value,
+                Pesel = txtPESEL.Text,
+                IdStatus = 1 // aktywny
+            };
 
-           
+
             MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
             var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
@@ -55,7 +57,7 @@ namespace HR
             
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

@@ -171,7 +171,7 @@ namespace HR
             this.btnAddWorker.TabIndex = 12;
             this.btnAddWorker.Text = "Zatwierdź";
             this.btnAddWorker.UseVisualStyleBackColor = false;
-            this.btnAddWorker.Click += new System.EventHandler(this.btnEditWorker_Click);
+            this.btnAddWorker.Click += new System.EventHandler(this.BtnEditWorker_Click);
             // 
             // btnCancel
             // 
@@ -183,7 +183,7 @@ namespace HR
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // tableLayoutPanel1
             // 

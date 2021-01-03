@@ -204,7 +204,7 @@ namespace HR
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnEditWorker
             // 
@@ -216,7 +216,7 @@ namespace HR
             this.btnEditWorker.TabIndex = 12;
             this.btnEditWorker.Text = "Dodaj";
             this.btnEditWorker.UseVisualStyleBackColor = false;
-            this.btnEditWorker.Click += new System.EventHandler(this.btnAddWorker_Click);
+            this.btnEditWorker.Click += new System.EventHandler(this.BtnAddWorker_Click);
             // 
             // cbStatus
             // 
@@ -286,7 +286,6 @@ namespace HR
             this.Name = "WorkerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.WorkerAdd_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
