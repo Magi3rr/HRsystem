@@ -12,9 +12,9 @@ namespace HR
 {
     public partial class ContractsForm : Form
     {
+        DatabaseHRDataContext DatabaseHRContracts = new DatabaseHRDataContext();
 
 
-        
         public ContractsForm()
         {
             InitializeComponent();
@@ -38,12 +38,22 @@ namespace HR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //del
+            int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
+            //
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //modyf
+
+            int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
+            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            //MainForm.DatabaseHRDataConnection.Contract
+            ContratcsEdit ce = new ContratcsEdit(DatabaseHRContracts, index);
+            //ContratcsEdit ce = new ContratcsEdit(MainForm.DatabaseHRDataConnection.Contract, index);
+            ce.ShowDialog();
         }
     }
 }

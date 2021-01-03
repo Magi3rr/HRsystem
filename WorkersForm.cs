@@ -30,12 +30,7 @@ namespace HR
 
         }
 
-        public void LoadContracts()
-        {
-
-            var con = (from x in DatabaseHRWorkers.Contract select x).ToList();
-            dataGridViewWorker.DataSource = con;
-        }
+        
 
 
 

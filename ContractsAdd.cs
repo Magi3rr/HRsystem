@@ -76,53 +76,17 @@ namespace HR
         private void btnAddContract_Click(object sender, EventArgs e)
         {
             Contract newContract = new Contract();
-        /*
 
-            if (numericUPWynagrodzenie.Value < 99)
-            {
-                MessageBox.Show("Wynagrodzenie jest mniejsze od bazowej kwoty");
-
-            }
-            else if (weryfikacja()== false)
-            {
-                newContract.IdTypUmowy = 1;
-                if (radioButtonUOP.Checked)
-                {
-
-                    newContract.IdTypUmowy = 2;
-                }
-                newContract.DataRozpoczęcia = dtBirth.Value;
-                newContract.DataZakończenia = dtBirth.Value;
-                newContract.IdStanowisko = 1;
-                if (radioButtonKierownik.Checked)
-                {
-                    newContract.IdStanowisko = 2;
-                }
-                newContract.Wynagrodzenie = numericUPWynagrodzenie.Value;
-                //newContract.IdPracownik =
-            }
-        */
-            newContract.IdContractType = 1;
-            if (radioButtonUOP.Checked)
-            {
-
-                newContract.IdContractType = 2;
-            }
+            newContract.IdContractType = cbBoxContractType.SelectedIndex;
             newContract.dtStartContract = dtBirth.Value;
             newContract.dtEndContract = dtBirth.Value;
-            newContract.IdPosition = 1;
-            if (checkBoxKier.Checked)
-            {
-                newContract.IdPosition = 2;
-            }
+            newContract.IdPosition = cbBoxPositionType.SelectedIndex;
             newContract.Salary = numericUPWynagrodzenie.Value;
-            newContract.IdWorker = 30; //wymaga dodania listy rozwijanej typu 
-
-
+           // newContract.Worker = cbBoxWorker.SelectedIndex;
             MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
-            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
-            workersForm.LoadContracts();
+            var contractsForm = Application.OpenForms.OfType<ContractsForm>().Single();
+            contractsForm.LoadContracts();
 
 
             Close();
@@ -145,11 +109,14 @@ namespace HR
         }
 
 
-        private void label5_Click(object sender, EventArgs e)
+      
+
+        private void ContractsAdd_Load(object sender, EventArgs e)
         {
-
+          
+            cbBoxPositionType.DataSource = MainForm.DatabaseHRDataConnection.Positions;
+            cbBoxContractType.DataSource = MainForm.DatabaseHRDataConnection.TypeContracts;
+            cbBoxWorker.DataSource = MainForm.DatabaseHRDataConnection.Worker;
         }
-
-       
     }
 }

@@ -39,24 +39,21 @@ namespace HR
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimeRozp = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnAddWorker = new System.Windows.Forms.Button();
             this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtBirth = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeKonc = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numericUPWynagrodzenie = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxPrac = new System.Windows.Forms.CheckBox();
-            this.checkBoxKier = new System.Windows.Forms.CheckBox();
-            this.radioButtonUOP = new System.Windows.Forms.CheckBox();
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.radioButtonUZ = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbBoxPositionType = new System.Windows.Forms.ComboBox();
+            this.cbBoxContractType = new System.Windows.Forms.ComboBox();
+            this.cbBoxWorkerName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).BeginInit();
@@ -113,7 +110,7 @@ namespace HR
             // dateTimeRozp
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeRozp, 2);
-            this.dateTimeRozp.Location = new System.Drawing.Point(90, 34);
+            this.dateTimeRozp.Location = new System.Drawing.Point(88, 34);
             this.dateTimeRozp.Name = "dateTimeRozp";
             this.dateTimeRozp.Size = new System.Drawing.Size(400, 20);
             this.dateTimeRozp.TabIndex = 23;
@@ -123,28 +120,21 @@ namespace HR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.Size = new System.Drawing.Size(75, 22);
             this.label5.TabIndex = 13;
             this.label5.Text = "Wynagrodzenie";
-            // 
-            // txtStatus
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(90, 153);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(400, 20);
-            this.txtStatus.TabIndex = 7;
             // 
             // btnAddWorker
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(193, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(185, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
-            this.btnAddWorker.Text = "Dodaj";
+            this.btnAddWorker.Text = "Zatwierdz";
             this.btnAddWorker.UseVisualStyleBackColor = false;
+            this.btnAddWorker.Click += new System.EventHandler(this.btnAddContrats_Click);
             // 
             // gendersBindingSource3
             // 
@@ -179,13 +169,13 @@ namespace HR
             this.label3.TabIndex = 11;
             this.label3.Text = "Data zakończenia";
             // 
-            // dtBirth
+            // dateTimeKonc
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(90, 63);
-            this.dtBirth.Name = "dtBirth";
-            this.dtBirth.Size = new System.Drawing.Size(400, 20);
-            this.dtBirth.TabIndex = 16;
+            this.tableLayoutPanel1.SetColumnSpan(this.dateTimeKonc, 2);
+            this.dateTimeKonc.Location = new System.Drawing.Point(88, 63);
+            this.dateTimeKonc.Name = "dateTimeKonc";
+            this.dateTimeKonc.Size = new System.Drawing.Size(400, 20);
+            this.dateTimeKonc.TabIndex = 16;
             // 
             // label2
             // 
@@ -200,51 +190,13 @@ namespace HR
             // 
             this.gendersBindingSource2.DataSource = typeof(HR.Genders);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 21);
-            this.comboBox1.TabIndex = 27;
-            // 
             // numericUPWynagrodzenie
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
-            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(90, 131);
+            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(88, 131);
             this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
             this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
             this.numericUPWynagrodzenie.TabIndex = 28;
-            // 
-            // checkBoxPrac
-            // 
-            this.checkBoxPrac.AutoSize = true;
-            this.checkBoxPrac.Location = new System.Drawing.Point(328, 99);
-            this.checkBoxPrac.Name = "checkBoxPrac";
-            this.checkBoxPrac.Size = new System.Drawing.Size(76, 17);
-            this.checkBoxPrac.TabIndex = 29;
-            this.checkBoxPrac.Text = "Pracownik";
-            this.checkBoxPrac.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxKier
-            // 
-            this.checkBoxKier.AutoSize = true;
-            this.checkBoxKier.Location = new System.Drawing.Point(90, 99);
-            this.checkBoxKier.Name = "checkBoxKier";
-            this.checkBoxKier.Size = new System.Drawing.Size(72, 17);
-            this.checkBoxKier.TabIndex = 30;
-            this.checkBoxKier.Text = "Kierownik";
-            this.checkBoxKier.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUOP
-            // 
-            this.radioButtonUOP.AutoSize = true;
-            this.radioButtonUOP.Location = new System.Drawing.Point(328, 3);
-            this.radioButtonUOP.Name = "radioButtonUOP";
-            this.radioButtonUOP.Size = new System.Drawing.Size(101, 17);
-            this.radioButtonUOP.TabIndex = 31;
-            this.radioButtonUOP.Text = "Umowa o pracę";
-            this.radioButtonUOP.UseVisualStyleBackColor = true;
             // 
             // gendersBindingSource4
             // 
@@ -261,39 +213,26 @@ namespace HR
             this.label6.TabIndex = 17;
             this.label6.Text = "Edycja umowy";
             // 
-            // radioButtonUZ
-            // 
-            this.radioButtonUZ.AutoSize = true;
-            this.radioButtonUZ.Location = new System.Drawing.Point(90, 3);
-            this.radioButtonUZ.Name = "radioButtonUZ";
-            this.radioButtonUZ.Size = new System.Drawing.Size(104, 17);
-            this.radioButtonUZ.TabIndex = 32;
-            this.radioButtonUZ.Text = "Umowa zlecenie";
-            this.radioButtonUZ.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.tableLayoutPanel1.Controls.Add(this.cbBoxPositionType, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbBoxContractType, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeRozp, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtStatus, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dtBirth, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimeKonc, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.numericUPWynagrodzenie, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.checkBoxPrac, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.checkBoxKier, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonUOP, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.radioButtonUZ, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbBoxWorkerName, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 59);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -308,6 +247,33 @@ namespace HR
             this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 282);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
+            // cbBoxPositionType
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxPositionType, 2);
+            this.cbBoxPositionType.FormattingEnabled = true;
+            this.cbBoxPositionType.Location = new System.Drawing.Point(88, 99);
+            this.cbBoxPositionType.Name = "cbBoxPositionType";
+            this.cbBoxPositionType.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxPositionType.TabIndex = 35;
+            // 
+            // cbBoxContractType
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxContractType, 2);
+            this.cbBoxContractType.FormattingEnabled = true;
+            this.cbBoxContractType.Location = new System.Drawing.Point(88, 3);
+            this.cbBoxContractType.Name = "cbBoxContractType";
+            this.cbBoxContractType.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxContractType.TabIndex = 34;
+            // 
+            // cbBoxWorkerName
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorkerName, 2);
+            this.cbBoxWorkerName.FormattingEnabled = true;
+            this.cbBoxWorkerName.Location = new System.Drawing.Point(88, 153);
+            this.cbBoxWorkerName.Name = "cbBoxWorkerName";
+            this.cbBoxWorkerName.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxWorkerName.TabIndex = 33;
+            // 
             // ContratcsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +286,7 @@ namespace HR
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContratcsEdit";
             this.Text = "ContratcsEdit";
+            this.Load += new System.EventHandler(this.ContratcsEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).EndInit();
@@ -348,22 +315,19 @@ namespace HR
         private System.Windows.Forms.DateTimePicker dateTimeRozp;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddWorker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtBirth;
+        private System.Windows.Forms.DateTimePicker dateTimeKonc;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.NumericUpDown numericUPWynagrodzenie;
-        private System.Windows.Forms.CheckBox checkBoxPrac;
-        private System.Windows.Forms.CheckBox checkBoxKier;
-        private System.Windows.Forms.CheckBox radioButtonUOP;
-        private System.Windows.Forms.CheckBox radioButtonUZ;
         private System.Windows.Forms.BindingSource gendersBindingSource3;
         private System.Windows.Forms.BindingSource gendersBindingSource2;
         private System.Windows.Forms.BindingSource gendersBindingSource4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbBoxWorkerName;
+        private System.Windows.Forms.ComboBox cbBoxContractType;
+        private System.Windows.Forms.ComboBox cbBoxPositionType;
     }
 }

@@ -23,4 +23,37 @@ namespace HR
 
     }
 
+   
+    partial class TypeContracts
+    {
+        public override string ToString()
+        {
+
+            return this.typeContract;
+        }
+    }
+   
+
+
+    partial class Positions
+    {
+        public override string ToString()
+        {
+            return this.WorkerPosition;
+        }
+
+
+
+    }
+
+    partial class Worker
+    {
+        public override string ToString()
+        {
+            return this._Imie+_Nazwisko;
+        }
+
+
+
+    }
 }
