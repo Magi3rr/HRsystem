@@ -45,6 +45,7 @@ namespace HR
             this.numericUPWynagrodzenie = new System.Windows.Forms.NumericUpDown();
             this.cbBoxContractType = new System.Windows.Forms.ComboBox();
             this.cbBoxPositionType = new System.Windows.Forms.ComboBox();
+            this.cbBoxWorker = new System.Windows.Forms.ComboBox();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,6 @@ namespace HR
             this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cbBoxWorker = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -96,7 +96,7 @@ namespace HR
             // dtBirth
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(90, 63);
+            this.dtBirth.Location = new System.Drawing.Point(89, 63);
             this.dtBirth.Name = "dtBirth";
             this.dtBirth.Size = new System.Drawing.Size(400, 20);
             this.dtBirth.TabIndex = 16;
@@ -127,7 +127,7 @@ namespace HR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.Size = new System.Drawing.Size(75, 22);
             this.label5.TabIndex = 13;
             this.label5.Text = "Wynagrodzenie";
             // 
@@ -135,7 +135,7 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(190, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(189, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -148,7 +148,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
             this.tableLayoutPanel1.Controls.Add(this.dateTimeRozp, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
@@ -181,7 +181,7 @@ namespace HR
             // dateTimeRozp
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeRozp, 2);
-            this.dateTimeRozp.Location = new System.Drawing.Point(90, 34);
+            this.dateTimeRozp.Location = new System.Drawing.Point(89, 34);
             this.dateTimeRozp.Name = "dateTimeRozp";
             this.dateTimeRozp.Size = new System.Drawing.Size(400, 20);
             this.dateTimeRozp.TabIndex = 23;
@@ -210,7 +210,7 @@ namespace HR
             // numericUPWynagrodzenie
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
-            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(90, 131);
+            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(89, 131);
             this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
             this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
             this.numericUPWynagrodzenie.TabIndex = 28;
@@ -219,7 +219,7 @@ namespace HR
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxContractType, 2);
             this.cbBoxContractType.FormattingEnabled = true;
-            this.cbBoxContractType.Location = new System.Drawing.Point(90, 3);
+            this.cbBoxContractType.Location = new System.Drawing.Point(89, 3);
             this.cbBoxContractType.Name = "cbBoxContractType";
             this.cbBoxContractType.Size = new System.Drawing.Size(400, 21);
             this.cbBoxContractType.TabIndex = 31;
@@ -228,10 +228,19 @@ namespace HR
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxPositionType, 2);
             this.cbBoxPositionType.FormattingEnabled = true;
-            this.cbBoxPositionType.Location = new System.Drawing.Point(90, 99);
+            this.cbBoxPositionType.Location = new System.Drawing.Point(89, 99);
             this.cbBoxPositionType.Name = "cbBoxPositionType";
             this.cbBoxPositionType.Size = new System.Drawing.Size(400, 21);
             this.cbBoxPositionType.TabIndex = 32;
+            // 
+            // cbBoxWorker
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorker, 2);
+            this.cbBoxWorker.FormattingEnabled = true;
+            this.cbBoxWorker.Location = new System.Drawing.Point(89, 153);
+            this.cbBoxWorker.Name = "cbBoxWorker";
+            this.cbBoxWorker.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxWorker.TabIndex = 33;
             // 
             // workerBindingSource
             // 
@@ -274,15 +283,6 @@ namespace HR
             // 
             this.gendersBindingSource2.DataSource = typeof(HR.Genders);
             this.gendersBindingSource2.CurrentChanged += new System.EventHandler(this.gendersBindingSource2_CurrentChanged);
-            // 
-            // cbBoxWorker
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorker, 2);
-            this.cbBoxWorker.FormattingEnabled = true;
-            this.cbBoxWorker.Location = new System.Drawing.Point(90, 153);
-            this.cbBoxWorker.Name = "cbBoxWorker";
-            this.cbBoxWorker.Size = new System.Drawing.Size(400, 21);
-            this.cbBoxWorker.TabIndex = 33;
             // 
             // ContractsAdd
             // 

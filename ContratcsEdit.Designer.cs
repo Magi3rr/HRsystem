@@ -51,9 +51,9 @@ namespace HR
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbBoxWorkerName = new System.Windows.Forms.ComboBox();
-            this.cbBoxContractType = new System.Windows.Forms.ComboBox();
             this.cbBoxPositionType = new System.Windows.Forms.ComboBox();
+            this.cbBoxContractType = new System.Windows.Forms.ComboBox();
+            this.cbBoxWorkerName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource1)).BeginInit();
@@ -110,7 +110,7 @@ namespace HR
             // dateTimeRozp
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeRozp, 2);
-            this.dateTimeRozp.Location = new System.Drawing.Point(89, 34);
+            this.dateTimeRozp.Location = new System.Drawing.Point(88, 34);
             this.dateTimeRozp.Name = "dateTimeRozp";
             this.dateTimeRozp.Size = new System.Drawing.Size(400, 20);
             this.dateTimeRozp.TabIndex = 23;
@@ -128,7 +128,7 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(186, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(185, 247);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -172,7 +172,7 @@ namespace HR
             // dateTimeKonc
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeKonc, 2);
-            this.dateTimeKonc.Location = new System.Drawing.Point(89, 63);
+            this.dateTimeKonc.Location = new System.Drawing.Point(88, 63);
             this.dateTimeKonc.Name = "dateTimeKonc";
             this.dateTimeKonc.Size = new System.Drawing.Size(400, 20);
             this.dateTimeKonc.TabIndex = 16;
@@ -193,7 +193,7 @@ namespace HR
             // numericUPWynagrodzenie
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
-            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(89, 131);
+            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(88, 131);
             this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
             this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
             this.numericUPWynagrodzenie.TabIndex = 28;
@@ -218,7 +218,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel1.Controls.Add(this.cbBoxPositionType, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbBoxContractType, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeRozp, 1, 1);
@@ -247,32 +247,32 @@ namespace HR
             this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 282);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
-            // cbBoxWorkerName
+            // cbBoxPositionType
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorkerName, 2);
-            this.cbBoxWorkerName.FormattingEnabled = true;
-            this.cbBoxWorkerName.Location = new System.Drawing.Point(89, 153);
-            this.cbBoxWorkerName.Name = "cbBoxWorkerName";
-            this.cbBoxWorkerName.Size = new System.Drawing.Size(400, 21);
-            this.cbBoxWorkerName.TabIndex = 33;
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxPositionType, 2);
+            this.cbBoxPositionType.FormattingEnabled = true;
+            this.cbBoxPositionType.Location = new System.Drawing.Point(88, 99);
+            this.cbBoxPositionType.Name = "cbBoxPositionType";
+            this.cbBoxPositionType.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxPositionType.TabIndex = 35;
             // 
             // cbBoxContractType
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxContractType, 2);
             this.cbBoxContractType.FormattingEnabled = true;
-            this.cbBoxContractType.Location = new System.Drawing.Point(89, 3);
+            this.cbBoxContractType.Location = new System.Drawing.Point(88, 3);
             this.cbBoxContractType.Name = "cbBoxContractType";
             this.cbBoxContractType.Size = new System.Drawing.Size(400, 21);
             this.cbBoxContractType.TabIndex = 34;
             // 
-            // cbBoxPositionType
+            // cbBoxWorkerName
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxPositionType, 2);
-            this.cbBoxPositionType.FormattingEnabled = true;
-            this.cbBoxPositionType.Location = new System.Drawing.Point(89, 99);
-            this.cbBoxPositionType.Name = "cbBoxPositionType";
-            this.cbBoxPositionType.Size = new System.Drawing.Size(400, 21);
-            this.cbBoxPositionType.TabIndex = 35;
+            this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorkerName, 2);
+            this.cbBoxWorkerName.FormattingEnabled = true;
+            this.cbBoxWorkerName.Location = new System.Drawing.Point(88, 153);
+            this.cbBoxWorkerName.Name = "cbBoxWorkerName";
+            this.cbBoxWorkerName.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxWorkerName.TabIndex = 33;
             // 
             // ContratcsEdit
             // 

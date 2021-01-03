@@ -76,23 +76,13 @@ namespace HR
         private void btnAddContract_Click(object sender, EventArgs e)
         {
             Contract newContract = new Contract();
-       
-            newContract.IdContractType = 1;
-            newContract.IdContractType = 2;
-           
-            
+
+            newContract.IdContractType = cbBoxContractType.SelectedIndex;
             newContract.dtStartContract = dtBirth.Value;
             newContract.dtEndContract = dtBirth.Value;
-            newContract.IdPosition = 1;
-            /*
-            if (checkBoxKier.Checked)
-            {
-                newContract.IdPosition = 2;
-            }
+            newContract.IdPosition = cbBoxPositionType.SelectedIndex;
             newContract.Salary = numericUPWynagrodzenie.Value;
-            newContract.IdWorker = 30; //wymaga dodania listy rozwijanej typu 
-            */
-
+           // newContract.Worker = cbBoxWorker.SelectedIndex;
             MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
             var contractsForm = Application.OpenForms.OfType<ContractsForm>().Single();

@@ -24,11 +24,6 @@ namespace HR
             dateTimeRozp.Value = w.dtStartContract;
             dateTimeKonc.Value = w.dtEndContract;
             numericUPWynagrodzenie.Text= w.Salary.ToString();
-            if (w.IdPosition==1)
-            {
-                dateTimeRozp.Value = w.dtStartContract;
-                dateTimeKonc.Value = w.dtEndContract;
-            }
             
 
 
