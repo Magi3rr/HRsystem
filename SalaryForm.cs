@@ -19,7 +19,7 @@ namespace HR
         public SalaryForm()
         {
             InitializeComponent();
-           // LoadSalary();
+            LoadSalary();
 
         }
 
@@ -38,8 +38,10 @@ namespace HR
                        });
 
             dataGridViewSalary.DataSource = stu.ToList();
-
-
+            dataGridViewSalary.Columns["dtStartContract"].HeaderText = "Data podpisania";
+            dataGridViewSalary.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy";
+            dataGridViewSalary.Columns["TypeContract"].HeaderText = "Rodzaj umowy";
+            dataGridViewSalary.Columns["Id"].Visible = false;
 
         }
        

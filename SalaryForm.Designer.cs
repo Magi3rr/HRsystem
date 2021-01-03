@@ -47,10 +47,13 @@ namespace HR
             // 
             // dataGridViewSalary
             // 
+            this.dataGridViewSalary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSalary.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSalary.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewSalary.Name = "dataGridViewSalary";
+            this.dataGridViewSalary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSalary.Size = new System.Drawing.Size(1036, 556);
             this.dataGridViewSalary.TabIndex = 3;
             // 

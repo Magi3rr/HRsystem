@@ -54,6 +54,7 @@ namespace HR
             this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewContracts.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewContracts.Name = "dataGridViewContracts";
+            this.dataGridViewContracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewContracts.Size = new System.Drawing.Size(1052, 595);
             this.dataGridViewContracts.TabIndex = 3;
             // 
