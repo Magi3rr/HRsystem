@@ -23,7 +23,7 @@ namespace HR
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
 
-            //dateTime
+            //dtBirth.Format = w.dtBirth;
 
             
         }

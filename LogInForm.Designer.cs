@@ -30,16 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.blLogin = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.blLogin = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +59,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Logowanie";
+            // 
+            // blLogin
+            // 
+            this.blLogin.AutoSize = true;
+            this.blLogin.Location = new System.Drawing.Point(113, 22);
+            this.blLogin.Name = "blLogin";
+            this.blLogin.Size = new System.Drawing.Size(0, 16);
+            this.blLogin.TabIndex = 4;
             // 
             // btnLogIn
             // 
@@ -120,21 +127,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Admin";
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Arial Black", 12F);
-            this.btnClose.Location = new System.Drawing.Point(453, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 41);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.BtnCloseLog_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -156,14 +148,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // blLogin
-            // 
-            this.blLogin.AutoSize = true;
-            this.blLogin.Location = new System.Drawing.Point(113, 22);
-            this.blLogin.Name = "blLogin";
-            this.blLogin.Size = new System.Drawing.Size(0, 16);
-            this.blLogin.TabIndex = 4;
-            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -172,10 +156,9 @@
             this.ClientSize = new System.Drawing.Size(489, 560);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -196,7 +179,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label blLogin;

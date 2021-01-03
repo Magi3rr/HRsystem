@@ -40,7 +40,6 @@
             this.slidePanel = new System.Windows.Forms.Panel();
             this.btnWorkers = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.btnCloseMF = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
             this.bottomPanel.SuspendLayout();
@@ -181,28 +180,12 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.topPanel.Controls.Add(this.btnCloseMF);
             this.topPanel.Controls.Add(this.label3);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(250, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1052, 61);
             this.topPanel.TabIndex = 2;
-            // 
-            // btnCloseMF
-            // 
-            this.btnCloseMF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseMF.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCloseMF.FlatAppearance.BorderSize = 0;
-            this.btnCloseMF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseMF.Font = new System.Drawing.Font("Arial Black", 16F);
-            this.btnCloseMF.Location = new System.Drawing.Point(998, 11);
-            this.btnCloseMF.Name = "btnCloseMF";
-            this.btnCloseMF.Size = new System.Drawing.Size(32, 33);
-            this.btnCloseMF.TabIndex = 3;
-            this.btnCloseMF.Text = "X";
-            this.btnCloseMF.UseVisualStyleBackColor = false;
-            this.btnCloseMF.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // label3
             // 
@@ -234,9 +217,10 @@
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.bottomPanel);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "System HR";
             this.bottomPanel.ResumeLayout(false);
             this.bottomPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -253,7 +237,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.Button btnCloseMF;
         private System.Windows.Forms.Panel slidePanel;
         private System.Windows.Forms.Button btnWorkers;
         private System.Windows.Forms.Label label1;

@@ -67,9 +67,9 @@ namespace HR
             // txtLastName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtLastName, 2);
-            this.txtLastName.Location = new System.Drawing.Point(82, 34);
+            this.txtLastName.Location = new System.Drawing.Point(103, 34);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(400, 20);
+            this.txtLastName.Size = new System.Drawing.Size(290, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // workerBindingSource
@@ -113,7 +113,7 @@ namespace HR
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(129, 9);
+            this.label6.Location = new System.Drawing.Point(74, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(268, 36);
             this.label6.TabIndex = 14;
@@ -122,9 +122,9 @@ namespace HR
             // txtName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtName, 2);
-            this.txtName.Location = new System.Drawing.Point(82, 3);
+            this.txtName.Location = new System.Drawing.Point(103, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(400, 20);
+            this.txtName.Size = new System.Drawing.Size(290, 20);
             this.txtName.TabIndex = 5;
             // 
             // label3
@@ -132,16 +132,16 @@ namespace HR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 26);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Data urodzenia";
             // 
             // dtBirth
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
-            this.dtBirth.Location = new System.Drawing.Point(82, 99);
+            this.dtBirth.Location = new System.Drawing.Point(103, 99);
             this.dtBirth.Name = "dtBirth";
-            this.dtBirth.Size = new System.Drawing.Size(400, 20);
+            this.dtBirth.Size = new System.Drawing.Size(290, 20);
             this.dtBirth.TabIndex = 16;
             // 
             // label4
@@ -166,7 +166,7 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(163, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(116, 188);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
             this.btnAddWorker.TabIndex = 12;
@@ -178,7 +178,7 @@ namespace HR
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCancel.Location = new System.Drawing.Point(407, 247);
+            this.btnCancel.Location = new System.Drawing.Point(264, 188);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 32);
             this.btnCancel.TabIndex = 20;
@@ -189,9 +189,9 @@ namespace HR
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -217,30 +217,29 @@ namespace HR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 282);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 223);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // txtStatus
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtStatus, 2);
-            this.txtStatus.Location = new System.Drawing.Point(82, 153);
+            this.txtStatus.Location = new System.Drawing.Point(103, 153);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(400, 20);
+            this.txtStatus.Size = new System.Drawing.Size(290, 20);
             this.txtStatus.TabIndex = 7;
             // 
             // txtPESEL
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtPESEL, 2);
-            this.txtPESEL.Location = new System.Drawing.Point(82, 131);
+            this.txtPESEL.Location = new System.Drawing.Point(103, 131);
             this.txtPESEL.Name = "txtPESEL";
-            this.txtPESEL.Size = new System.Drawing.Size(400, 20);
+            this.txtPESEL.Size = new System.Drawing.Size(290, 20);
             this.txtPESEL.TabIndex = 17;
             // 
             // rbButtonFemale
             // 
             this.rbButtonFemale.AutoSize = true;
-            this.rbButtonFemale.Location = new System.Drawing.Point(298, 63);
+            this.rbButtonFemale.Location = new System.Drawing.Point(251, 63);
             this.rbButtonFemale.Name = "rbButtonFemale";
             this.rbButtonFemale.Size = new System.Drawing.Size(62, 17);
             this.rbButtonFemale.TabIndex = 21;
@@ -250,7 +249,7 @@ namespace HR
             // rbButtonMale
             // 
             this.rbButtonMale.AutoSize = true;
-            this.rbButtonMale.Location = new System.Drawing.Point(82, 63);
+            this.rbButtonMale.Location = new System.Drawing.Point(103, 63);
             this.rbButtonMale.Name = "rbButtonMale";
             this.rbButtonMale.Size = new System.Drawing.Size(79, 17);
             this.rbButtonMale.TabIndex = 22;
@@ -283,12 +282,14 @@ namespace HR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(543, 348);
+            this.ClientSize = new System.Drawing.Size(404, 286);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "WorkerEdit";
-            this.Text = "WorkerEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Edytuj";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

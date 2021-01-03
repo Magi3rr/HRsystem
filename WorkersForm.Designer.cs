@@ -138,7 +138,6 @@
             // 
             this.dataGridViewWorker.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.ReadOnly = true;
