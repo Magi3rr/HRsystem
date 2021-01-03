@@ -38,24 +38,26 @@ namespace HR
         private void btnDelete_Click(object sender, EventArgs e)
         {
             
-            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;              
-            DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
-            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-            test.Text = index.ToString();
-
-            var query = from t in DatabaseHRWorkers.Workers where t.Id == index select t;
-
-            foreach (var t in query)
-            {
-                DatabaseHRWorkers.Workers.DeleteOnSubmit(t);
-            }
             
-            DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
+            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz usunąć zaznaczony rekord?","Usuwanie", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
+                DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
+                int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+                test.Text = index.ToString();
 
-           
+                var query = from t in DatabaseHRWorkers.Workers where t.Id == index select t;
 
-            LoadWorkers();
-            MessageBox.Show("Rekord usunięty");
+                foreach (var t in query)
+                {
+                    DatabaseHRWorkers.Workers.DeleteOnSubmit(t);
+                }
+
+                DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
+                LoadWorkers();
+            }
+
         }
 
         private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,7 +82,6 @@ namespace HR
 
         private void WorkersForm_Load(object sender, EventArgs e)
         {
-            //DatabaseHRDataContext cd = new DatabaseHRDataContext();
             var emp = (from x in DatabaseHRWorkers.Workers select x).ToList();
             dataGridViewWorker.DataSource = emp;
         }
@@ -144,6 +145,11 @@ namespace HR
         }
 
         private void contractBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewWorker_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

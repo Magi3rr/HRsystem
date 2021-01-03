@@ -13,4 +13,14 @@ namespace HR
             return this.Sex;
         }
     }
+
+    partial class Statuses
+    {
+        public override string ToString()
+        {
+            return this.Status;
+        }
+
+    }
+
 }

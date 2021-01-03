@@ -74,9 +74,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 17);
+            this.label1.Size = new System.Drawing.Size(253, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Zalogowany użytkownik: Łukasz Magierowicz";
+            this.label1.Text = "Zalogowany użytkownik: Jan Kowalski";
             // 
             // pictureBox1
             // 
@@ -234,7 +234,6 @@
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.bottomPanel);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -21,6 +21,9 @@ namespace HR
             this.DatabaseHRWorkers = DatabaseHRWorkers;
             w = DatabaseHRWorkers.Workers.Single(x => x.Id == id);
             txtName.Text = w.Name;
+            txtLastName.Text = w.Surname;
+
+            //dateTime
 
             
         }
@@ -33,7 +36,9 @@ namespace HR
         private void btnEditWorker_Click(object sender, EventArgs e)
         {
             w.Name = txtName.Text;
+            w.Surname = txtLastName.Text;
             DatabaseHRWorkers.SubmitChanges();
+            Close();
 
         }
     }

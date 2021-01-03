@@ -52,8 +52,8 @@ namespace HR
            
             MainForm.DatabaseHRDataConnection.Workers.InsertOnSubmit(newWorker);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
-           var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
-           workersForm.LoadWorkers();
+            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
+            workersForm.LoadWorkers();
      
 
            Close();
@@ -61,7 +61,7 @@ namespace HR
 
         private void WorkerAdd_Load(object sender, EventArgs e)
         {
-          
+            //lbStatus.DataSource=   //zaciąganie danych z bazy podczas wczytywania okna
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

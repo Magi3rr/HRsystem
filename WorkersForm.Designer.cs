@@ -38,11 +38,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridViewWorker = new System.Windows.Forms.DataGridView();
-            this.Imie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nazwisko = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataUrodzenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PESEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -141,13 +136,8 @@
             // 
             // dataGridViewWorker
             // 
+            this.dataGridViewWorker.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Imie,
-            this.Nazwisko,
-            this.DataUrodzenia,
-            this.PESEL,
-            this.Genders});
             this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewWorker.Name = "dataGridViewWorker";
@@ -155,41 +145,7 @@
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
             this.dataGridViewWorker.TabIndex = 1;
-            // 
-            // Imie
-            // 
-            this.Imie.DataPropertyName = "Imie";
-            this.Imie.HeaderText = "Imie";
-            this.Imie.Name = "Imie";
-            this.Imie.ReadOnly = true;
-            // 
-            // Nazwisko
-            // 
-            this.Nazwisko.DataPropertyName = "Nazwisko";
-            this.Nazwisko.HeaderText = "Nazwisko";
-            this.Nazwisko.Name = "Nazwisko";
-            this.Nazwisko.ReadOnly = true;
-            // 
-            // DataUrodzenia
-            // 
-            this.DataUrodzenia.DataPropertyName = "DataUrodzenia";
-            this.DataUrodzenia.HeaderText = "DataUrodzenia";
-            this.DataUrodzenia.Name = "DataUrodzenia";
-            this.DataUrodzenia.ReadOnly = true;
-            // 
-            // PESEL
-            // 
-            this.PESEL.DataPropertyName = "PESEL";
-            this.PESEL.HeaderText = "PESEL";
-            this.PESEL.Name = "PESEL";
-            this.PESEL.ReadOnly = true;
-            // 
-            // Genders
-            // 
-            this.Genders.DataPropertyName = "Genders";
-            this.Genders.HeaderText = "Genders";
-            this.Genders.Name = "Genders";
-            this.Genders.ReadOnly = true;
+            this.dataGridViewWorker.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWorker_CellContentClick);
             // 
             // workerBindingSource
             // 
@@ -240,11 +196,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewWorker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Imie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nazwisko;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataUrodzenia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PESEL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genders;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
