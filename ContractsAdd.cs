@@ -58,15 +58,6 @@ namespace HR
 
         }
 
-        private void btnCloseWr_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -82,7 +73,9 @@ namespace HR
             newContract.dtEndContract = dtBirth.Value;
             newContract.IdPosition = cbBoxPositionType.SelectedIndex;
             newContract.Salary = numericUPWynagrodzenie.Value;
-           // newContract.Worker = cbBoxWorker.SelectedIndex;
+            //newContract.Worker = cbBoxWorker.SelectedItem;
+
+           
             MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
             MainForm.DatabaseHRDataConnection.SubmitChanges();
             var contractsForm = Application.OpenForms.OfType<ContractsForm>().Single();
@@ -95,21 +88,7 @@ namespace HR
 
         }
 
-        bool weryfikacja()
-        {
 
-            if (numericUPWynagrodzenie.Value.ToString() == "" || dtBirth.Value.ToString() == "")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-
-      
 
         private void ContractsAdd_Load(object sender, EventArgs e)
         {

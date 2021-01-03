@@ -24,7 +24,7 @@ namespace HR
             dateTimeRozp.Value = w.dtStartContract;
             dateTimeKonc.Value = w.dtEndContract;
             numericUPWynagrodzenie.Text= w.Salary.ToString();
-            
+            //cbBoxWorkerName.Items = w.Worker;
 
 
         }
@@ -66,6 +66,18 @@ namespace HR
             cbBoxPositionType.DataSource = MainForm.DatabaseHRDataConnection.Positions;
             cbBoxContractType.DataSource = MainForm.DatabaseHRDataConnection.TypeContracts;
             cbBoxWorkerName.DataSource = MainForm.DatabaseHRDataConnection.Worker;
+        }
+
+        private void buttonHide_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnEditContract_Click(object sender, EventArgs e)
+        {
+            ////
+            DatabaseHRContracts.SubmitChanges();
+            Close();
         }
     }
 }
