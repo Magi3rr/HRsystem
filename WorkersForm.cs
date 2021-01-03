@@ -27,12 +27,7 @@ namespace HR
             dataGridViewWorker.DataSource = emp;
         }
 
-        public void LoadContracts()
-        {
-
-            var con = (from x in DatabaseHRWorkers.Contract select x).ToList();
-            dataGridViewWorker.DataSource = con;
-        }
+        
 
 
         private void btnDelete_Click(object sender, EventArgs e)

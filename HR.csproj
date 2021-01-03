@@ -141,7 +141,6 @@
     <Compile Include="WorkerEdit.Designer.cs">
       <DependentUpon>WorkerEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkerEXT.cs" />
     <Compile Include="WorkersForm.cs">
       <SubType>Form</SubType>
     </Compile>
