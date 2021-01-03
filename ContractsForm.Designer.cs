@@ -48,6 +48,8 @@ namespace HR
             // 
             // dataGridViewContracts
             // 
+            this.dataGridViewContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewContracts.Location = new System.Drawing.Point(0, 58);
