@@ -48,10 +48,13 @@ namespace HR
             // 
             // dataGridViewPositions
             // 
+            this.dataGridViewPositions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPositions.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewPositions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPositions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPositions.Location = new System.Drawing.Point(0, 58);
             this.dataGridViewPositions.Name = "dataGridViewPositions";
+            this.dataGridViewPositions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPositions.Size = new System.Drawing.Size(1036, 556);
             this.dataGridViewPositions.TabIndex = 5;
             // 
@@ -132,7 +135,6 @@ namespace HR
             this.Controls.Add(this.dataGridViewPositions);
             this.Controls.Add(this.panelContracts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "PositionForm";
             this.Text = "PositionForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositions)).EndInit();

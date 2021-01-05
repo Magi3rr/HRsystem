@@ -39,6 +39,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_login = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lb_login);
             this.groupBox1.Controls.Add(this.blLogin);
             this.groupBox1.Controls.Add(this.btnLogIn);
             this.groupBox1.Controls.Add(this.linkLabel1);
@@ -148,6 +150,17 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // lb_login
+            // 
+            this.lb_login.AutoSize = true;
+            this.lb_login.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_login.Location = new System.Drawing.Point(113, 6);
+            this.lb_login.Name = "lb_login";
+            this.lb_login.Size = new System.Drawing.Size(159, 16);
+            this.lb_login.TabIndex = 5;
+            this.lb_login.Text = "Zalogowano pomyślnie!";
+            this.lb_login.Visible = false;
+            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -182,6 +195,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label blLogin;
+        private System.Windows.Forms.Label lb_login;
     }
 }
 
