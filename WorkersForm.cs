@@ -95,6 +95,8 @@ namespace HR
             int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+            //int indexSex = Convert.ToInt32(selectedRow.Cells[3].Value);
+
             WorkerEdit we = new WorkerEdit(DatabaseHRWorkers, index);
             //we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
             //we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();

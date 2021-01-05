@@ -143,7 +143,7 @@
             this.dataGridViewWorker.ReadOnly = true;
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
-            this.dataGridViewWorker.TabIndex = 1;
+            this.dataGridViewWorker.TabIndex = 1;   
             // 
             // workerBindingSource
             // 
