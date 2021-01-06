@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenXmlPowerTools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,14 +20,14 @@ namespace HR
             InitializeComponent();
 
             this.DatabaseHRWorkers = DatabaseHRWorkers;
-            w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
+            w = DatabaseHRWorkers.Worker.Single(x => x.IdSex == id);
+            //w = DatabaseHRWorkers.Worker.Single(x => x.IdSex == IdSex);
+
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
-
-            //wyświetlanie z comboboxa
-
+            cbGender.SelectedIndex = w.IdSex-1;
             dtBirth.Value = w.dtBirth;
-            cbGender.SelectedItem = w.IdSex;
+
 
         }
 
@@ -39,15 +40,18 @@ namespace HR
         {
             w.Name = txtName.Text;
             w.Surname = txtLastName.Text;
+            //var a = Convert.ToInt32(cbGender.SelectedIndex) + 1;
+            w.IdSex = Convert.ToInt32(cbGender.SelectedIndex) + 1;
+            
             DatabaseHRWorkers.SubmitChanges();
-            Close();
+            //Close();
 
         }
 
         private void WorkerEdit_Load(object sender, EventArgs e)
         {
-            cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
-            cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
+            //cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
+            //cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
         }
     }
 }
