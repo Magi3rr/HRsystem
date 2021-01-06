@@ -24,17 +24,36 @@ namespace HR
         public void LoadContracts()
         {
 
-            var emp = (from x in MainForm.DatabaseHRDataConnection.Contract select x).ToList();
-            dataGridViewContracts.DataSource = emp;
+            var empContracts = (from DatabaseContract in MainForm.DatabaseHRDataConnection.Contract
+                                join
+                                DatabaseWorkers in MainForm.DatabaseHRDataConnection.Worker on
+                                DatabaseContract.IdWorker equals DatabaseWorkers.Id
+                                select new
+                                {
+                                    DatabaseWorkers.Id,
+                                    DatabaseWorkers.Name,
+                                    DatabaseWorkers.Surname,
+                                    DatabaseContract.dtStartContract,
+                                    DatabaseContract.dtEndContract,
+                                    DatabaseContract.Salary,
+                                    DatabaseContract.Positions,
+                                    DatabaseContract.TypeContracts,
+                                    
+
+                                });
+            dataGridViewContracts.AutoResizeColumns();
+            dataGridViewContracts.DataSource = empContracts.ToList();          
             dataGridViewContracts.Columns["dtStartContract"].HeaderText = "Data podpisania";
             dataGridViewContracts.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy";
             dataGridViewContracts.Columns["Salary"].HeaderText = "Wynagrodzenie";
             dataGridViewContracts.Columns["Positions"].HeaderText = "Stanowisko";
             dataGridViewContracts.Columns["TypeContracts"].HeaderText = "Stanowisko";
-            dataGridViewContracts.Columns["IdContractType"].Visible = false;
-            dataGridViewContracts.Columns["IdPosition"].Visible = false;
-            dataGridViewContracts.Columns["IdWorker"].Visible = false;
-            dataGridViewContracts.Columns["Id"].Visible = false;
+            dataGridViewContracts.Columns["Name"].HeaderText = "Imie ";
+            dataGridViewContracts.Columns["Surname"].HeaderText = "Nazwisko ";
+           
+             dataGridViewContracts.Columns["Id"].Visible = false;
+            //dataGridViewContracts.Columns["IdWorker"].Visible = false;
+           
 
         }
 
@@ -51,34 +70,56 @@ namespace HR
             DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz usunąć zaznaczony rekord?", "Usuwanie", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+
+                int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
+                DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
+                int index = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+                var getData = from st in MainForm.DatabaseHRDataConnection.Contract
+                               join g in MainForm.DatabaseHRDataConnection.Worker on
+                               st.IdWorker equals g.Id where st.Id.Equals(index)
+                               select new { zmienna1=st, zmienna2=g };
+                foreach (var t in getData)
+                {
+
+                    MainForm.DatabaseHRDataConnection.Contract.DeleteOnSubmit(t.zmienna1);
+                    MainForm.DatabaseHRDataConnection.Worker.DeleteOnSubmit(t.zmienna2);
+
+                }
+             
+
+
+
+
+                /*
                 int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
                 DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
                 int index = Convert.ToInt32(selectedRow.Cells[0].Value);
                
 
-                var query = from t in DatabaseHRContracts.Contract where t.Id == index select t;
+                var query = from t in MainForm.DatabaseHRDataConnection.Contract where t.Id == index select t;
 
                 foreach (var t in query)
                 {
                     DatabaseHRContracts.Contract.DeleteOnSubmit(t);
                 }
 
-                DatabaseHRContracts.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
+              
                 LoadContracts();
+                */
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            //https://stackoverflow.com/questions/26091759/using-linq-to-delete-multiple-rows-in-table-using-matching-key-from-related-tabl
+            //https://www.codeproject.com/Questions/699533/how-to-delete-two-tables-data-with-together-in-lin
             int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
-            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-
-            //MainForm.DatabaseHRDataConnection.Contract
-            ContratcsEdit ce = new ContratcsEdit(DatabaseHRContracts, index);
-            //ContratcsEdit ce = new ContratcsEdit(MainForm.DatabaseHRDataConnection.Contract, index);
-            ce.ShowDialog();
+            int index =Convert.ToInt32(selectedRow.Cells[0].Value);
+            
+            ContratcsEdit ce = new ContratcsEdit(MainForm.DatabaseHRDataConnection, index);
+             ce.ShowDialog();
         }
     }
 }

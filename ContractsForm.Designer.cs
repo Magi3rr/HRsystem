@@ -39,6 +39,7 @@ namespace HR
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panelContracts = new System.Windows.Forms.Panel();
+            this.txtBox_Value = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
@@ -50,13 +51,15 @@ namespace HR
             // 
             this.dataGridViewContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewContracts.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewContracts.MultiSelect = false;
             this.dataGridViewContracts.Name = "dataGridViewContracts";
+            this.dataGridViewContracts.ReadOnly = true;
             this.dataGridViewContracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewContracts.Size = new System.Drawing.Size(1052, 595);
-            this.dataGridViewContracts.TabIndex = 3;
+            this.dataGridViewContracts.TabIndex = 1;
             // 
             // workerBindingSource
             // 
@@ -121,6 +124,7 @@ namespace HR
             // 
             this.panelContracts.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelContracts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelContracts.Controls.Add(this.txtBox_Value);
             this.panelContracts.Controls.Add(this.btnDelete);
             this.panelContracts.Controls.Add(this.btnEdit);
             this.panelContracts.Controls.Add(this.btnAdd);
@@ -129,6 +133,13 @@ namespace HR
             this.panelContracts.Name = "panelContracts";
             this.panelContracts.Size = new System.Drawing.Size(1052, 58);
             this.panelContracts.TabIndex = 2;
+            // 
+            // txtBox_Value
+            // 
+            this.txtBox_Value.Location = new System.Drawing.Point(658, 26);
+            this.txtBox_Value.Name = "txtBox_Value";
+            this.txtBox_Value.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_Value.TabIndex = 2;
             // 
             // ContractsForm
             // 
@@ -146,6 +157,7 @@ namespace HR
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
             this.panelContracts.ResumeLayout(false);
+            this.panelContracts.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -160,5 +172,6 @@ namespace HR
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panelContracts;
+        private System.Windows.Forms.TextBox txtBox_Value;
     }
 }

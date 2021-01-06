@@ -33,7 +33,6 @@ namespace HR
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalaryForm));
             this.dataGridViewSalary = new System.Windows.Forms.DataGridView();
             this.panelWorkers = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,23 +59,12 @@ namespace HR
             // panelWorkers
             // 
             this.panelWorkers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelWorkers.Controls.Add(this.button1);
             this.panelWorkers.Controls.Add(this.btnEdit);
             this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWorkers.Location = new System.Drawing.Point(0, 0);
             this.panelWorkers.Name = "panelWorkers";
             this.panelWorkers.Size = new System.Drawing.Size(1036, 58);
             this.panelWorkers.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(506, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Załaduj dane";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnEdit
             // 
@@ -91,6 +79,7 @@ namespace HR
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edytuj";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // workerBindingSource
             // 
@@ -130,7 +119,6 @@ namespace HR
 
         private System.Windows.Forms.DataGridView dataGridViewSalary;
         private System.Windows.Forms.Panel panelWorkers;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;

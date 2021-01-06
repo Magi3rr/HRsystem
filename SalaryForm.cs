@@ -14,7 +14,7 @@ namespace HR
     public partial class SalaryForm : Form
     {
 
-        
+
 
         public SalaryForm()
         {
@@ -27,28 +27,30 @@ namespace HR
         {
 
 
-           var stu = (from DatabaseHRSalary in MainForm.DatabaseHRDataConnection.TypeContracts join DatabaseHRConctract in MainForm.DatabaseHRDataConnection.Contract on DatabaseHRSalary.Id equals DatabaseHRConctract.Id
+            var stu = (from DatabaseHRSalary in MainForm.DatabaseHRDataConnection.TypeContracts
+                       join DatabaseHRConctract in MainForm.DatabaseHRDataConnection.Contract on DatabaseHRSalary.Id equals DatabaseHRConctract.IdContractType
 
                        select new
-                      {
-                         DatabaseHRSalary.typeContract,
-                         DatabaseHRSalary.Id,
-                         DatabaseHRConctract.dtStartContract,
-                         DatabaseHRConctract.dtEndContract
+                       {
+                           DatabaseHRSalary.typeContract,
+                           DatabaseHRSalary.Id,
+                           DatabaseHRConctract.dtStartContract,
+                           DatabaseHRConctract.dtEndContract,
+                           DatabaseHRSalary.Contract
+
                        });
 
             dataGridViewSalary.DataSource = stu.ToList();
-            dataGridViewSalary.Columns["dtStartContract"].HeaderText = "Data podpisania";
-            dataGridViewSalary.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy";
-            dataGridViewSalary.Columns["TypeContract"].HeaderText = "Rodzaj umowy";
+            dataGridViewSalary.Columns["dtStartContract"].HeaderText = "Data podpisania ";
+            dataGridViewSalary.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy ";
+            dataGridViewSalary.Columns["TypeContract"].HeaderText = "Rodzaj umowy ";
             dataGridViewSalary.Columns["Id"].Visible = false;
 
         }
-       
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            LoadSalary();
+
         }
     }
 }
