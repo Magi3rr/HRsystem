@@ -54,7 +54,7 @@ namespace HR
 
         private void BtnSalary_Click(object sender, EventArgs e)
         {
-            //hide();
+            hide();
             SlidePanel(btnSalary);
             sf.TopLevel = false;
             centerPanel.Controls.Add(sf);

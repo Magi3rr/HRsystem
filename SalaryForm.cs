@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace HR
 {
@@ -67,7 +68,7 @@ namespace HR
             {
                 Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
                 xcelApp.Application.Workbooks.Add(Type.Missing);
-                for( int i =0; i < dataGridViewSalary.Columns.Count+1; i++)
+                for( int i =0; i < dataGridViewSalary.Rows.Count+1; i++)
                 {
                     for (int j =0; j< dataGridViewSalary.Columns.Count + 1; j++)
                     {
@@ -77,8 +78,31 @@ namespace HR
                 xcelApp.Columns.AutoFit();
                 xcelApp.Visible = true;
             }
-            //https://living-sun.com/pl/c/185903-issues-with-class-factory-for-component-with-clsid-00024500-0000-0000-c000-000000000046-c-ms-word-aspnet-35.html
+           
         }
 
+        private void btnExportCSV_Click(object sender, EventArgs e)
+        {
+
+            TextWriter writer = new StreamWriter(@"C:/ExportHR/ExportWynagrodzenia.txt");
+            for (int i = 0; i < dataGridViewSalary.Rows.Count ; i++)
+            {
+                for (int j = 0; j < dataGridViewSalary.Columns.Count -1 ; j++)
+                {
+                    writer.Write("\t"+dataGridViewSalary.Rows[i].Cells[j].Value.ToString()+ "\t"+ "|");
+             
+                }
+                writer.WriteLine("");
+                writer.WriteLine("-------------------------------");   
+            }
+            writer.Close();
+            MessageBox.Show("Eksport udany, pliki znajdują się na dysku C, sprawdź folder o nazwie ExportHR");
+
+
+        }
+
+
+
+        
     }
 }

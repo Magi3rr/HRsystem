@@ -37,6 +37,7 @@ namespace HR
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).BeginInit();
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -59,6 +60,7 @@ namespace HR
             // panelWorkers
             // 
             this.panelWorkers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelWorkers.Controls.Add(this.button1);
             this.panelWorkers.Controls.Add(this.textBoxSalary);
             this.panelWorkers.Controls.Add(this.btnExport);
             this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,6 +104,20 @@ namespace HR
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(171, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "CSV";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnExportCSV_Click);
+            // 
             // SalaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +148,6 @@ namespace HR
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
         private System.Windows.Forms.TextBox textBoxSalary;
+        private System.Windows.Forms.Button button1;
     }
 }
