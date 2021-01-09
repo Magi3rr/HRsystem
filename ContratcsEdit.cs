@@ -20,11 +20,14 @@ namespace HR
             InitializeComponent();
 
             this.DatabaseHRContracts = DatabaseHRContracts;
-           // w = DatabaseHRContracts.Contract.Single(x => x.Id == id);
-           // dateTimeRozp.Value = w.dtStartContract;
-           // dateTimeKonc.Value = w.dtEndContract;
-          //  numericUPWynagrodzenie.Value = w.Salary;
-           //
+            w = DatabaseHRContracts.Contract.Single(x => x.Id == id);
+            cbBoxContractType.SelectedItem = w.TypeContracts;
+            dateTimeRozp.Value = w.dtStartContract;
+            dateTimeKonc.Value = w.dtEndContract;
+            numericUPWynagrodzenie.Value = w.Salary;
+            cbBoxPositionType.SelectedValue = w.Positions;
+            cbBoxWorkerName.SelectedValue = w.Worker;
+
 
 
         }
@@ -48,9 +51,20 @@ namespace HR
 
         private void btnEditContract_Click(object sender, EventArgs e)
         {
-            ////
+
+            w.TypeContracts = cbBoxContractType.SelectedItem as TypeContracts;
+            w.dtStartContract = dateTimeRozp.Value;
+            w.dtEndContract = dateTimeKonc.Value;
+            w.Positions = cbBoxPositionType.SelectedItem as Positions;
+            w.Salary = numericUPWynagrodzenie.Value;
+            w.Worker = cbBoxWorkerName.SelectedItem as Worker;
+
+
             DatabaseHRContracts.SubmitChanges();
             Close();
+            
         }
+
+       
     }
 }

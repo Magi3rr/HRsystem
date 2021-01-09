@@ -68,12 +68,12 @@ namespace HR
         {
             Contract newContract = new Contract();
 
-            newContract.IdContractType = cbBoxContractType.SelectedIndex;
+            newContract.TypeContracts= cbBoxContractType.SelectedItem as TypeContracts;
             newContract.dtStartContract = dtBirth.Value;
             newContract.dtEndContract = dtBirth.Value;
-            newContract.IdPosition = cbBoxPositionType.SelectedIndex;
+            newContract.Positions = cbBoxPositionType.SelectedItem as Positions;
             newContract.Salary = numericUPWynagrodzenie.Value;
-            //newContract.Worker = cbBoxWorker.SelectedItem;
+            newContract.Worker = cbBoxWorker.SelectedItem as Worker;
 
            
             MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);

@@ -40,6 +40,7 @@ namespace HR
             this.btnDelete = new System.Windows.Forms.Button();
             this.panelContracts = new System.Windows.Forms.Panel();
             this.txtBox_Value = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
@@ -124,6 +125,7 @@ namespace HR
             // 
             this.panelContracts.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelContracts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelContracts.Controls.Add(this.button1);
             this.panelContracts.Controls.Add(this.txtBox_Value);
             this.panelContracts.Controls.Add(this.btnDelete);
             this.panelContracts.Controls.Add(this.btnEdit);
@@ -140,6 +142,16 @@ namespace HR
             this.txtBox_Value.Name = "txtBox_Value";
             this.txtBox_Value.Size = new System.Drawing.Size(100, 20);
             this.txtBox_Value.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(537, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ContractsForm
             // 
@@ -173,5 +185,6 @@ namespace HR
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panelContracts;
         private System.Windows.Forms.TextBox txtBox_Value;
+        private System.Windows.Forms.Button button1;
     }
 }

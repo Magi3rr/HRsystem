@@ -32,8 +32,9 @@ namespace HR
 
                        select new
                        {
-                           DatabaseHRSalary.typeContract,
                            DatabaseHRSalary.Id,
+                           DatabaseHRSalary.typeContract,
+                           DatabaseHRConctract.Salary,
                            DatabaseHRConctract.dtStartContract,
                            DatabaseHRConctract.dtEndContract,
                            DatabaseHRSalary.Contract
@@ -43,6 +44,7 @@ namespace HR
             dataGridViewSalary.DataSource = stu.ToList();
             dataGridViewSalary.Columns["dtStartContract"].HeaderText = "Data podpisania ";
             dataGridViewSalary.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy ";
+            dataGridViewSalary.Columns["Salary"].HeaderText = "Wynagrodzenie ";
             dataGridViewSalary.Columns["TypeContract"].HeaderText = "Rodzaj umowy ";
             dataGridViewSalary.Columns["Id"].Visible = false;
 
