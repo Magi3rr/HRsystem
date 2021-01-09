@@ -20,12 +20,12 @@ namespace HR
             InitializeComponent();
 
             this.DatabaseHRWorkers = DatabaseHRWorkers;
-            w = DatabaseHRWorkers.Worker.Single(x => x.IdSex == id);
-            //w = DatabaseHRWorkers.Worker.Single(x => x.IdSex == IdSex);
+            w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
 
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
-            cbGender.SelectedIndex = w.IdSex-1;
+            //cbGender.SelectedIndex = w.IdSex-1;
+            cbGender.SelectedItem = w.Genders;
             dtBirth.Value = w.dtBirth;
 
 
@@ -40,9 +40,14 @@ namespace HR
         {
             w.Name = txtName.Text;
             w.Surname = txtLastName.Text;
-            //var a = Convert.ToInt32(cbGender.SelectedIndex) + 1;
-            w.IdSex = Convert.ToInt32(cbGender.SelectedIndex) + 1;
+            w.Genders = cbGender.SelectedItem as Genders;
+            //tbtest.Text = cbGender.ToString();
+            //tbtest.Text = cbGender.SelectedIndex.ToString();
             
+           
+
+
+
             DatabaseHRWorkers.SubmitChanges();
             //Close();
 
@@ -50,7 +55,7 @@ namespace HR
 
         private void WorkerEdit_Load(object sender, EventArgs e)
         {
-            //cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
+            cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
             //cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
         }
     }

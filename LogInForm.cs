@@ -39,7 +39,8 @@ namespace HR
 
         public void Open()
         {
-            using (MainForm mf = new MainForm())
+            string userName = textBox1.Text;
+            using (MainForm mf = new MainForm(userName))
             {
                 mf.ShowDialog();
                 this.Close();

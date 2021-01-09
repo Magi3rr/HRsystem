@@ -30,15 +30,14 @@ namespace HR
        
         private void BtnAddWorker_Click(object sender, EventArgs e)
         {
-            Worker newWorker = new Worker
-            {
-                Name = txtName.Text,
-                Surname = txtLastName.Text,
-                IdSex = Convert.ToInt32(cbGender.SelectedIndex), //zmienić typ na string w bazie
-                dtBirth = dtBirth.Value,
-                Pesel = txtPESEL.Text,
-                IdStatus = 1 // aktywny
-            };
+            Worker newWorker = new Worker();
+            newWorker.Name = txtName.Text;
+            newWorker.Surname = txtLastName.Text;
+            newWorker.Genders = cbGender.SelectedItem as Genders;
+            //IdSex = Convert.ToInt32(cbGender.SelectedIndex), //zmienić typ na string w bazie
+            newWorker.dtBirth = dtBirth.Value;
+            newWorker.Pesel = txtPESEL.Text;
+            newWorker.IdStatus = 1;
 
 
             MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);

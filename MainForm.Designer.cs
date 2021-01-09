@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.userName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@
             // bottomPanel
             // 
             this.bottomPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bottomPanel.Controls.Add(this.userName);
             this.bottomPanel.Controls.Add(this.label2);
             this.bottomPanel.Controls.Add(this.label1);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -58,6 +60,14 @@
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(1302, 32);
             this.bottomPanel.TabIndex = 0;
+            // 
+            // userName
+            // 
+            this.userName.AutoSize = true;
+            this.userName.Location = new System.Drawing.Point(176, 6);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(0, 17);
+            this.userName.TabIndex = 2;
             // 
             // label2
             // 
@@ -73,9 +83,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 17);
+            this.label1.Size = new System.Drawing.Size(164, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Zalogowany użytkownik: Jan Kowalski";
+            this.label1.Text = "Zalogowany użytkownik:";
             // 
             // pictureBox1
             // 
@@ -246,5 +256,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel centerPanel;
+        private System.Windows.Forms.Label userName;
     }
 }

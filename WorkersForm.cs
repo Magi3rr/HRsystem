@@ -22,8 +22,8 @@ namespace HR
 
        public void LoadWorkers()
         {
-
-            var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
+            
+            var emp = (from x in MainForm.DatabaseHRDataConnection.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
             dataGridViewWorker.Columns["Name"].HeaderText = "Imię";
             dataGridViewWorker.Columns["Surname"].HeaderText = "Nazwisko";
@@ -33,10 +33,30 @@ namespace HR
             dataGridViewWorker.Columns["Id"].Visible = false;
             dataGridViewWorker.Columns["IdSex"].Visible = false;
             dataGridViewWorker.Columns["IdStatus"].Visible = false;
+            /*var emp = (from x in MainForm.DatabaseHRDataConnection.Worker
+                       select new
+                       {
+                           x.Name,
+                           x.Surname,
+                           x.dtBirth,
+                           x.Genders,
+                           x.Statuses,
+
+                       });
+            dataGridViewWorker.DataSource = emp;
+            dataGridViewWorker.Columns["Name"].HeaderText = "Imię";
+            dataGridViewWorker.Columns["Surname"].HeaderText = "Nazwisko";
+            dataGridViewWorker.Columns["dtbirth"].HeaderText = "Status";
+            dataGridViewWorker.Columns["Genders"].HeaderText = "Płeć";
+            dataGridViewWorker.Columns["Statuses"].HeaderText = "Status";
+            //dataGridViewWorker.Columns["Id"].Visible = false;
+            //dataGridViewWorker.Columns["IdSex"].Visible = false;
+            //dataGridViewWorker.Columns["IdStatus"].Visible = false;*/
+
 
         }
 
-        
+
 
 
 
@@ -97,7 +117,7 @@ namespace HR
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
             //int indexSex = Convert.ToInt32(selectedRow.Cells[3].Value);
 
-            WorkerEdit we = new WorkerEdit(DatabaseHRWorkers, index);
+            WorkerEdit we = new WorkerEdit(MainForm.DatabaseHRDataConnection, index);
             //we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
             //we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();
             

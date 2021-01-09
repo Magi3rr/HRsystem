@@ -46,14 +46,14 @@ namespace HR
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPESEL = new System.Windows.Forms.TextBox();
-            this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.tbtest = new System.Windows.Forms.TextBox();
             this.workerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tb1 = new System.Windows.Forms.TextBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -192,6 +192,7 @@ namespace HR
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.cbGender, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 1);
@@ -204,9 +205,8 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.txtPESEL, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.cbGender, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbStatus, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.tb1, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tbtest, 0, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 59);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -217,6 +217,7 @@ namespace HR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 223);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
@@ -228,19 +229,6 @@ namespace HR
             this.txtPESEL.Size = new System.Drawing.Size(290, 20);
             this.txtPESEL.TabIndex = 17;
             // 
-            // cbGender
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.cbGender, 2);
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "Mężczyzna",
-            "Kobieta"});
-            this.cbGender.Location = new System.Drawing.Point(103, 63);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(290, 21);
-            this.cbGender.TabIndex = 26;
-            this.cbGender.Text = "System.Windows.Forms.RowStyle";
-            // 
             // cbStatus
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbStatus, 2);
@@ -250,6 +238,13 @@ namespace HR
             this.cbStatus.Size = new System.Drawing.Size(290, 21);
             this.cbStatus.TabIndex = 27;
             this.cbStatus.Text = "System.Windows.Forms.RowStyle";
+            // 
+            // tbtest
+            // 
+            this.tbtest.Location = new System.Drawing.Point(3, 183);
+            this.tbtest.Name = "tbtest";
+            this.tbtest.Size = new System.Drawing.Size(94, 20);
+            this.tbtest.TabIndex = 28;
             // 
             // workerBindingSource1
             // 
@@ -272,12 +267,14 @@ namespace HR
             // 
             this.gendersBindingSource2.DataSource = typeof(HR.Genders);
             // 
-            // tb1
+            // cbGender
             // 
-            this.tb1.Location = new System.Drawing.Point(3, 183);
-            this.tb1.Name = "tb1";
-            this.tb1.Size = new System.Drawing.Size(94, 20);
-            this.tb1.TabIndex = 28;
+            this.tableLayoutPanel1.SetColumnSpan(this.cbGender, 2);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(103, 63);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(290, 21);
+            this.cbGender.TabIndex = 35;
             // 
             // WorkerEdit
             // 
@@ -329,8 +326,8 @@ namespace HR
         private System.Windows.Forms.BindingSource gendersBindingSource2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource workerBindingSource1;
-        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbStatus;
-        private System.Windows.Forms.TextBox tb1;
+        private System.Windows.Forms.TextBox tbtest;
+        private System.Windows.Forms.ComboBox cbGender;
     }
 }
