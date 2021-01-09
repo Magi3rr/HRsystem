@@ -34,7 +34,6 @@ namespace HR
                            DatabaseWorkers.Name,
                            DatabaseWorkers.Surname,
                            DatabasePositions.WorkerPosition,
-                           DatabaseContracts.dtStartContract,
                            DatabaseContracts.TypeContracts
 
                        }) ;
@@ -43,7 +42,7 @@ namespace HR
             dataGridViewPositions.Columns["Surname"].HeaderText = "Nazwisko ";
             dataGridViewPositions.Columns["WorkerPosition"].HeaderText = "Stanowisko ";
             dataGridViewPositions.Columns["TypeContracts"].HeaderText = "Rodzaj umowy ";
-            dataGridViewPositions.Columns["dtStartContract"].HeaderText = "Data rozpoczęcia umowy ";
+           
 
 
         }

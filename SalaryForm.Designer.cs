@@ -30,10 +30,10 @@ namespace HR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalaryForm));
             this.dataGridViewSalary = new System.Windows.Forms.DataGridView();
             this.panelWorkers = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.textBoxSalary = new System.Windows.Forms.TextBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,27 +59,34 @@ namespace HR
             // panelWorkers
             // 
             this.panelWorkers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelWorkers.Controls.Add(this.btnEdit);
+            this.panelWorkers.Controls.Add(this.textBoxSalary);
+            this.panelWorkers.Controls.Add(this.btnExport);
             this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWorkers.Location = new System.Drawing.Point(0, 0);
             this.panelWorkers.Name = "panelWorkers";
             this.panelWorkers.Size = new System.Drawing.Size(1036, 58);
             this.panelWorkers.TabIndex = 2;
             // 
-            // btnEdit
+            // textBoxSalary
             // 
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(12, 13);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(140, 35);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edytuj";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.textBoxSalary.Location = new System.Drawing.Point(877, 27);
+            this.textBoxSalary.Name = "textBoxSalary";
+            this.textBoxSalary.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSalary.TabIndex = 2;
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(12, 13);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(140, 35);
+            this.btnExport.TabIndex = 1;
+            this.btnExport.Text = " Excel";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // workerBindingSource
             // 
@@ -108,6 +115,7 @@ namespace HR
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).EndInit();
             this.panelWorkers.ResumeLayout(false);
+            this.panelWorkers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
@@ -119,9 +127,10 @@ namespace HR
 
         private System.Windows.Forms.DataGridView dataGridViewSalary;
         private System.Windows.Forms.Panel panelWorkers;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
+        private System.Windows.Forms.TextBox textBoxSalary;
     }
 }
