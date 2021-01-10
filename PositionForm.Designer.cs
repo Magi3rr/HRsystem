@@ -58,7 +58,7 @@ namespace HR
             this.dataGridViewPositions.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewPositions.Name = "dataGridViewPositions";
             this.dataGridViewPositions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPositions.Size = new System.Drawing.Size(1036, 554);
+            this.dataGridViewPositions.Size = new System.Drawing.Size(563, 246);
             this.dataGridViewPositions.TabIndex = 5;
             // 
             // btnDelete
@@ -114,7 +114,7 @@ namespace HR
             this.panelContracts.Location = new System.Drawing.Point(0, 0);
             this.panelContracts.Margin = new System.Windows.Forms.Padding(0);
             this.panelContracts.Name = "panelContracts";
-            this.panelContracts.Size = new System.Drawing.Size(1036, 60);
+            this.panelContracts.Size = new System.Drawing.Size(563, 60);
             this.panelContracts.TabIndex = 4;
             // 
             // workerBindingSource
@@ -143,14 +143,14 @@ namespace HR
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 614);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 306);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // PositionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 614);
+            this.ClientSize = new System.Drawing.Size(563, 306);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PositionForm";

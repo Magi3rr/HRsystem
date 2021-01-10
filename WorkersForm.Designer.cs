@@ -145,7 +145,6 @@
             this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 60);
             this.dataGridViewWorker.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridViewWorker.MultiSelect = false;
             this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.ReadOnly = true;
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -182,24 +181,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 653);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // WorkersForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1052, 653);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkersForm";
-            this.ShowIcon = false;
             this.Text = "Form1";
-            this.MaximumSizeChanged += new System.EventHandler(this.BtnAdd_Click);
             this.Load += new System.EventHandler(this.WorkersForm_Load);
             this.panelWorkers.ResumeLayout(false);
             this.panelWorkers.PerformLayout();

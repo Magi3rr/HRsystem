@@ -85,9 +85,5 @@ namespace HR
             we.ShowDialog();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            LoadWorkers();
-        }
     }
 }
