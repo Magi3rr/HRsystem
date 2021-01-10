@@ -21,10 +21,6 @@ namespace HR
         {
             InitializeComponent();
             this.userName.Text = userName;
-
-           
-            
-
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -32,13 +28,11 @@ namespace HR
             this.Close();
         }
 
-
         private void SlidePanel(Button btn)
         {
             slidePanel.Top = btn.Top;
             slidePanel.Height = btn.Height;
             slidePanel.Visible = btn.Enabled;
-            //
 
         }
         private void BtnWorkers_Click(object sender, EventArgs e)
@@ -47,14 +41,8 @@ namespace HR
             SlidePanel(btnWorkers);
             wf.TopLevel = false;
             centerPanel.Controls.Add(wf);
-            //wf.MdiParent = this;
-            //wf.Dock = DockStyle.Fill;
             wf.Show();
-            //wf.Size.Width=1052;
         }
-
-     
-        
 
         private void BtnSalary_Click(object sender, EventArgs e)
         {

@@ -219,14 +219,14 @@
             // 
             // centerPanel
             // 
-            this.centerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.centerPanel.AutoSize = true;
             this.centerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.centerPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.centerPanel.Location = new System.Drawing.Point(723, 387);
+            this.centerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centerPanel.Location = new System.Drawing.Point(240, 61);
             this.centerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(0, 0);
+            this.centerPanel.Size = new System.Drawing.Size(967, 653);
             this.centerPanel.TabIndex = 3;
             // 
             // tableLayoutPanel1

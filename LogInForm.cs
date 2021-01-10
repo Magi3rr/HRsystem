@@ -42,8 +42,12 @@ namespace HR
             string userName = textBox1.Text;
             using (MainForm mf = new MainForm(userName))
             {
+                this.Visible = false;
+                this.Opacity = 0;
+                this.ShowInTaskbar = false;
                 mf.ShowDialog();
                 this.Close();
+
 
             }
         }

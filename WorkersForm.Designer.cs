@@ -42,6 +42,8 @@
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -180,10 +182,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 653);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WorkersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1052, 653);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -192,6 +199,7 @@
             this.Name = "WorkersForm";
             this.ShowIcon = false;
             this.Text = "Form1";
+            this.MaximumSizeChanged += new System.EventHandler(this.BtnAdd_Click);
             this.Load += new System.EventHandler(this.WorkersForm_Load);
             this.panelWorkers.ResumeLayout(false);
             this.panelWorkers.PerformLayout();
@@ -218,5 +226,7 @@
         public System.Windows.Forms.TextBox test1;
         private System.Windows.Forms.DataGridView dataGridViewWorker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

@@ -95,7 +95,23 @@ namespace HR
           
             cbBoxPositionType.DataSource = MainForm.DatabaseHRDataConnection.Positions;
             cbBoxContractType.DataSource = MainForm.DatabaseHRDataConnection.TypeContracts;
-            cbBoxWorker.DataSource = MainForm.DatabaseHRDataConnection.Worker;
+            cbBoxContractType.DataSource = MainForm.DatabaseHRDataConnection.Contract;
+
+            /*
+            var empContracts = (from DatabaseContract in MainForm.DatabaseHRDataConnection.Contract
+                                join
+                                DatabaseWorkers in MainForm.DatabaseHRDataConnection.Worker on
+                                DatabaseContract.IdWorker equals DatabaseWorkers.Id
+                                select new
+                                {
+                                    DatabaseWorkers.Name,
+                                    DatabaseWorkers.Surname,
+                                });
+
+
+            cbBoxWorker.DataSource = empContracts;
+
+            */
         }
     }
 }
