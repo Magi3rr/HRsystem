@@ -44,6 +44,7 @@ namespace HR
             {
                 mf.ShowDialog();
                 this.Close();
+
             }
         }
 

@@ -70,26 +70,26 @@ namespace HR
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxPositionType, 2);
             this.cbBoxPositionType.FormattingEnabled = true;
-            this.cbBoxPositionType.Location = new System.Drawing.Point(86, 99);
+            this.cbBoxPositionType.Location = new System.Drawing.Point(103, 93);
             this.cbBoxPositionType.Name = "cbBoxPositionType";
-            this.cbBoxPositionType.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxPositionType.Size = new System.Drawing.Size(204, 21);
             this.cbBoxPositionType.TabIndex = 35;
             // 
             // cbBoxContractType
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxContractType, 2);
             this.cbBoxContractType.FormattingEnabled = true;
-            this.cbBoxContractType.Location = new System.Drawing.Point(86, 3);
+            this.cbBoxContractType.Location = new System.Drawing.Point(103, 3);
             this.cbBoxContractType.Name = "cbBoxContractType";
-            this.cbBoxContractType.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxContractType.Size = new System.Drawing.Size(204, 21);
             this.cbBoxContractType.TabIndex = 34;
             // 
             // dateTimeRozp
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeRozp, 2);
-            this.dateTimeRozp.Location = new System.Drawing.Point(86, 34);
+            this.dateTimeRozp.Location = new System.Drawing.Point(103, 33);
             this.dateTimeRozp.Name = "dateTimeRozp";
-            this.dateTimeRozp.Size = new System.Drawing.Size(400, 20);
+            this.dateTimeRozp.Size = new System.Drawing.Size(204, 20);
             this.dateTimeRozp.TabIndex = 23;
             // 
             // label1Name
@@ -104,18 +104,18 @@ namespace HR
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 31);
+            this.label1.Location = new System.Drawing.Point(3, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 26);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Data rozpoczęcia";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 128);
+            this.label5.Location = new System.Drawing.Point(3, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 22);
+            this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Wynagrodzenie";
             // 
@@ -123,9 +123,9 @@ namespace HR
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Location = new System.Drawing.Point(407, 247);
+            this.button1.Location = new System.Drawing.Point(208, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 32);
+            this.button1.Size = new System.Drawing.Size(99, 32);
             this.button1.TabIndex = 20;
             this.button1.Text = "Anuluj";
             this.button1.UseVisualStyleBackColor = false;
@@ -135,9 +135,9 @@ namespace HR
             // 
             this.btnAddWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAddWorker.Location = new System.Drawing.Point(175, 247);
+            this.btnAddWorker.Location = new System.Drawing.Point(103, 195);
             this.btnAddWorker.Name = "btnAddWorker";
-            this.btnAddWorker.Size = new System.Drawing.Size(129, 32);
+            this.btnAddWorker.Size = new System.Drawing.Size(99, 32);
             this.btnAddWorker.TabIndex = 12;
             this.btnAddWorker.Text = "Zatwierdz";
             this.btnAddWorker.UseVisualStyleBackColor = false;
@@ -157,22 +157,22 @@ namespace HR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 26);
+            this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Data zakończenia";
             // 
             // dateTimeKonc
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.dateTimeKonc, 2);
-            this.dateTimeKonc.Location = new System.Drawing.Point(86, 63);
+            this.dateTimeKonc.Location = new System.Drawing.Point(103, 63);
             this.dateTimeKonc.Name = "dateTimeKonc";
-            this.dateTimeKonc.Size = new System.Drawing.Size(400, 20);
+            this.dateTimeKonc.Size = new System.Drawing.Size(204, 20);
             this.dateTimeKonc.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 96);
+            this.label2.Location = new System.Drawing.Point(3, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 24;
@@ -181,23 +181,23 @@ namespace HR
             // numericUPWynagrodzenie
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUPWynagrodzenie, 2);
-            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(86, 131);
+            this.numericUPWynagrodzenie.Location = new System.Drawing.Point(103, 123);
             this.numericUPWynagrodzenie.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericUPWynagrodzenie.Name = "numericUPWynagrodzenie";
-            this.numericUPWynagrodzenie.Size = new System.Drawing.Size(400, 20);
+            this.numericUPWynagrodzenie.Size = new System.Drawing.Size(204, 20);
             this.numericUPWynagrodzenie.TabIndex = 28;
             // 
             // cbBoxWorkerName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.cbBoxWorkerName, 2);
             this.cbBoxWorkerName.FormattingEnabled = true;
-            this.cbBoxWorkerName.Location = new System.Drawing.Point(86, 153);
+            this.cbBoxWorkerName.Location = new System.Drawing.Point(103, 153);
             this.cbBoxWorkerName.Name = "cbBoxWorkerName";
-            this.cbBoxWorkerName.Size = new System.Drawing.Size(400, 21);
+            this.cbBoxWorkerName.Size = new System.Drawing.Size(204, 21);
             this.cbBoxWorkerName.TabIndex = 33;
             // 
             // workerBindingSource
@@ -240,7 +240,7 @@ namespace HR
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(161, 8);
+            this.label6.Location = new System.Drawing.Point(68, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(212, 36);
             this.label6.TabIndex = 21;
@@ -249,9 +249,9 @@ namespace HR
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.99229F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.00771F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.cbBoxPositionType, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbBoxContractType, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeRozp, 1, 1);
@@ -266,18 +266,17 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.numericUPWynagrodzenie, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.cbBoxWorkerName, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 58);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 73);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 282);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(310, 230);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // ContratcsEdit
@@ -285,14 +284,14 @@ namespace HR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(543, 348);
+            this.ClientSize = new System.Drawing.Size(354, 311);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ContratcsEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ContratcsEdit";
+            this.Text = "Edytuj umowę";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ContratcsEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUPWynagrodzenie)).EndInit();

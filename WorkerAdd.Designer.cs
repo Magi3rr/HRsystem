@@ -70,7 +70,7 @@ namespace HR
             this.tableLayoutPanel1.SetColumnSpan(this.txtName, 2);
             this.txtName.Location = new System.Drawing.Point(103, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(290, 20);
+            this.txtName.Size = new System.Drawing.Size(204, 20);
             this.txtName.TabIndex = 5;
             // 
             // txtLastName
@@ -78,7 +78,7 @@ namespace HR
             this.tableLayoutPanel1.SetColumnSpan(this.txtLastName, 2);
             this.txtLastName.Location = new System.Drawing.Point(103, 33);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(290, 20);
+            this.txtLastName.Size = new System.Drawing.Size(204, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // label1Name
@@ -128,7 +128,7 @@ namespace HR
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnEditWorker, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.cbStatus, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 60);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 73);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -138,7 +138,7 @@ namespace HR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 223);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(310, 230);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // cbGender
@@ -147,7 +147,7 @@ namespace HR
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Location = new System.Drawing.Point(103, 63);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(290, 21);
+            this.cbGender.Size = new System.Drawing.Size(204, 21);
             this.cbGender.TabIndex = 25;
             this.cbGender.Text = "System.Windows.Forms.RowStyle";
             // 
@@ -165,7 +165,7 @@ namespace HR
             this.tableLayoutPanel1.SetColumnSpan(this.dtBirth, 2);
             this.dtBirth.Location = new System.Drawing.Point(103, 93);
             this.dtBirth.Name = "dtBirth";
-            this.dtBirth.Size = new System.Drawing.Size(290, 20);
+            this.dtBirth.Size = new System.Drawing.Size(204, 20);
             this.dtBirth.TabIndex = 16;
             // 
             // label4
@@ -191,16 +191,16 @@ namespace HR
             this.tableLayoutPanel1.SetColumnSpan(this.txtPESEL, 2);
             this.txtPESEL.Location = new System.Drawing.Point(103, 123);
             this.txtPESEL.Name = "txtPESEL";
-            this.txtPESEL.Size = new System.Drawing.Size(290, 20);
+            this.txtPESEL.Size = new System.Drawing.Size(204, 20);
             this.txtPESEL.TabIndex = 17;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCancel.Location = new System.Drawing.Point(251, 188);
+            this.btnCancel.Location = new System.Drawing.Point(208, 195);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(129, 32);
+            this.btnCancel.Size = new System.Drawing.Size(99, 32);
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -210,9 +210,9 @@ namespace HR
             // 
             this.btnEditWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEditWorker.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditWorker.Location = new System.Drawing.Point(103, 188);
+            this.btnEditWorker.Location = new System.Drawing.Point(103, 195);
             this.btnEditWorker.Name = "btnEditWorker";
-            this.btnEditWorker.Size = new System.Drawing.Size(129, 32);
+            this.btnEditWorker.Size = new System.Drawing.Size(99, 32);
             this.btnEditWorker.TabIndex = 12;
             this.btnEditWorker.Text = "Dodaj";
             this.btnEditWorker.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@ namespace HR
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(103, 153);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(290, 21);
+            this.cbStatus.Size = new System.Drawing.Size(204, 21);
             this.cbStatus.TabIndex = 24;
             this.cbStatus.Text = "System.Windows.Forms.RowStyle";
             // 
@@ -245,13 +245,13 @@ namespace HR
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(38, 9);
+            this.label6.Location = new System.Drawing.Point(33, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(317, 26);
+            this.label6.Size = new System.Drawing.Size(296, 36);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Dodawanie nowego pracownika";
+            this.label6.Text = "Dodanie pracownika";
             // 
             // gendersBindingSource2
             // 
@@ -279,13 +279,14 @@ namespace HR
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(404, 286);
+            this.ClientSize = new System.Drawing.Size(354, 311);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WorkerAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.WorkerAdd_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

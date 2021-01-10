@@ -39,11 +39,13 @@ namespace HR
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositions)).BeginInit();
             this.panelContracts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewPositions
@@ -52,10 +54,11 @@ namespace HR
             this.dataGridViewPositions.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewPositions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPositions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewPositions.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewPositions.Location = new System.Drawing.Point(0, 60);
+            this.dataGridViewPositions.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewPositions.Name = "dataGridViewPositions";
             this.dataGridViewPositions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPositions.Size = new System.Drawing.Size(1036, 556);
+            this.dataGridViewPositions.Size = new System.Drawing.Size(1036, 554);
             this.dataGridViewPositions.TabIndex = 5;
             // 
             // btnDelete
@@ -107,10 +110,11 @@ namespace HR
             this.panelContracts.Controls.Add(this.btnDelete);
             this.panelContracts.Controls.Add(this.btnEdit);
             this.panelContracts.Controls.Add(this.btnAdd);
-            this.panelContracts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContracts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContracts.Location = new System.Drawing.Point(0, 0);
+            this.panelContracts.Margin = new System.Windows.Forms.Padding(0);
             this.panelContracts.Name = "panelContracts";
-            this.panelContracts.Size = new System.Drawing.Size(1036, 58);
+            this.panelContracts.Size = new System.Drawing.Size(1036, 60);
             this.panelContracts.TabIndex = 4;
             // 
             // workerBindingSource
@@ -127,13 +131,27 @@ namespace HR
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panelContracts, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewPositions, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 614);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
             // PositionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 614);
-            this.Controls.Add(this.dataGridViewPositions);
-            this.Controls.Add(this.panelContracts);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PositionForm";
             this.Text = "PositionForm";
@@ -142,6 +160,7 @@ namespace HR
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -156,5 +175,6 @@ namespace HR
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panelContracts;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

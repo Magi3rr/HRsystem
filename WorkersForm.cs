@@ -17,54 +17,24 @@ namespace HR
         {
             InitializeComponent();
             LoadWorkers();
-
         }
 
        public void LoadWorkers()
-        {
-            
+        {          
             var emp = (from x in MainForm.DatabaseHRDataConnection.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
             dataGridViewWorker.Columns["Name"].HeaderText = "Imię";
             dataGridViewWorker.Columns["Surname"].HeaderText = "Nazwisko";
-            dataGridViewWorker.Columns["dtbirth"].HeaderText = "Status";
+            dataGridViewWorker.Columns["dtbirth"].HeaderText = "Data urodzenia";
             dataGridViewWorker.Columns["Genders"].HeaderText = "Płeć";
             dataGridViewWorker.Columns["Statuses"].HeaderText = "Status";
             dataGridViewWorker.Columns["Id"].Visible = false;
             dataGridViewWorker.Columns["IdSex"].Visible = false;
             dataGridViewWorker.Columns["IdStatus"].Visible = false;
-            /*var emp = (from x in MainForm.DatabaseHRDataConnection.Worker
-                       select new
-                       {
-                           x.Name,
-                           x.Surname,
-                           x.dtBirth,
-                           x.Genders,
-                           x.Statuses,
-
-                       });
-            dataGridViewWorker.DataSource = emp;
-            dataGridViewWorker.Columns["Name"].HeaderText = "Imię";
-            dataGridViewWorker.Columns["Surname"].HeaderText = "Nazwisko";
-            dataGridViewWorker.Columns["dtbirth"].HeaderText = "Status";
-            dataGridViewWorker.Columns["Genders"].HeaderText = "Płeć";
-            dataGridViewWorker.Columns["Statuses"].HeaderText = "Status";
-            //dataGridViewWorker.Columns["Id"].Visible = false;
-            //dataGridViewWorker.Columns["IdSex"].Visible = false;
-            //dataGridViewWorker.Columns["IdStatus"].Visible = false;*/
-
-
         }
 
-
-
-
-
-
         private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            
-            
+        {            
             DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz usunąć zaznaczony rekord?","Usuwanie", MessageBoxButtons.YesNo);
             if(dialogResult == DialogResult.Yes)
             {
@@ -79,8 +49,7 @@ namespace HR
                 {
                     DatabaseHRWorkers.Worker.DeleteOnSubmit(t);
                 }
-
-                DatabaseHRWorkers.SubmitChanges();  //nieobsługiwany wyjątek System.Data.Linq.ChangeConflictException
+                DatabaseHRWorkers.SubmitChanges();
                 LoadWorkers();
             }
 
@@ -92,8 +61,6 @@ namespace HR
             WorkerAdd Adw = new WorkerAdd(); 
             Adw.Show();
             LoadWorkers();
-
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -105,46 +72,17 @@ namespace HR
         {
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            
-
             int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
             int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-            //int indexSex = Convert.ToInt32(selectedRow.Cells[3].Value);
-
             WorkerEdit we = new WorkerEdit(MainForm.DatabaseHRDataConnection, index);
-            //we.txtName.Text = dataGridViewWorker.CurrentRow.Cells[1].Value.ToString();
-            //we.txtLastName.Text = dataGridViewWorker.CurrentRow.Cells[2].Value.ToString();
-            
             we.ShowDialog();
-
-
-
-            /*
-            int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
-            DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
-            int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-            Worker wrk = DatabaseHRWorkers.Worker.FirstOrDefault(wrk1 => wrk1.Id.Equals(index));
-            //test.Text = index.ToString();
-            
-
-            wrk.Imie = "zzz";
-            wrk.Nazwisko = "zzzzz";
-
-            DatabaseHRWorkers.SubmitChanges();
-
-            var SelectQuery =
-                from a in DatabaseHRWorkers.GetTable<Worker>()
-                select a;
-
-            dataGridViewWorker.DataSource = SelectQuery;
-            */
-
         }
 
     }

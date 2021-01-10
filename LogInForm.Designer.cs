@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lb_login = new System.Windows.Forms.Label();
             this.blLogin = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -39,7 +40,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_login = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Logowanie";
+            // 
+            // lb_login
+            // 
+            this.lb_login.AutoSize = true;
+            this.lb_login.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_login.Location = new System.Drawing.Point(113, 6);
+            this.lb_login.Name = "lb_login";
+            this.lb_login.Size = new System.Drawing.Size(159, 16);
+            this.lb_login.TabIndex = 5;
+            this.lb_login.Text = "Zalogowano pomyślnie!";
+            this.lb_login.Visible = false;
             // 
             // blLogin
             // 
@@ -150,17 +161,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // lb_login
-            // 
-            this.lb_login.AutoSize = true;
-            this.lb_login.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lb_login.Location = new System.Drawing.Point(113, 6);
-            this.lb_login.Name = "lb_login";
-            this.lb_login.Size = new System.Drawing.Size(159, 16);
-            this.lb_login.TabIndex = 5;
-            this.lb_login.Text = "Zalogowano pomyślnie!";
-            this.lb_login.Visible = false;
-            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -171,7 +171,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

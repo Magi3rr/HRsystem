@@ -41,11 +41,13 @@
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelWorkers
@@ -57,10 +59,11 @@
             this.panelWorkers.Controls.Add(this.btnDelete);
             this.panelWorkers.Controls.Add(this.btnEdit);
             this.panelWorkers.Controls.Add(this.btnAdd);
-            this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelWorkers.Location = new System.Drawing.Point(0, 0);
+            this.panelWorkers.Margin = new System.Windows.Forms.Padding(0);
             this.panelWorkers.Name = "panelWorkers";
-            this.panelWorkers.Size = new System.Drawing.Size(1052, 58);
+            this.panelWorkers.Size = new System.Drawing.Size(1052, 60);
             this.panelWorkers.TabIndex = 0;
             // 
             // test1
@@ -137,13 +140,15 @@
             this.dataGridViewWorker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewWorker.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewWorker.Location = new System.Drawing.Point(0, 60);
+            this.dataGridViewWorker.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewWorker.MultiSelect = false;
             this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.ReadOnly = true;
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 595);
-            this.dataGridViewWorker.TabIndex = 1;   
+            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 593);
+            this.dataGridViewWorker.TabIndex = 1;
             // 
             // workerBindingSource
             // 
@@ -159,14 +164,29 @@
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewWorker, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelWorkers, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 653);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
             // WorkersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1052, 653);
-            this.Controls.Add(this.dataGridViewWorker);
-            this.Controls.Add(this.panelWorkers);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkersForm";
@@ -179,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +217,6 @@
         public System.Windows.Forms.TextBox test;
         public System.Windows.Forms.TextBox test1;
         private System.Windows.Forms.DataGridView dataGridViewWorker;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

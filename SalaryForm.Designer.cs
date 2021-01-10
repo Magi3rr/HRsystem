@@ -32,17 +32,19 @@ namespace HR
             this.components = new System.ComponentModel.Container();
             this.dataGridViewSalary = new System.Windows.Forms.DataGridView();
             this.panelWorkers = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBoxSalary = new System.Windows.Forms.TextBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).BeginInit();
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewSalary
@@ -51,10 +53,11 @@ namespace HR
             this.dataGridViewSalary.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewSalary.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewSalary.Location = new System.Drawing.Point(0, 60);
+            this.dataGridViewSalary.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewSalary.Name = "dataGridViewSalary";
             this.dataGridViewSalary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSalary.Size = new System.Drawing.Size(1036, 556);
+            this.dataGridViewSalary.Size = new System.Drawing.Size(1036, 554);
             this.dataGridViewSalary.TabIndex = 3;
             // 
             // panelWorkers
@@ -63,11 +66,26 @@ namespace HR
             this.panelWorkers.Controls.Add(this.button1);
             this.panelWorkers.Controls.Add(this.textBoxSalary);
             this.panelWorkers.Controls.Add(this.btnExport);
-            this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelWorkers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelWorkers.Location = new System.Drawing.Point(0, 0);
+            this.panelWorkers.Margin = new System.Windows.Forms.Padding(0);
             this.panelWorkers.Name = "panelWorkers";
-            this.panelWorkers.Size = new System.Drawing.Size(1036, 58);
+            this.panelWorkers.Size = new System.Drawing.Size(1036, 60);
             this.panelWorkers.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(171, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "CSV";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnExportCSV_Click);
             // 
             // textBoxSalary
             // 
@@ -104,27 +122,27 @@ namespace HR
             this.contractBindingSource.DataMember = "Contract";
             this.contractBindingSource.DataSource = this.workerBindingSource;
             // 
-            // button1
+            // tableLayoutPanel1
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(171, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "CSV";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnExportCSV_Click);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panelWorkers, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewSalary, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 614);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // SalaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 614);
-            this.Controls.Add(this.dataGridViewSalary);
-            this.Controls.Add(this.panelWorkers);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SalaryForm";
             this.Text = "SalaryForm";
@@ -135,6 +153,7 @@ namespace HR
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +168,6 @@ namespace HR
         private System.Windows.Forms.BindingSource contractBindingSource;
         private System.Windows.Forms.TextBox textBoxSalary;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

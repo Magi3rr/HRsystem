@@ -21,6 +21,7 @@ namespace HR
         {
             InitializeComponent();
             this.userName.Text = userName;
+
            
             
 
@@ -46,7 +47,10 @@ namespace HR
             SlidePanel(btnWorkers);
             wf.TopLevel = false;
             centerPanel.Controls.Add(wf);
+            //wf.MdiParent = this;
+            //wf.Dock = DockStyle.Fill;
             wf.Show();
+            //wf.Size.Width=1052;
         }
 
      
@@ -68,10 +72,6 @@ namespace HR
             pf.TopLevel = false;
             centerPanel.Controls.Add(pf);
             pf.Show();
-
-
-
-
         }
 
         private void btnContracts_Click(object sender, EventArgs e)

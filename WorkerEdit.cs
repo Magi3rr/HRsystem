@@ -24,11 +24,10 @@ namespace HR
 
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
-            //cbGender.SelectedIndex = w.IdSex-1;
             cbGender.SelectedItem = w.Genders;
             dtBirth.Value = w.dtBirth;
-
-
+            txtPESEL.Text = w.Pesel;
+            cbStatus.SelectedItem = w.Statuses;
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -41,22 +40,23 @@ namespace HR
             w.Name = txtName.Text;
             w.Surname = txtLastName.Text;
             w.Genders = cbGender.SelectedItem as Genders;
-            //tbtest.Text = cbGender.ToString();
-            //tbtest.Text = cbGender.SelectedIndex.ToString();
-            
-           
-
-
+            w.dtBirth = dtBirth.Value;
+            w.Pesel = txtPESEL.Text;
+            w.Statuses = cbStatus.SelectedItem as Statuses;
 
             DatabaseHRWorkers.SubmitChanges();
-            //Close();
-
+            Close();
         }
 
         private void WorkerEdit_Load(object sender, EventArgs e)
         {
             cbGender.DataSource = MainForm.DatabaseHRDataConnection.Genders;
-            //cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
+            cbStatus.DataSource = MainForm.DatabaseHRDataConnection.Statuses;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

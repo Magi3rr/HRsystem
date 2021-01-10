@@ -39,13 +39,15 @@ namespace HR
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panelContracts = new System.Windows.Forms.Panel();
-            this.txtBox_Value = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtBox_Value = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).BeginInit();
             this.panelContracts.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewContracts
@@ -54,12 +56,13 @@ namespace HR
             this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewContracts.Location = new System.Drawing.Point(0, 58);
+            this.dataGridViewContracts.Location = new System.Drawing.Point(0, 60);
+            this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewContracts.MultiSelect = false;
             this.dataGridViewContracts.Name = "dataGridViewContracts";
             this.dataGridViewContracts.ReadOnly = true;
             this.dataGridViewContracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewContracts.Size = new System.Drawing.Size(1052, 595);
+            this.dataGridViewContracts.Size = new System.Drawing.Size(1053, 593);
             this.dataGridViewContracts.TabIndex = 1;
             // 
             // workerBindingSource
@@ -130,18 +133,12 @@ namespace HR
             this.panelContracts.Controls.Add(this.btnDelete);
             this.panelContracts.Controls.Add(this.btnEdit);
             this.panelContracts.Controls.Add(this.btnAdd);
-            this.panelContracts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContracts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContracts.Location = new System.Drawing.Point(0, 0);
+            this.panelContracts.Margin = new System.Windows.Forms.Padding(0);
             this.panelContracts.Name = "panelContracts";
-            this.panelContracts.Size = new System.Drawing.Size(1052, 58);
+            this.panelContracts.Size = new System.Drawing.Size(1053, 60);
             this.panelContracts.TabIndex = 2;
-            // 
-            // txtBox_Value
-            // 
-            this.txtBox_Value.Location = new System.Drawing.Point(658, 26);
-            this.txtBox_Value.Name = "txtBox_Value";
-            this.txtBox_Value.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_Value.TabIndex = 2;
             // 
             // button1
             // 
@@ -153,14 +150,35 @@ namespace HR
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtBox_Value
+            // 
+            this.txtBox_Value.Location = new System.Drawing.Point(658, 26);
+            this.txtBox_Value.Name = "txtBox_Value";
+            this.txtBox_Value.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_Value.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewContracts, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelContracts, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1053, 653);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
             // ContractsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1052, 653);
-            this.Controls.Add(this.dataGridViewContracts);
-            this.Controls.Add(this.panelContracts);
+            this.ClientSize = new System.Drawing.Size(1053, 653);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContractsForm";
             this.Text = "ContractsForm";
@@ -170,6 +188,7 @@ namespace HR
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
             this.panelContracts.ResumeLayout(false);
             this.panelContracts.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -186,5 +205,6 @@ namespace HR
         private System.Windows.Forms.Panel panelContracts;
         private System.Windows.Forms.TextBox txtBox_Value;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

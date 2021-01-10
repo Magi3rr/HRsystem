@@ -43,10 +43,12 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.leftPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bottomPanel
@@ -57,8 +59,9 @@
             this.bottomPanel.Controls.Add(this.label1);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottomPanel.Location = new System.Drawing.Point(0, 714);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(1302, 32);
+            this.bottomPanel.Size = new System.Drawing.Size(1207, 32);
             this.bottomPanel.TabIndex = 0;
             // 
             // userName
@@ -71,8 +74,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1116, 6);
+            this.label2.Location = new System.Drawing.Point(1017, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 17);
             this.label2.TabIndex = 1;
@@ -108,10 +112,12 @@
             this.leftPanel.Controls.Add(this.slidePanel);
             this.leftPanel.Controls.Add(this.btnWorkers);
             this.leftPanel.Controls.Add(this.pictureBox1);
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(0);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(250, 714);
+            this.tableLayoutPanel1.SetRowSpan(this.leftPanel, 2);
+            this.leftPanel.Size = new System.Drawing.Size(240, 714);
             this.leftPanel.TabIndex = 1;
             // 
             // btnPosition
@@ -191,43 +197,65 @@
             // 
             this.topPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.topPanel.Controls.Add(this.label3);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(250, 0);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topPanel.Location = new System.Drawing.Point(240, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1052, 61);
+            this.topPanel.Size = new System.Drawing.Size(967, 61);
             this.topPanel.TabIndex = 2;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoEllipsis = true;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(293, 12);
+            this.label3.Location = new System.Drawing.Point(290, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(399, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "System kadrowo-płacowy HR";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // centerPanel
             // 
+            this.centerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.centerPanel.AutoSize = true;
+            this.centerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.centerPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.centerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centerPanel.Location = new System.Drawing.Point(250, 61);
+            this.centerPanel.Location = new System.Drawing.Point(723, 387);
+            this.centerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(1052, 653);
+            this.centerPanel.Size = new System.Drawing.Size(0, 0);
             this.centerPanel.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.leftPanel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.topPanel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.centerPanel, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1207, 714);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1302, 746);
-            this.Controls.Add(this.centerPanel);
-            this.Controls.Add(this.topPanel);
-            this.Controls.Add(this.leftPanel);
+            this.ClientSize = new System.Drawing.Size(1207, 746);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bottomPanel);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System HR";
@@ -237,6 +265,8 @@
             this.leftPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,8 +284,9 @@
         private System.Windows.Forms.Button btnContracts;
         private System.Windows.Forms.Button btnSalary;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel centerPanel;
         private System.Windows.Forms.Label userName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label3;
     }
 }
