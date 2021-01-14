@@ -39,8 +39,7 @@ namespace HR
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panelContracts = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtBox_Value = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -52,10 +51,11 @@ namespace HR
             // 
             // dataGridViewContracts
             // 
+            this.dataGridViewContracts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewContracts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewContracts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContracts.Location = new System.Drawing.Point(0, 60);
             this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewContracts.MultiSelect = false;
@@ -81,12 +81,13 @@ namespace HR
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(21, 12);
+            this.btnAdd.Location = new System.Drawing.Point(593, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(140, 35);
             this.btnAdd.TabIndex = 1;
@@ -96,12 +97,13 @@ namespace HR
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(181, 12);
+            this.btnEdit.Location = new System.Drawing.Point(753, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(140, 35);
             this.btnEdit.TabIndex = 1;
@@ -111,12 +113,13 @@ namespace HR
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(341, 12);
+            this.btnDelete.Location = new System.Drawing.Point(913, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 35);
             this.btnDelete.TabIndex = 1;
@@ -128,8 +131,7 @@ namespace HR
             // 
             this.panelContracts.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelContracts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelContracts.Controls.Add(this.button1);
-            this.panelContracts.Controls.Add(this.txtBox_Value);
+            this.panelContracts.Controls.Add(this.label1);
             this.panelContracts.Controls.Add(this.btnDelete);
             this.panelContracts.Controls.Add(this.btnEdit);
             this.panelContracts.Controls.Add(this.btnAdd);
@@ -140,22 +142,15 @@ namespace HR
             this.panelContracts.Size = new System.Drawing.Size(1053, 60);
             this.panelContracts.TabIndex = 2;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(537, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtBox_Value
-            // 
-            this.txtBox_Value.Location = new System.Drawing.Point(658, 26);
-            this.txtBox_Value.Name = "txtBox_Value";
-            this.txtBox_Value.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_Value.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Lista umów";
             // 
             // tableLayoutPanel1
             // 
@@ -180,7 +175,10 @@ namespace HR
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContractsForm";
+            this.ShowIcon = false;
             this.Text = "ContractsForm";
+            this.Load += new System.EventHandler(this.ContractsForm_Load);
+            this.Resize += new System.EventHandler(this.ContractsForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gendersBindingSource)).EndInit();
@@ -202,8 +200,7 @@ namespace HR
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panelContracts;
-        private System.Windows.Forms.TextBox txtBox_Value;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -236,6 +236,7 @@ namespace HR
             this.txtPESEL.Name = "txtPESEL";
             this.txtPESEL.Size = new System.Drawing.Size(204, 20);
             this.txtPESEL.TabIndex = 17;
+            this.txtPESEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPESEL_KeyPress);
             // 
             // cbStatus
             // 
@@ -276,8 +277,11 @@ namespace HR
             this.ClientSize = new System.Drawing.Size(354, 311);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "WorkerEdit";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edytuj";
             this.TopMost = true;

@@ -21,7 +21,6 @@ namespace HR
 
             this.DatabaseHRWorkers = DatabaseHRWorkers;
             w = DatabaseHRWorkers.Worker.Single(x => x.Id == id);
-
             txtName.Text = w.Name;
             txtLastName.Text = w.Surname;
             cbGender.SelectedItem = w.Genders;
@@ -37,15 +36,24 @@ namespace HR
 
         private void BtnEditWorker_Click(object sender, EventArgs e)
         {
-            w.Name = txtName.Text;
-            w.Surname = txtLastName.Text;
-            w.Genders = cbGender.SelectedItem as Genders;
-            w.dtBirth = dtBirth.Value;
-            w.Pesel = txtPESEL.Text;
-            w.Statuses = cbStatus.SelectedItem as Statuses;
 
-            DatabaseHRWorkers.SubmitChanges();
-            Close();
+            if (String.IsNullOrEmpty(txtName.Text) && String.IsNullOrEmpty(txtLastName.Text) && String.IsNullOrEmpty(txtPESEL.Text))
+            {
+                MessageBox.Show("Nie wypełniłeś wszystkich pól");
+            }
+            else
+            {
+                w.Name = txtName.Text;
+                w.Surname = txtLastName.Text;
+                w.Genders = cbGender.SelectedItem as Genders;
+                w.dtBirth = dtBirth.Value;
+                w.Pesel = txtPESEL.Text;
+                w.Statuses = cbStatus.SelectedItem as Statuses;
+
+                DatabaseHRWorkers.SubmitChanges();
+                Close();
+            }
+            
         }
 
         private void WorkerEdit_Load(object sender, EventArgs e)
@@ -57,6 +65,14 @@ namespace HR
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPESEL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

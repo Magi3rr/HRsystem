@@ -25,19 +25,29 @@ namespace HR
        
         private void BtnAddWorker_Click(object sender, EventArgs e)
         {
-            Worker newWorker = new Worker();
-            newWorker.Name = txtName.Text;
-            newWorker.Surname = txtLastName.Text;
-            newWorker.Genders = cbGender.SelectedItem as Genders;
-            newWorker.dtBirth = dtBirth.Value;
-            newWorker.Pesel = txtPESEL.Text;
-            newWorker.Statuses = cbStatus.SelectedItem as Statuses;
+            if (String.IsNullOrEmpty(txtName.Text) && String.IsNullOrEmpty(txtLastName.Text) && String.IsNullOrEmpty(txtPESEL.Text))
+            {
+                MessageBox.Show("Nie wypełniłeś wszystkich pól");
+            }
+            else
+            {
+                Worker newWorker = new Worker();
+                txtName.Text.Replace(" ", string.Empty);
+                newWorker.Name = txtName.Text;
+                newWorker.Surname = txtLastName.Text;
+                txtLastName.Text.Replace(" ", string.Empty);
+                newWorker.Genders = cbGender.SelectedItem as Genders;
+                newWorker.dtBirth = dtBirth.Value;
+                newWorker.Pesel = txtPESEL.Text;
+                newWorker.Statuses = cbStatus.SelectedItem as Statuses;
 
-            MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
-            MainForm.DatabaseHRDataConnection.SubmitChanges();
-            var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
-            workersForm.LoadWorkers();
-            Close();
+                MainForm.DatabaseHRDataConnection.Worker.InsertOnSubmit(newWorker);
+                MainForm.DatabaseHRDataConnection.SubmitChanges();
+                var workersForm = Application.OpenForms.OfType<WorkersForm>().Single();
+                workersForm.LoadWorkers();
+                Close();
+            }
+            
         }
 
         private void WorkerAdd_Load(object sender, EventArgs e)
@@ -49,6 +59,14 @@ namespace HR
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }       
+        }
+
+        private void txtPESEL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

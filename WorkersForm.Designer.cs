@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkersForm));
             this.panelWorkers = new System.Windows.Forms.Panel();
-            this.test1 = new System.Windows.Forms.TextBox();
-            this.test = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -44,6 +41,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -55,9 +53,7 @@
             // panelWorkers
             // 
             this.panelWorkers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelWorkers.Controls.Add(this.test1);
-            this.panelWorkers.Controls.Add(this.test);
-            this.panelWorkers.Controls.Add(this.button1);
+            this.panelWorkers.Controls.Add(this.label1);
             this.panelWorkers.Controls.Add(this.btnDelete);
             this.panelWorkers.Controls.Add(this.btnEdit);
             this.panelWorkers.Controls.Add(this.btnAdd);
@@ -68,38 +64,15 @@
             this.panelWorkers.Size = new System.Drawing.Size(1052, 60);
             this.panelWorkers.TabIndex = 0;
             // 
-            // test1
-            // 
-            this.test1.Location = new System.Drawing.Point(855, 12);
-            this.test1.Name = "test1";
-            this.test1.Size = new System.Drawing.Size(100, 25);
-            this.test1.TabIndex = 4;
-            // 
-            // test
-            // 
-            this.test.Location = new System.Drawing.Point(709, 13);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(100, 25);
-            this.test.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(506, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Odśwież";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(341, 12);
+            this.btnDelete.Location = new System.Drawing.Point(912, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 35);
             this.btnDelete.TabIndex = 1;
@@ -109,12 +82,13 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(181, 12);
+            this.btnEdit.Location = new System.Drawing.Point(752, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(140, 35);
             this.btnEdit.TabIndex = 1;
@@ -124,12 +98,13 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(21, 12);
+            this.btnAdd.Location = new System.Drawing.Point(592, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(140, 35);
             this.btnAdd.TabIndex = 1;
@@ -139,16 +114,18 @@
             // 
             // dataGridViewWorker
             // 
+            this.dataGridViewWorker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewWorker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewWorker.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridViewWorker.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewWorker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewWorker.Location = new System.Drawing.Point(0, 60);
             this.dataGridViewWorker.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewWorker.MultiSelect = false;
             this.dataGridViewWorker.Name = "dataGridViewWorker";
             this.dataGridViewWorker.ReadOnly = true;
             this.dataGridViewWorker.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 593);
+            this.dataGridViewWorker.Size = new System.Drawing.Size(1052, 569);
             this.dataGridViewWorker.TabIndex = 1;
             // 
             // workerBindingSource
@@ -167,6 +144,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -178,21 +156,31 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 653);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 629);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lista pracowników";
             // 
             // WorkersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1052, 653);
+            this.ClientSize = new System.Drawing.Size(1052, 629);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Arial", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WorkersForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.WorkersForm_Load);
+            this.Resize += new System.EventHandler(this.WorkersForm_Resize);
             this.panelWorkers.ResumeLayout(false);
             this.panelWorkers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorker)).EndInit();
@@ -201,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.contractBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -210,15 +199,13 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private System.Windows.Forms.BindingSource gendersBindingSource;
         private System.Windows.Forms.BindingSource contractBindingSource;
-        public System.Windows.Forms.TextBox test;
-        public System.Windows.Forms.TextBox test1;
-        private System.Windows.Forms.DataGridView dataGridViewWorker;
+        public System.Windows.Forms.DataGridView dataGridViewWorker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label1;
     }
 }

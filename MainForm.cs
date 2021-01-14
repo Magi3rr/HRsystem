@@ -10,10 +10,12 @@ namespace HR
 {
     public partial class MainForm : Form
     {
+
         WorkersForm wf = new WorkersForm();
         ContractsForm cf = new ContractsForm();
         SalaryForm sf = new SalaryForm();
         PositionForm pf = new PositionForm();
+        
 
         public static DatabaseHRDataContext DatabaseHRDataConnection = new DatabaseHRDataContext();
         
@@ -21,11 +23,7 @@ namespace HR
         {
             InitializeComponent();
             this.userName.Text = userName;
-        }
-
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            
         }
 
         private void SlidePanel(Button btn)
@@ -42,6 +40,7 @@ namespace HR
             wf.TopLevel = false;
             centerPanel.Controls.Add(wf);
             wf.Show();
+            ChangeSize();
         }
 
         private void BtnSalary_Click(object sender, EventArgs e)
@@ -51,6 +50,7 @@ namespace HR
             sf.TopLevel = false;
             centerPanel.Controls.Add(sf);
             sf.Show();
+            ChangeSize();
         }
 
         private void BtnPosition_Click(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace HR
             pf.TopLevel = false;
             centerPanel.Controls.Add(pf);
             pf.Show();
+            ChangeSize();
         }
 
         private void btnContracts_Click(object sender, EventArgs e)
@@ -69,6 +70,7 @@ namespace HR
             cf.TopLevel = false;
             centerPanel.Controls.Add(cf);
             cf.Show();
+            ChangeSize();
         }
 
         private void hide()
@@ -78,6 +80,28 @@ namespace HR
             pf.Hide();
             cf.Hide();
 
+        }
+
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            ChangeSize();
+        }
+
+      
+        private void MainForm_MaximumSizeChanged(object sender, EventArgs e)
+        {
+            //ChangeSize();
+        }
+
+        private void ChangeSize()
+        {
+            int x = centerPanel.Size.Width;
+            int y = centerPanel.Size.Height;
+            wf.Size = new Size(x, y);
+            sf.Size = new Size(x, y);
+            cf.Size = new Size(x, y);
+            pf.Size = new Size(x, y);
         }
     }
 }

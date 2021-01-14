@@ -65,25 +65,31 @@ namespace HR
         }
 
         private void btnAddContract_Click(object sender, EventArgs e)
-        {
-            Contract newContract = new Contract();
+        {     
+            if (numericUPWynagrodzenie.Value ==0)
+            {
+                MessageBox.Show("Wynagrodzenie nie może wynosić 0");
+            }
+            else
+            {
+                Contract newContract = new Contract();
 
-            newContract.TypeContracts= cbBoxContractType.SelectedItem as TypeContracts;
-            newContract.dtStartContract = dtBirth.Value;
-            newContract.dtEndContract = dtBirth.Value;
-            newContract.Positions = cbBoxPositionType.SelectedItem as Positions;
-            newContract.Salary = numericUPWynagrodzenie.Value;
-            newContract.Worker = cbBoxWorker.SelectedItem as Worker;
-
-           
-            MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
-            MainForm.DatabaseHRDataConnection.SubmitChanges();
-            var contractsForm = Application.OpenForms.OfType<ContractsForm>().Single();
-            contractsForm.LoadContracts();
+                newContract.TypeContracts = cbBoxContractType.SelectedItem as TypeContracts;
+                newContract.dtStartContract = dtBirth.Value;
+                newContract.dtEndContract = dtBirth.Value;
+                newContract.Positions = cbBoxPositionType.SelectedItem as Positions;
+                newContract.Salary = numericUPWynagrodzenie.Value;
+                newContract.Worker = cbBoxWorker.SelectedItem as Worker;
 
 
-            Close();
+                MainForm.DatabaseHRDataConnection.Contract.InsertOnSubmit(newContract);
+                MainForm.DatabaseHRDataConnection.SubmitChanges();
+                var contractsForm = Application.OpenForms.OfType<ContractsForm>().Single();
+                contractsForm.LoadContracts();
 
+
+                Close();
+            }
 
 
         }

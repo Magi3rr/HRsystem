@@ -51,20 +51,23 @@ namespace HR
 
         private void btnEditContract_Click(object sender, EventArgs e)
         {
+            if (numericUPWynagrodzenie.Value == 0)
+            {
+                MessageBox.Show("Wynagrodzenie nie może wynosić 0");
+            }
+            else
+            {
+                w.TypeContracts = cbBoxContractType.SelectedItem as TypeContracts;
+                w.dtStartContract = dateTimeRozp.Value;
+                w.dtEndContract = dateTimeKonc.Value;
+                w.Positions = cbBoxPositionType.SelectedItem as Positions;
+                w.Salary = numericUPWynagrodzenie.Value;
+                w.Worker = cbBoxWorkerName.SelectedItem as Worker;
 
-            w.TypeContracts = cbBoxContractType.SelectedItem as TypeContracts;
-            w.dtStartContract = dateTimeRozp.Value;
-            w.dtEndContract = dateTimeKonc.Value;
-            w.Positions = cbBoxPositionType.SelectedItem as Positions;
-            w.Salary = numericUPWynagrodzenie.Value;
-            w.Worker = cbBoxWorkerName.SelectedItem as Worker;
 
-
-            DatabaseHRContracts.SubmitChanges();
-            Close();
-            
-        }
-
-       
+                DatabaseHRContracts.SubmitChanges();
+                Close();
+            }  
+        } 
     }
 }

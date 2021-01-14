@@ -23,6 +23,7 @@ namespace HR
 
         public void LoadContracts()
         {
+            
 
             var empContracts = (from DatabaseContract in MainForm.DatabaseHRDataConnection.Contract
                                 join
@@ -53,8 +54,10 @@ namespace HR
             dataGridViewContracts.Columns["Surname"].HeaderText = "Nazwisko ";
            
             dataGridViewContracts.Columns["Id"].Visible = false;
-           
-           
+
+            //this.dataGridViewContracts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //this.dataGridViewContracts.AutoResizeColumns();
+
 
         }
 
@@ -74,7 +77,6 @@ namespace HR
                 int rowIndex = dataGridViewContracts.CurrentCell.RowIndex;
                 DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
                 int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-                txtBox_Value.Text = index.ToString();
 
                 var query = from t in DatabaseHRContracts.Contract where t.Id == index select t;
 
@@ -94,7 +96,6 @@ namespace HR
             DataGridViewRow selectedRow = dataGridViewContracts.Rows[rowIndex];
            
             int index =Convert.ToInt32(selectedRow.Cells[0].Value);
-            txtBox_Value.Text =index.ToString();
 
             ContratcsEdit ce = new ContratcsEdit(MainForm.DatabaseHRDataConnection, index);
              ce.ShowDialog();
@@ -103,6 +104,21 @@ namespace HR
         private void button1_Click(object sender, EventArgs e)
         {
             LoadContracts();
+        }
+
+        private void ContractsForm_Resize(object sender, EventArgs e)
+        {
+            int x = this.Size.Width;
+            int y = this.Size.Height;
+            dataGridViewContracts.Size = new Size(x, y);
+        }
+
+        private void ContractsForm_Load(object sender, EventArgs e)
+        {
+            //int x = this.Size.Width;
+            //int y = this.Size.Height;
+            //this.dataGridViewContracts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
         }
     }
 }

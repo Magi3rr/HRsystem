@@ -13,10 +13,13 @@ namespace HR
     public partial class WorkersForm : Form
     {
         DatabaseHRDataContext DatabaseHRWorkers = new DatabaseHRDataContext();
-        public WorkersForm()
+        public WorkersForm()//int wMF, int hMF
         {
             InitializeComponent();
             LoadWorkers();
+            
+            //test.Text = wMF.ToString();
+            //dataGridViewWorker.Size = new Size(wMF-61,hMF);
         }
 
        public void LoadWorkers()
@@ -31,6 +34,9 @@ namespace HR
             dataGridViewWorker.Columns["Id"].Visible = false;
             dataGridViewWorker.Columns["IdSex"].Visible = false;
             dataGridViewWorker.Columns["IdStatus"].Visible = false;
+            //this.dataGridViewWorker.Sort(this.dataGridViewWorker.Columns["Name"], ListSortDirection.Ascending);
+
+
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -41,7 +47,6 @@ namespace HR
                 int rowIndex = dataGridViewWorker.CurrentCell.RowIndex;
                 DataGridViewRow selectedRow = dataGridViewWorker.Rows[rowIndex];
                 int index = Convert.ToInt32(selectedRow.Cells[0].Value);
-                test.Text = index.ToString();
 
                 var query = from t in DatabaseHRWorkers.Worker where t.Id == index select t;
 
@@ -57,8 +62,7 @@ namespace HR
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-
-            WorkerAdd Adw = new WorkerAdd(); 
+            WorkerAdd Adw = new WorkerAdd();     
             Adw.Show();
             LoadWorkers();
         }
@@ -72,7 +76,7 @@ namespace HR
         {
             var emp = (from x in DatabaseHRWorkers.Worker select x).ToList();
             dataGridViewWorker.DataSource = emp;
-            //this.WindowState = FormWindowState.Maximized;
+
         }
 
 
@@ -85,5 +89,12 @@ namespace HR
             we.ShowDialog();
         }
 
+        
+        private void WorkersForm_Resize(object sender, EventArgs e)
+        {
+            int x = this.Size.Width;
+            int y = this.Size.Height;
+            dataGridViewWorker.Size = new Size(x, y);
+        }
     }
 }
