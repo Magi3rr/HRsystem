@@ -101,8 +101,9 @@ namespace HR
 
         }
 
-
-
-        
+        private void SalaryForm_Load(object sender, EventArgs e)
+        {
+            LoadSalary();
+        }
     }
 }

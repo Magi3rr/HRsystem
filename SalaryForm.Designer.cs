@@ -32,13 +32,13 @@ namespace HR
             this.components = new System.ComponentModel.Container();
             this.dataGridViewSalary = new System.Windows.Forms.DataGridView();
             this.panelWorkers = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).BeginInit();
             this.panelWorkers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
@@ -73,6 +73,16 @@ namespace HR
             this.panelWorkers.Name = "panelWorkers";
             this.panelWorkers.Size = new System.Drawing.Size(1036, 60);
             this.panelWorkers.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 22);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Lista wynagrodzeń";
             // 
             // button1
             // 
@@ -133,16 +143,6 @@ namespace HR
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 614);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(23, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 22);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Lista wynagrodzeń";
-            // 
             // SalaryForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -152,6 +152,7 @@ namespace HR
             this.Name = "SalaryForm";
             this.Text = "SalaryForm";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.SalaryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).EndInit();
             this.panelWorkers.ResumeLayout(false);
             this.panelWorkers.PerformLayout();

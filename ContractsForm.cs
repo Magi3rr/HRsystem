@@ -43,7 +43,7 @@ namespace HR
                                     
 
                                 });
-            dataGridViewContracts.AutoResizeColumns();
+            //dataGridViewContracts.AutoResizeColumns();
             dataGridViewContracts.DataSource = empContracts.ToList();          
             dataGridViewContracts.Columns["dtStartContract"].HeaderText = "Data podpisania";
             dataGridViewContracts.Columns["dtEndContract"].HeaderText = "Data wygaśnięcia umowy";
@@ -55,8 +55,8 @@ namespace HR
            
             dataGridViewContracts.Columns["Id"].Visible = false;
 
-            //this.dataGridViewContracts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //this.dataGridViewContracts.AutoResizeColumns();
+            //dataGridViewContracts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
 
         }
@@ -67,6 +67,7 @@ namespace HR
             ContractsAdd Adw = new ContractsAdd();
             Adw.Show();
             LoadContracts();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
